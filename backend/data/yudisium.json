@@ -1,0 +1,41 @@
+[
+  {
+    "id": "yud-001",
+    "nama": "Yudisium Periode I 2024",
+    "tanggal": "2024-07-20",
+    "periode": "Ganjil 2023/2024",
+    "tempat": "Aula Utama Kampus",
+    "jumlah_peserta": 10,
+    "status": "selesai",
+    "keterangan": "Yudisium perdana angkatan 2020 semua program studi",
+    "created_at": "2024-06-01T08:00:00Z",
+    "updated_at": "2024-07-20T10:00:00Z",
+    "deleted_at": null
+  },
+  {
+    "id": "yud-002",
+    "nama": "Yudisium Periode II 2024",
+    "tanggal": "2024-11-30",
+    "periode": "Genap 2023/2024",
+    "tempat": "Aula Utama Kampus",
+    "jumlah_peserta": 5,
+    "status": "selesai",
+    "keterangan": "Yudisium periode kedua angkatan 2020",
+    "created_at": "2024-10-01T08:00:00Z",
+    "updated_at": "2024-11-30T10:00:00Z",
+    "deleted_at": null
+  },
+  {
+    "id": "yud-003",
+    "nama": "Yudisium Periode I 2025",
+    "tanggal": "2025-07-19",
+    "periode": "Ganjil 2024/2025",
+    "tempat": "Gedung Serbaguna Kampus",
+    "jumlah_peserta": 0,
+    "status": "dijadwalkan",
+    "keterangan": "Yudisium angkatan 2021 dan sebagian 2020",
+    "created_at": "2025-05-01T08:00:00Z",
+    "updated_at": "2025-05-01T08:00:00Z",
+    "deleted_at": null
+  }
+]

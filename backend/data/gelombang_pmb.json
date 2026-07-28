@@ -1,0 +1,44 @@
+[
+  {
+    "id": "gelombang-001",
+    "nama": "Gelombang 1 TA 2024/2025",
+    "tahun_akademik": "2024/2025",
+    "jalur": "reguler",
+    "tanggal_buka": "2024-01-15",
+    "tanggal_tutup": "2024-03-31",
+    "kuota": 100,
+    "biaya_pendaftaran": 200000,
+    "status": "selesai",
+    "diterima": 27,
+    "created_at": "2024-01-01T08:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": "gelombang-002",
+    "nama": "Gelombang 2 TA 2024/2025",
+    "tahun_akademik": "2024/2025",
+    "jalur": "reguler",
+    "tanggal_buka": "2024-04-01",
+    "tanggal_tutup": "2024-06-30",
+    "kuota": 80,
+    "biaya_pendaftaran": 200000,
+    "status": "selesai",
+    "diterima": 12,
+    "created_at": "2024-03-20T08:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": "gelombang-003",
+    "nama": "Gelombang 1 TA 2025/2026",
+    "tahun_akademik": "2025/2026",
+    "jalur": "reguler",
+    "tanggal_buka": "2025-01-10",
+    "tanggal_tutup": "2025-04-30",
+    "kuota": 120,
+    "biaya_pendaftaran": 250000,
+    "status": "buka",
+    "diterima": 0,
+    "created_at": "2025-01-01T08:00:00",
+    "deleted_at": null
+  }
+]

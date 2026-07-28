@@ -1,0 +1,54 @@
+[
+  {
+    "id": "bsw-001",
+    "nama": "Beasiswa Prestasi Akademik",
+    "jenis": "akademik",
+    "kuota": 20,
+    "nilai_min_ipk": 3.5,
+    "syarat": "IPK >= 3.5, aktif kuliah",
+    "besaran": 2000000,
+    "periode": "2024/2025",
+    "status": "buka",
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  },
+  {
+    "id": "bsw-002",
+    "nama": "Beasiswa Kurang Mampu",
+    "jenis": "ekonomi",
+    "kuota": 30,
+    "nilai_min_ipk": 2.75,
+    "syarat": "SKTM, IPK >= 2.75",
+    "besaran": 2500000,
+    "periode": "2024/2025",
+    "status": "buka",
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  },
+  {
+    "id": "bsw-003",
+    "nama": "Beasiswa KIP Kuliah",
+    "jenis": "pemerintah",
+    "kuota": 50,
+    "nilai_min_ipk": 0,
+    "syarat": "Terdaftar KIP, lulus seleksi",
+    "besaran": 3000000,
+    "periode": "2024/2025",
+    "status": "buka",
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  },
+  {
+    "id": "bsw-004",
+    "nama": "Beasiswa Hafidz Qur'an",
+    "jenis": "prestasi",
+    "kuota": 10,
+    "nilai_min_ipk": 2.5,
+    "syarat": "Hafal min 10 juz",
+    "besaran": 1500000,
+    "periode": "2024/2025",
+    "status": "tutup",
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  }
+]
