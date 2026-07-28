@@ -1,0 +1,74 @@
+[
+  {
+    "id": "nobe-001",
+    "mahasiswa_id": "mhs-001", "mahasiswa_nama": "Budi Santoso", "mahasiswa_nim": "2021001001",
+    "mk_id": "mk-web", "mk_nama": "Pemrograman Web", "semester": "Ganjil 2024/2025",
+    "cpmk_scores": [
+      {"cpmk_id": "cpmk-web-01", "kode": "CPMK-1", "nilai": 82, "tercapai": true},
+      {"cpmk_id": "cpmk-web-02", "kode": "CPMK-2", "nilai": 78, "tercapai": true},
+      {"cpmk_id": "cpmk-web-03", "kode": "CPMK-3", "nilai": 85, "tercapai": true}
+    ],
+    "nilai_akhir": 81.45,
+    "created_at": "2025-01-10T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "nobe-002",
+    "mahasiswa_id": "mhs-002", "mahasiswa_nama": "Sari Dewi", "mahasiswa_nim": "2021001002",
+    "mk_id": "mk-web", "mk_nama": "Pemrograman Web", "semester": "Ganjil 2024/2025",
+    "cpmk_scores": [
+      {"cpmk_id": "cpmk-web-01", "kode": "CPMK-1", "nilai": 90, "tercapai": true},
+      {"cpmk_id": "cpmk-web-02", "kode": "CPMK-2", "nilai": 88, "tercapai": true},
+      {"cpmk_id": "cpmk-web-03", "kode": "CPMK-3", "nilai": 92, "tercapai": true}
+    ],
+    "nilai_akhir": 89.95,
+    "created_at": "2025-01-10T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "nobe-003",
+    "mahasiswa_id": "mhs-003", "mahasiswa_nama": "Ricky Halim", "mahasiswa_nim": "2021001003",
+    "mk_id": "mk-web", "mk_nama": "Pemrograman Web", "semester": "Ganjil 2024/2025",
+    "cpmk_scores": [
+      {"cpmk_id": "cpmk-web-01", "kode": "CPMK-1", "nilai": 55, "tercapai": false},
+      {"cpmk_id": "cpmk-web-02", "kode": "CPMK-2", "nilai": 62, "tercapai": true},
+      {"cpmk_id": "cpmk-web-03", "kode": "CPMK-3", "nilai": 58, "tercapai": false}
+    ],
+    "nilai_akhir": 59.25,
+    "created_at": "2025-01-10T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "nobe-004",
+    "mahasiswa_id": "mhs-001", "mahasiswa_nama": "Budi Santoso", "mahasiswa_nim": "2021001001",
+    "mk_id": "mk-db", "mk_nama": "Basis Data", "semester": "Ganjil 2024/2025",
+    "cpmk_scores": [
+      {"cpmk_id": "cpmk-db-01", "kode": "CPMK-1", "nilai": 88, "tercapai": true},
+      {"cpmk_id": "cpmk-db-02", "kode": "CPMK-2", "nilai": 75, "tercapai": true},
+      {"cpmk_id": "cpmk-db-03", "kode": "CPMK-3", "nilai": 80, "tercapai": true}
+    ],
+    "nilai_akhir": 80.4,
+    "created_at": "2025-01-11T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "nobe-005",
+    "mahasiswa_id": "mhs-004", "mahasiswa_nama": "Ayu Lestari", "mahasiswa_nim": "2021001004",
+    "mk_id": "mk-db", "mk_nama": "Basis Data", "semester": "Ganjil 2024/2025",
+    "cpmk_scores": [
+      {"cpmk_id": "cpmk-db-01", "kode": "CPMK-1", "nilai": 95, "tercapai": true},
+      {"cpmk_id": "cpmk-db-02", "kode": "CPMK-2", "nilai": 91, "tercapai": true},
+      {"cpmk_id": "cpmk-db-03", "kode": "CPMK-3", "nilai": 87, "tercapai": true}
+    ],
+    "nilai_akhir": 91.0,
+    "created_at": "2025-01-11T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "nobe-006",
+    "mahasiswa_id": "mhs-005", "mahasiswa_nama": "Deni Kusuma", "mahasiswa_nim": "2021001005",
+    "mk_id": "mk-db", "mk_nama": "Basis Data", "semester": "Ganjil 2024/2025",
+    "cpmk_scores": [
+      {"cpmk_id": "cpmk-db-01", "kode": "CPMK-1", "nilai": 48, "tercapai": false},
+      {"cpmk_id": "cpmk-db-02", "kode": "CPMK-2", "nilai": 55, "tercapai": false},
+      {"cpmk_id": "cpmk-db-03", "kode": "CPMK-3", "nilai": 60, "tercapai": true}
+    ],
+    "nilai_akhir": 54.9,
+    "created_at": "2025-01-11T07:00:00+00:00", "deleted_at": null
+  }
+]

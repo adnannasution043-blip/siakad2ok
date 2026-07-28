@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cpl-si-01", "kode": "CPL-SI-1", "prodi_id": "prodi-si", "prodi_nama": "Sistem Informasi",
+    "deskripsi": "Mampu menerapkan pengetahuan matematika, sains, dan teknologi informasi untuk memecahkan permasalahan sistem informasi secara sistematis",
+    "ranah": "pengetahuan", "created_at": "2024-01-10T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpl-si-02", "kode": "CPL-SI-2", "prodi_id": "prodi-si", "prodi_nama": "Sistem Informasi",
+    "deskripsi": "Mampu merancang dan mengimplementasikan sistem informasi yang memenuhi kebutuhan pengguna dengan mempertimbangkan aspek keamanan dan skalabilitas",
+    "ranah": "keterampilan_khusus", "created_at": "2024-01-10T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpl-si-03", "kode": "CPL-SI-3", "prodi_id": "prodi-si", "prodi_nama": "Sistem Informasi",
+    "deskripsi": "Mampu bekerja sama dalam tim lintas disiplin, berkomunikasi secara efektif, dan bertanggung jawab secara profesional",
+    "ranah": "sikap", "created_at": "2024-01-10T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpl-si-04", "kode": "CPL-SI-4", "prodi_id": "prodi-si", "prodi_nama": "Sistem Informasi",
+    "deskripsi": "Mampu menganalisis kebutuhan bisnis dan mengelola proyek teknologi informasi menggunakan metodologi yang tepat",
+    "ranah": "keterampilan_umum", "created_at": "2024-01-10T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpl-if-01", "kode": "CPL-IF-1", "prodi_id": "prodi-if", "prodi_nama": "Informatika",
+    "deskripsi": "Mampu menguasai konsep komputasi, algoritma, dan struktur data untuk membangun perangkat lunak yang efisien",
+    "ranah": "pengetahuan", "created_at": "2024-01-10T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpl-if-02", "kode": "CPL-IF-2", "prodi_id": "prodi-if", "prodi_nama": "Informatika",
+    "deskripsi": "Mampu merancang, mengimplementasikan, dan menguji perangkat lunak berkualitas tinggi menggunakan prinsip rekayasa perangkat lunak",
+    "ranah": "keterampilan_khusus", "created_at": "2024-01-10T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpl-if-03", "kode": "CPL-IF-3", "prodi_id": "prodi-if", "prodi_nama": "Informatika",
+    "deskripsi": "Mampu menerapkan etika profesi, berpikir kritis, dan mengembangkan diri secara berkelanjutan di bidang teknologi",
+    "ranah": "sikap", "created_at": "2024-01-10T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpl-ak-01", "kode": "CPL-AK-1", "prodi_id": "prodi-ak", "prodi_nama": "Akuntansi",
+    "deskripsi": "Mampu menguasai konsep dasar akuntansi, pelaporan keuangan, dan sistem informasi akuntansi secara komprehensif",
+    "ranah": "pengetahuan", "created_at": "2024-01-10T07:00:00+00:00", "deleted_at": null
+  }
+]

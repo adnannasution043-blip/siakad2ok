@@ -83,5 +83,3 @@ Semua router tidak perlu diubah.
 "# siakadlocal" 
 "# siakadlocal2" 
 "# siakadlocal2" 
-"# siakadlocal2" 
-"# siakad2ok" 

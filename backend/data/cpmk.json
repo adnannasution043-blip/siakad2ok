@@ -1,0 +1,56 @@
+[
+  {
+    "id": "cpmk-web-01", "kode": "CPMK-1", "mk_id": "mk-web", "mk_nama": "Pemrograman Web",
+    "cpl_ids": ["cpl-si-01", "cpl-si-02"],
+    "deskripsi": "Mahasiswa mampu menjelaskan konsep dasar HTML, CSS, dan JavaScript serta menerapkannya dalam pembuatan halaman web statis",
+    "bobot": 25, "created_at": "2024-02-01T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpmk-web-02", "kode": "CPMK-2", "mk_id": "mk-web", "mk_nama": "Pemrograman Web",
+    "cpl_ids": ["cpl-si-02"],
+    "deskripsi": "Mahasiswa mampu membangun aplikasi web dinamis menggunakan framework modern (React/Vue) dan menghubungkan ke REST API",
+    "bobot": 40, "created_at": "2024-02-01T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpmk-web-03", "kode": "CPMK-3", "mk_id": "mk-web", "mk_nama": "Pemrograman Web",
+    "cpl_ids": ["cpl-si-02", "cpl-si-04"],
+    "deskripsi": "Mahasiswa mampu mengimplementasikan autentikasi, keamanan dasar, dan deployment aplikasi web ke server cloud",
+    "bobot": 35, "created_at": "2024-02-01T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpmk-db-01", "kode": "CPMK-1", "mk_id": "mk-db", "mk_nama": "Basis Data",
+    "cpl_ids": ["cpl-si-01"],
+    "deskripsi": "Mahasiswa mampu menjelaskan konsep basis data relasional, ERD, dan normalisasi hingga bentuk normal ketiga (3NF)",
+    "bobot": 30, "created_at": "2024-02-01T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpmk-db-02", "kode": "CPMK-2", "mk_id": "mk-db", "mk_nama": "Basis Data",
+    "cpl_ids": ["cpl-si-01", "cpl-si-02"],
+    "deskripsi": "Mahasiswa mampu menulis query SQL kompleks (JOIN, subquery, agregasi) dan mengoptimalkan performa query dengan indexing",
+    "bobot": 40, "created_at": "2024-02-01T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpmk-db-03", "kode": "CPMK-3", "mk_id": "mk-db", "mk_nama": "Basis Data",
+    "cpl_ids": ["cpl-si-02", "cpl-si-04"],
+    "deskripsi": "Mahasiswa mampu merancang skema basis data untuk sistem nyata dan mengimplementasikan stored procedure serta trigger",
+    "bobot": 30, "created_at": "2024-02-01T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpmk-algo-01", "kode": "CPMK-1", "mk_id": "mk-algo", "mk_nama": "Algoritma & Struktur Data",
+    "cpl_ids": ["cpl-if-01"],
+    "deskripsi": "Mahasiswa mampu menganalisis kompleksitas algoritma menggunakan notasi Big-O dan memilih algoritma yang tepat untuk suatu masalah",
+    "bobot": 35, "created_at": "2024-02-01T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpmk-algo-02", "kode": "CPMK-2", "mk_id": "mk-algo", "mk_nama": "Algoritma & Struktur Data",
+    "cpl_ids": ["cpl-if-01", "cpl-if-02"],
+    "deskripsi": "Mahasiswa mampu mengimplementasikan struktur data fundamental (array, linked list, stack, queue, tree, graph) dalam bahasa pemrograman",
+    "bobot": 40, "created_at": "2024-02-01T07:00:00+00:00", "deleted_at": null
+  },
+  {
+    "id": "cpmk-algo-03", "kode": "CPMK-3", "mk_id": "mk-algo", "mk_nama": "Algoritma & Struktur Data",
+    "cpl_ids": ["cpl-if-02"],
+    "deskripsi": "Mahasiswa mampu menerapkan teknik sorting, searching, dan dynamic programming untuk menyelesaikan permasalahan komputasi",
+    "bobot": 25, "created_at": "2024-02-01T07:00:00+00:00", "deleted_at": null
+  }
+]

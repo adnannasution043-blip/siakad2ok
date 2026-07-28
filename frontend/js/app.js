@@ -94,6 +94,7 @@ const App = (() => {
     Router.register('notifikasi',     () => NotifikasiModule.render())
     Router.register('klinik',         () => KlinikModule.render())
     Router.register('perpustakaan',   () => PerpustakaanModule.render())
+    Router.register('obe',            () => OBEModule.render())
 
     // Sidebar overlay click (mobile)
     document.getElementById('sidebar-overlay')?.addEventListener('click', () => {
