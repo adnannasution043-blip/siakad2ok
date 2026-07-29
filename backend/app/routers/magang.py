@@ -1,17 +1,38 @@
-from fastapi import APIRouter, Query, HTTPException
+from fastapi import APIRouter, Query, Header, HTTPException
 from typing import Optional
 from datetime import datetime, timezone
 import uuid
 
 from app.utils.db import read_all, find_by_id, insert, update, soft_delete, paginate
+from app.utils.dev import (
+    get_user_from_request, check_role,
+    get_mahasiswa_for_user, get_dosen_for_user,
+)
 
 router = APIRouter(prefix="/magang", tags=["Magang / PKL"])
 
-def _dev_user():
-    return {"id": "usr-001", "role": "super_admin", "nama": "Administrator"}
+ADMIN = ["super_admin", "admin_akademik", "staf"]
+ADMIN_KAPRODI = ["super_admin", "admin_akademik", "kaprodi", "staf"]
+
+def ok(data=None, message="Berhasil", meta=None):
+    return {"success": True, "data": data, "message": message, "meta": meta}
 
 def _now():
     return datetime.now(timezone.utc).isoformat()
+
+def _scope_magang(rows: list, user: dict) -> list:
+    role = user.get("role")
+    if role in ADMIN or role == "kaprodi":
+        return rows
+    if role == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        mhs_id = mhs["id"] if mhs else ""
+        return [m for m in rows if m.get("mahasiswa_id") == mhs_id]
+    if role == "dosen":
+        dosen = get_dosen_for_user(user)
+        dosen_id = dosen["id"] if dosen else ""
+        return [m for m in rows if m.get("dosen_pembimbing_id") == dosen_id]
+    return []
 
 # ─── LIST & DETAIL ────────────────────────────────────────────────────────────
 
@@ -23,13 +44,21 @@ def list_magang(
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
     per_page: int = Query(20, ge=1, le=1000),
+    authorization: str = Header(default="dev"),
 ):
+    user = get_user_from_request(authorization)
     data = [m for m in read_all("magang") if not m.get("deleted_at")]
+    data = _scope_magang(data, user)
+
     if status:
         data = [m for m in data if m.get("status") == status]
     if semester:
         data = [m for m in data if m.get("semester_akademik") == semester]
     if mahasiswa_id:
+        if user.get("role") == "mahasiswa":
+            mhs = get_mahasiswa_for_user(user)
+            if not mhs or mhs["id"] != mahasiswa_id:
+                raise HTTPException(403, "Akses ditolak")
         data = [m for m in data if m.get("mahasiswa_id") == mahasiswa_id]
     if search:
         q = search.lower()
@@ -39,12 +68,15 @@ def list_magang(
                 or q in m.get("judul_proyek", "").lower()]
     data.sort(key=lambda x: x.get("tgl_mulai", ""), reverse=True)
     items, meta = paginate(data, page, per_page)
-    return {"success": True, "data": items, "message": "Berhasil", "meta": meta}
+    return ok(items, meta=meta)
 
 
 @router.get("/stats")
-def get_stats():
+def get_stats(authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
     data = [m for m in read_all("magang") if not m.get("deleted_at")]
+    data = _scope_magang(data, user)
+
     nilai_list = [m["nilai_akhir"] for m in data if m.get("nilai_akhir")]
     instansi_count = {}
     for m in data:
@@ -52,23 +84,19 @@ def get_stats():
         instansi_count[inst] = instansi_count.get(inst, 0) + 1
     top_instansi = sorted(instansi_count.items(), key=lambda x: -x[1])[:5]
 
-    return {
-        "success": True,
-        "data": {
-            "total": len(data),
-            "pending": sum(1 for m in data if m.get("status") == "pending"),
-            "berjalan": sum(1 for m in data if m.get("status") == "berjalan"),
-            "selesai": sum(1 for m in data if m.get("status") == "selesai"),
-            "rata_nilai": round(sum(nilai_list) / len(nilai_list), 2) if nilai_list else None,
-            "top_instansi": [{"instansi": k, "jumlah": v} for k, v in top_instansi],
-        },
-        "message": "Berhasil",
-        "meta": None,
-    }
+    return ok({
+        "total": len(data),
+        "pending": sum(1 for m in data if m.get("status") == "pending"),
+        "berjalan": sum(1 for m in data if m.get("status") == "berjalan"),
+        "selesai": sum(1 for m in data if m.get("status") == "selesai"),
+        "rata_nilai": round(sum(nilai_list) / len(nilai_list), 2) if nilai_list else None,
+        "top_instansi": [{"instansi": k, "jumlah": v} for k, v in top_instansi],
+    })
 
 
 @router.post("")
-def ajukan_magang(body: dict):
+def ajukan_magang(body: dict, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
     mahasiswa_id = body.get("mahasiswa_id", "").strip()
     instansi = body.get("instansi", "").strip()
     tgl_mulai = body.get("tgl_mulai", "").strip()
@@ -76,11 +104,17 @@ def ajukan_magang(body: dict):
     if not all([mahasiswa_id, instansi, tgl_mulai, tgl_selesai]):
         raise HTTPException(400, "mahasiswa_id, instansi, tgl_mulai, tgl_selesai wajib diisi")
 
+    if user.get("role") == "mahasiswa":
+        mhs_own = get_mahasiswa_for_user(user)
+        if not mhs_own or mhs_own["id"] != mahasiswa_id:
+            raise HTTPException(403, "Mahasiswa hanya dapat mengajukan magang untuk dirinya sendiri")
+    else:
+        check_role(user, ADMIN_KAPRODI + ["dosen"])
+
     mhs = find_by_id("mahasiswa", mahasiswa_id)
     if not mhs:
         raise HTTPException(404, "Mahasiswa tidak ditemukan")
 
-    # Cek sudah ada magang aktif (berjalan)
     aktif = [m for m in read_all("magang")
              if m.get("mahasiswa_id") == mahasiswa_id
              and m.get("status") == "berjalan"
@@ -113,22 +147,28 @@ def ajukan_magang(body: dict):
         "deleted_at": None,
     }
     insert("magang", rec)
-    return {"success": True, "data": rec, "message": "Pengajuan magang berhasil disubmit", "meta": None}
+    return ok(rec, "Pengajuan magang berhasil disubmit")
 
 
 @router.get("/{magang_id}")
-def get_magang(magang_id: str):
+def get_magang(magang_id: str, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
     m = find_by_id("magang", magang_id)
     if not m or m.get("deleted_at"):
         raise HTTPException(404, "Data magang tidak ditemukan")
-    return {"success": True, "data": m, "message": "Berhasil", "meta": None}
+    if not _scope_magang([m], user):
+        raise HTTPException(403, "Akses ditolak")
+    return ok(m)
 
 
 @router.put("/{magang_id}")
-def update_magang(magang_id: str, body: dict):
+def update_magang(magang_id: str, body: dict, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
     m = find_by_id("magang", magang_id)
     if not m or m.get("deleted_at"):
         raise HTTPException(404, "Data magang tidak ditemukan")
+    if not _scope_magang([m], user):
+        raise HTTPException(403, "Akses ditolak")
     if m.get("status") == "selesai":
         raise HTTPException(400, "Magang yang sudah selesai tidak dapat diubah")
 
@@ -146,11 +186,13 @@ def update_magang(magang_id: str, body: dict):
 
     m["updated_at"] = _now()
     update("magang", magang_id, m)
-    return {"success": True, "data": m, "message": "Data magang diperbarui", "meta": None}
+    return ok(m, "Data magang diperbarui")
 
 
 @router.post("/{magang_id}/setujui")
-def setujui_magang(magang_id: str):
+def setujui_magang(magang_id: str, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, ADMIN_KAPRODI)
     m = find_by_id("magang", magang_id)
     if not m or m.get("deleted_at"):
         raise HTTPException(404, "Data magang tidak ditemukan")
@@ -159,11 +201,13 @@ def setujui_magang(magang_id: str):
     m["status"] = "berjalan"
     m["updated_at"] = _now()
     update("magang", magang_id, m)
-    return {"success": True, "data": m, "message": "Magang disetujui, status menjadi berjalan", "meta": None}
+    return ok(m, "Magang disetujui, status menjadi berjalan")
 
 
 @router.post("/{magang_id}/tolak")
-def tolak_magang(magang_id: str, body: dict):
+def tolak_magang(magang_id: str, body: dict, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, ADMIN_KAPRODI)
     m = find_by_id("magang", magang_id)
     if not m or m.get("deleted_at"):
         raise HTTPException(404, "Data magang tidak ditemukan")
@@ -173,14 +217,20 @@ def tolak_magang(magang_id: str, body: dict):
     if not alasan:
         raise HTTPException(400, "Alasan penolakan wajib diisi")
     soft_delete("magang", magang_id)
-    return {"success": True, "data": None, "message": f"Magang ditolak: {alasan}", "meta": None}
+    return ok(None, f"Magang ditolak: {alasan}")
 
 
 @router.post("/{magang_id}/selesai")
-def selesai_magang(magang_id: str, body: dict):
+def selesai_magang(magang_id: str, body: dict, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, ADMIN_KAPRODI + ["dosen"])
     m = find_by_id("magang", magang_id)
     if not m or m.get("deleted_at"):
         raise HTTPException(404, "Data magang tidak ditemukan")
+    if user.get("role") == "dosen":
+        dosen = get_dosen_for_user(user)
+        if not dosen or m.get("dosen_pembimbing_id") != dosen["id"]:
+            raise HTTPException(403, "Hanya dosen pembimbing yang dapat menyelesaikan magang ini")
     if m.get("status") != "berjalan":
         raise HTTPException(400, "Hanya magang berstatus 'berjalan' yang dapat diselesaikan")
 
@@ -196,15 +246,25 @@ def selesai_magang(magang_id: str, body: dict):
     m["tgl_selesai"] = body.get("tgl_selesai", m.get("tgl_selesai", ""))
     m["updated_at"] = _now()
     update("magang", magang_id, m)
-    return {"success": True, "data": m, "message": "Magang selesai, nilai berhasil diinput", "meta": None}
+    return ok(m, "Magang selesai, nilai berhasil diinput")
 
 
 @router.delete("/{magang_id}")
-def delete_magang(magang_id: str):
+def delete_magang(magang_id: str, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
     m = find_by_id("magang", magang_id)
     if not m or m.get("deleted_at"):
         raise HTTPException(404, "Data magang tidak ditemukan")
+
+    role = user.get("role")
+    if role == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        if not mhs or m.get("mahasiswa_id") != mhs["id"]:
+            raise HTTPException(403, "Akses ditolak")
+    elif role not in ADMIN:
+        raise HTTPException(403, "Akses ditolak")
+
     if m.get("status") != "pending":
         raise HTTPException(400, "Hanya pengajuan 'pending' yang dapat dihapus")
     soft_delete("magang", magang_id)
-    return {"success": True, "data": None, "message": "Pengajuan magang dihapus", "meta": None}
+    return ok(None, "Pengajuan magang dihapus")

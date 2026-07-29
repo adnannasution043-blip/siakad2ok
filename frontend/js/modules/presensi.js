@@ -307,6 +307,13 @@ const PresensiModule = (() => {
           </svg>
           Buat Sesi
         </button>
+        <button onclick="PresensiModule.cetakBA()"
+          class="px-4 py-2 border border-slate-300 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-slate-50 text-slate-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+          </svg>
+          Cetak BA Perkuliahan
+        </button>
       </div>
       ${UI.card(`<div id="sesi-table-wrap"></div><div id="sesi-pagination"></div>`)}
     `
@@ -655,6 +662,13 @@ const PresensiModule = (() => {
             `<option value="${k.id}" ${state.rekapKelasId===k.id?'selected':''}>${k.mata_kuliah_nama} — ${k.kode_kelas}</option>`
           ).join('')}
         </select>
+        <button onclick="PresensiModule.cetakAbsensi()"
+          class="px-4 py-2 border border-slate-300 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-slate-50 text-slate-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+          </svg>
+          Cetak Daftar Hadir
+        </button>
       </div>
       ${UI.card(`<div id="rekap-table-wrap"></div>`)}
     `
@@ -719,6 +733,157 @@ const PresensiModule = (() => {
     if (kelasId) fetchRekapKelas()
   }
 
+  // ── PRINT HELPERS ──────────────────────────────────────────
+  const openPrint = (title, bodyHtml, landscape = false) => {
+    const w = window.open('', '_blank', 'width=1000,height=720')
+    if (!w) return UI.toast('Izinkan popup di browser untuk mencetak', 'warning')
+    w.document.write(`<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>${title}</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;font-size:11pt;color:#000;padding:15mm 20mm}
+@media print{body{padding:0}@page{size:A4 ${landscape ? 'landscape' : 'portrait'};margin:12mm 15mm}}
+h1{font-size:14pt;text-align:center;text-transform:uppercase;margin-bottom:3px}
+h2{font-size:11pt;text-align:center;font-weight:normal;margin-bottom:2px}
+.sub{text-align:center;font-size:10pt;color:#444;margin-bottom:10px}
+hr.thick{border:0;border-top:2px solid #000;margin:6px 0 10px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 20px;margin-bottom:10px;font-size:10pt}
+.info-grid span{display:block}b{font-weight:bold}
+table{width:100%;border-collapse:collapse;margin-top:6px;font-size:9.5pt}
+th{background:#ddd;border:1px solid #666;padding:4px 6px;text-align:left;font-weight:bold}
+td{border:1px solid #999;padding:3px 6px}
+tr:nth-child(even) td{background:#f5f5f5}
+.c{text-align:center}.r{text-align:right}
+.ok{color:#16a34a;font-weight:bold}.warn{color:#dc2626;font-weight:bold}
+.footer{margin-top:32px;display:flex;justify-content:flex-end}
+.ttd{text-align:center;min-width:200px}
+.ttd .line{margin-top:60px;border-top:1px solid #000;padding-top:2px}
+.small{font-size:9pt;color:#666}
+</style></head><body>${bodyHtml}
+<script>setTimeout(()=>window.print(),400)</script>
+</body></html>`)
+    w.document.close()
+  }
+
+  // Cetak Daftar Hadir (Rekap Absensi)
+  const cetakAbsensi = () => {
+    if (!state.rekapKelasId) return UI.toast('Pilih kelas terlebih dahulu', 'warning')
+    if (!state.rekapData.length) return UI.toast('Data rekap kosong — muat data kelas dulu', 'warning')
+    const kelas = state.kelasList.find(k => k.id === state.rekapKelasId) || {}
+    const tgl = new Date().toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' })
+    const rows = state.rekapData.map((m, i) => `
+      <tr>
+        <td class="c">${i+1}</td>
+        <td class="c small">${m.mahasiswa_nim}</td>
+        <td>${m.mahasiswa_nama}</td>
+        <td class="c">${m.total}</td>
+        <td class="c ok">${m.hadir||0}</td>
+        <td class="c" style="color:#2563eb">${m.izin||0}</td>
+        <td class="c" style="color:#d97706">${m.sakit||0}</td>
+        <td class="c warn">${m.alpha||0}</td>
+        <td class="c ${m.status_kehadiran==='warning'?'warn':'ok'}">${m.persen_hadir}%</td>
+        <td class="c">${m.status_kehadiran==='warning'?'⚠ Kurang':'✓ Aman'}</td>
+      </tr>`).join('')
+    openPrint('Rekap Kehadiran', `
+      <h2>REKAP KEHADIRAN MAHASISWA</h2>
+      <h1>${kelas.mata_kuliah_nama||'—'}</h1>
+      <div class="sub">Kelas ${kelas.kode_kelas||'—'} — ${kelas.semester_akademik||'—'}</div>
+      <hr class="thick">
+      <div class="info-grid">
+        <span><b>Mata Kuliah</b>: ${kelas.mata_kuliah_nama||'—'}</span>
+        <span><b>Kelas</b>: ${kelas.kode_kelas||'—'}</span>
+        <span><b>Dosen Pengampu</b>: ${kelas.dosen_nama||'—'}</span>
+        <span><b>Semester</b>: ${kelas.semester_akademik||'—'}</span>
+        <span><b>Jumlah Mahasiswa</b>: ${state.rekapData.length} orang</span>
+        <span><b>Tanggal Cetak</b>: ${tgl}</span>
+      </div>
+      <table>
+        <thead><tr>
+          <th class="c" style="width:30px">No</th>
+          <th class="c" style="width:90px">NIM</th>
+          <th>Nama Mahasiswa</th>
+          <th class="c" style="width:45px">Total</th>
+          <th class="c" style="width:45px">H</th>
+          <th class="c" style="width:40px">I</th>
+          <th class="c" style="width:40px">S</th>
+          <th class="c" style="width:45px">A</th>
+          <th class="c" style="width:55px">%</th>
+          <th class="c" style="width:70px">Status</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+      <div class="small" style="margin-top:8px">H=Hadir · I=Izin · S=Sakit · A=Alpha · Batas kehadiran minimal: 75%</div>
+      <div class="footer"><div class="ttd">
+        <div>Dosen Pengampu,</div>
+        <div class="line">${kelas.dosen_nama||'—'}</div>
+      </div></div>`)
+  }
+
+  // Cetak Berita Acara Perkuliahan
+  const cetakBA = async () => {
+    const kelasId = state.sesiKelasId
+    if (!kelasId) return UI.toast('Pilih kelas di tab Sesi Kuliah terlebih dahulu', 'warning')
+    try {
+      const res = await API.get(`/presensi/sesi?kelas_id=${kelasId}&per_page=100`)
+      const list = (res.data||[]).sort((a,b) => a.pertemuan_ke - b.pertemuan_ke)
+      const kelas = state.kelasList.find(k => k.id === kelasId) || {}
+      const total = kelas.jumlah_pertemuan || 16
+      const tgl = new Date().toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' })
+      const rows = Array.from({length: total}, (_, i) => {
+        const s = list.find(x => x.pertemuan_ke === i+1)
+        return s ? `
+          <tr>
+            <td class="c">${i+1}</td>
+            <td class="c">${s.tanggal}</td>
+            <td>${s.topik||'—'}</td>
+            <td>${s.dibuat_oleh_nama||kelas.dosen_nama||'—'}</td>
+            <td class="c">${{aktif:'Berlangsung',selesai:'Selesai',belum_mulai:'Belum Mulai'}[s.status]||s.status}</td>
+            <td class="c"></td>
+          </tr>` : `
+          <tr>
+            <td class="c">${i+1}</td>
+            <td></td><td></td><td></td><td class="small c">Belum dilaksanakan</td>
+            <td class="c"></td>
+          </tr>`
+      }).join('')
+      openPrint('Berita Acara Perkuliahan', `
+        <h2>BERITA ACARA PERKULIAHAN</h2>
+        <h1>${kelas.mata_kuliah_nama||'—'}</h1>
+        <div class="sub">Kelas ${kelas.kode_kelas||'—'} — ${kelas.semester_akademik||'—'}</div>
+        <hr class="thick">
+        <div class="info-grid">
+          <span><b>Mata Kuliah</b>: ${kelas.mata_kuliah_nama||'—'} (${kelas.mata_kuliah_kode||'—'})</span>
+          <span><b>Kelas</b>: ${kelas.kode_kelas||'—'}</span>
+          <span><b>Dosen Pengampu</b>: ${kelas.dosen_nama||'—'}</span>
+          <span><b>Semester</b>: ${kelas.semester_akademik||'—'}</span>
+          <span><b>SKS</b>: ${kelas.sks||'—'}</span>
+          <span><b>Realisasi</b>: ${list.length}/${total} pertemuan</span>
+          <span><b>Tanggal Cetak</b>: ${tgl}</span>
+        </div>
+        <table>
+          <thead><tr>
+            <th class="c" style="width:50px">Pertemuan</th>
+            <th style="width:90px">Tanggal</th>
+            <th>Topik / Materi</th>
+            <th style="width:130px">Dosen / Pengajar</th>
+            <th style="width:90px">Status</th>
+            <th style="width:80px">Paraf Mhs</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+        <div class="footer" style="gap:40px">
+          <div class="ttd">
+            <div>Mengetahui,<br>Kaprodi</div>
+            <div class="line">___________________________</div>
+          </div>
+          <div class="ttd">
+            <div>Dosen Pengampu</div>
+            <div class="line">${kelas.dosen_nama||'—'}</div>
+          </div>
+        </div>`)
+    } catch(e) { UI.toast(e.message, 'error') }
+  }
+
   return {
     render, switchTab,
     // sesi
@@ -733,5 +898,7 @@ const PresensiModule = (() => {
     onPrsSearch, onPrsFilter, goPage,
     // rekap
     onRekapFilter,
+    // cetak
+    cetakAbsensi, cetakBA,
   }
 })()

@@ -1,14 +1,21 @@
-from fastapi import APIRouter, Query, HTTPException
+from fastapi import APIRouter, Query, HTTPException, Header
 from typing import Optional
 from datetime import datetime, timezone
 import uuid
 
 from app.utils.db import read_all, find_by_id, insert, update, soft_delete, paginate
+from app.utils.dev import get_user_from_request, check_role, get_mahasiswa_for_user
 
 router = APIRouter(prefix="/ukm", tags=["UKM / Organisasi"])
 
+UKM_ADMIN = ["super_admin", "admin_akademik", "staf"]
+
+def ok(data=None, message="Berhasil", meta=None):
+    return {"success": True, "data": data, "message": message, "meta": meta}
+
 def _now():
     return datetime.now(timezone.utc).isoformat()
+
 
 # ─── UKM ─────────────────────────────────────────────────────────────────────
 
@@ -19,7 +26,9 @@ def list_ukm(
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
     per_page: int = Query(20, ge=1, le=1000),
+    authorization: str = Header(default="dev"),
 ):
+    get_user_from_request(authorization)
     data = [u for u in read_all("ukm") if not u.get("deleted_at")]
     if kategori:
         data = [u for u in data if u.get("kategori") == kategori]
@@ -35,13 +44,14 @@ def list_ukm(
     for u in items:
         u["jumlah_anggota"] = sum(1 for a in anggota_all
                                   if a.get("ukm_id") == u["id"] and not a.get("deleted_at"))
-    return {"success": True, "data": items, "message": "Berhasil", "meta": meta}
+    return ok(items, meta=meta)
 
 
 @router.get("/stats")
-def get_stats():
-    ukm_list = [u for u in read_all("ukm") if not u.get("deleted_at")]
-    anggota_all = [a for a in read_all("anggota_ukm") if not a.get("deleted_at")]
+def get_stats(authorization: str = Header(default="dev")):
+    get_user_from_request(authorization)
+    ukm_list     = [u for u in read_all("ukm")          if not u.get("deleted_at")]
+    anggota_all  = [a for a in read_all("anggota_ukm")  if not a.get("deleted_at")]
     kegiatan_all = [k for k in read_all("kegiatan_ukm") if not k.get("deleted_at")]
 
     kat_count = {}
@@ -49,23 +59,20 @@ def get_stats():
         kat = u.get("kategori", "lainnya")
         kat_count[kat] = kat_count.get(kat, 0) + 1
 
-    return {
-        "success": True,
-        "data": {
-            "total_ukm": len(ukm_list),
-            "ukm_aktif": sum(1 for u in ukm_list if u.get("status") == "aktif"),
-            "total_anggota": len(anggota_all),
-            "total_kegiatan": len(kegiatan_all),
-            "kegiatan_selesai": sum(1 for k in kegiatan_all if k.get("status") == "selesai"),
-            "per_kategori": [{"kategori": k, "jumlah": v} for k, v in sorted(kat_count.items())],
-        },
-        "message": "Berhasil",
-        "meta": None,
-    }
+    return ok({
+        "total_ukm":        len(ukm_list),
+        "ukm_aktif":        sum(1 for u in ukm_list if u.get("status") == "aktif"),
+        "total_anggota":    len(anggota_all),
+        "total_kegiatan":   len(kegiatan_all),
+        "kegiatan_selesai": sum(1 for k in kegiatan_all if k.get("status") == "selesai"),
+        "per_kategori": [{"kategori": k, "jumlah": v} for k, v in sorted(kat_count.items())],
+    })
 
 
 @router.post("")
-def create_ukm(body: dict):
+def create_ukm(body: dict, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, UKM_ADMIN)
     nama = body.get("nama", "").strip()
     if not nama:
         raise HTTPException(400, "Nama UKM wajib diisi")
@@ -84,11 +91,12 @@ def create_ukm(body: dict):
         "deleted_at": None,
     }
     insert("ukm", rec)
-    return {"success": True, "data": rec, "message": "UKM berhasil dibuat", "meta": None}
+    return ok(rec, "UKM berhasil dibuat")
 
 
 @router.get("/{ukm_id}")
-def get_ukm(ukm_id: str):
+def get_ukm(ukm_id: str, authorization: str = Header(default="dev")):
+    get_user_from_request(authorization)
     u = find_by_id("ukm", ukm_id)
     if not u or u.get("deleted_at"):
         raise HTTPException(404, "UKM tidak ditemukan")
@@ -98,11 +106,13 @@ def get_ukm(ukm_id: str):
                 if k.get("ukm_id") == ukm_id and not k.get("deleted_at")]
     u["anggota"] = anggota
     u["kegiatan"] = kegiatan
-    return {"success": True, "data": u, "message": "Berhasil", "meta": None}
+    return ok(u)
 
 
 @router.put("/{ukm_id}")
-def update_ukm(ukm_id: str, body: dict):
+def update_ukm(ukm_id: str, body: dict, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, UKM_ADMIN)
     u = find_by_id("ukm", ukm_id)
     if not u or u.get("deleted_at"):
         raise HTTPException(404, "UKM tidak ditemukan")
@@ -112,11 +122,13 @@ def update_ukm(ukm_id: str, body: dict):
         if k in allowed:
             u[k] = v
     update("ukm", ukm_id, u)
-    return {"success": True, "data": u, "message": "UKM diperbarui", "meta": None}
+    return ok(u, "UKM diperbarui")
 
 
 @router.delete("/{ukm_id}")
-def delete_ukm(ukm_id: str):
+def delete_ukm(ukm_id: str, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, UKM_ADMIN)
     u = find_by_id("ukm", ukm_id)
     if not u or u.get("deleted_at"):
         raise HTTPException(404, "UKM tidak ditemukan")
@@ -125,7 +137,7 @@ def delete_ukm(ukm_id: str):
     if aktif:
         raise HTTPException(400, "Tidak dapat menghapus UKM yang masih memiliki anggota aktif")
     soft_delete("ukm", ukm_id)
-    return {"success": True, "data": None, "message": "UKM dihapus", "meta": None}
+    return ok(None, "UKM dihapus")
 
 
 # ─── ANGGOTA ──────────────────────────────────────────────────────────────────
@@ -138,8 +150,18 @@ def list_anggota(
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
     per_page: int = Query(20, ge=1, le=1000),
+    authorization: str = Header(default="dev"),
 ):
+    user = get_user_from_request(authorization)
     data = [a for a in read_all("anggota_ukm") if not a.get("deleted_at")]
+
+    if user.get("role") == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        mhs_id = mhs["id"] if mhs else ""
+        data = [a for a in data if a.get("mahasiswa_id") == mhs_id]
+    else:
+        check_role(user, UKM_ADMIN)
+
     if ukm_id:
         data = [a for a in data if a.get("ukm_id") == ukm_id]
     if jabatan:
@@ -152,24 +174,31 @@ def list_anggota(
                 or q in a.get("mahasiswa_nim", "").lower()]
     data.sort(key=lambda x: x.get("mahasiswa_nama", ""))
     items, meta = paginate(data, page, per_page)
-    # Enrich with ukm nama
     ukm_map = {u["id"]: u["nama"] for u in read_all("ukm") if not u.get("deleted_at")}
     for a in items:
         a["ukm_nama"] = ukm_map.get(a.get("ukm_id"), "—")
-    return {"success": True, "data": items, "message": "Berhasil", "meta": meta}
+    return ok(items, meta=meta)
 
 
 @router.post("/{ukm_id}/daftar")
-def daftar_anggota(ukm_id: str, body: dict):
+def daftar_anggota(ukm_id: str, body: dict, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
     u = find_by_id("ukm", ukm_id)
     if not u or u.get("deleted_at"):
         raise HTTPException(404, "UKM tidak ditemukan")
     if u.get("status") != "aktif":
         raise HTTPException(400, "UKM sedang tidak aktif")
 
-    mahasiswa_id = body.get("mahasiswa_id", "").strip()
-    if not mahasiswa_id:
-        raise HTTPException(400, "mahasiswa_id wajib diisi")
+    if user.get("role") == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        if not mhs:
+            raise HTTPException(403, "Data mahasiswa tidak ditemukan")
+        mahasiswa_id = mhs["id"]
+    else:
+        check_role(user, UKM_ADMIN)
+        mahasiswa_id = body.get("mahasiswa_id", "").strip()
+        if not mahasiswa_id:
+            raise HTTPException(400, "mahasiswa_id wajib diisi")
 
     mhs = find_by_id("mahasiswa", mahasiswa_id)
     if not mhs:
@@ -197,11 +226,13 @@ def daftar_anggota(ukm_id: str, body: dict):
         "deleted_at": None,
     }
     insert("anggota_ukm", rec)
-    return {"success": True, "data": rec, "message": "Anggota berhasil didaftarkan", "meta": None}
+    return ok(rec, "Anggota berhasil didaftarkan")
 
 
 @router.put("/anggota/{anggota_id}")
-def update_anggota(anggota_id: str, body: dict):
+def update_anggota(anggota_id: str, body: dict, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, UKM_ADMIN)
     a = find_by_id("anggota_ukm", anggota_id)
     if not a or a.get("deleted_at"):
         raise HTTPException(404, "Data anggota tidak ditemukan")
@@ -209,16 +240,18 @@ def update_anggota(anggota_id: str, body: dict):
         if k in body:
             a[k] = body[k]
     update("anggota_ukm", anggota_id, a)
-    return {"success": True, "data": a, "message": "Data anggota diperbarui", "meta": None}
+    return ok(a, "Data anggota diperbarui")
 
 
 @router.delete("/anggota/{anggota_id}")
-def hapus_anggota(anggota_id: str):
+def hapus_anggota(anggota_id: str, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, UKM_ADMIN)
     a = find_by_id("anggota_ukm", anggota_id)
     if not a or a.get("deleted_at"):
         raise HTTPException(404, "Data anggota tidak ditemukan")
     soft_delete("anggota_ukm", anggota_id)
-    return {"success": True, "data": None, "message": "Anggota dihapus dari UKM", "meta": None}
+    return ok(None, "Anggota dihapus dari UKM")
 
 
 # ─── KEGIATAN ─────────────────────────────────────────────────────────────────
@@ -231,7 +264,9 @@ def list_kegiatan(
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
     per_page: int = Query(20, ge=1, le=1000),
+    authorization: str = Header(default="dev"),
 ):
+    get_user_from_request(authorization)
     data = [k for k in read_all("kegiatan_ukm") if not k.get("deleted_at")]
     if ukm_id:
         data = [k for k in data if k.get("ukm_id") == ukm_id]
@@ -247,11 +282,13 @@ def list_kegiatan(
     ukm_map = {u["id"]: u["nama"] for u in read_all("ukm") if not u.get("deleted_at")}
     for k in items:
         k["ukm_nama"] = ukm_map.get(k.get("ukm_id"), "—")
-    return {"success": True, "data": items, "message": "Berhasil", "meta": meta}
+    return ok(items, meta=meta)
 
 
 @router.post("/{ukm_id}/kegiatan")
-def create_kegiatan(ukm_id: str, body: dict):
+def create_kegiatan(ukm_id: str, body: dict, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, UKM_ADMIN)
     u = find_by_id("ukm", ukm_id)
     if not u or u.get("deleted_at"):
         raise HTTPException(404, "UKM tidak ditemukan")
@@ -275,11 +312,13 @@ def create_kegiatan(ukm_id: str, body: dict):
         "deleted_at": None,
     }
     insert("kegiatan_ukm", rec)
-    return {"success": True, "data": rec, "message": "Kegiatan berhasil dibuat", "meta": None}
+    return ok(rec, "Kegiatan berhasil dibuat")
 
 
 @router.put("/kegiatan/{kegiatan_id}")
-def update_kegiatan(kegiatan_id: str, body: dict):
+def update_kegiatan(kegiatan_id: str, body: dict, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, UKM_ADMIN)
     k = find_by_id("kegiatan_ukm", kegiatan_id)
     if not k or k.get("deleted_at"):
         raise HTTPException(404, "Kegiatan tidak ditemukan")
@@ -289,13 +328,15 @@ def update_kegiatan(kegiatan_id: str, body: dict):
         if key in allowed:
             k[key] = val
     update("kegiatan_ukm", kegiatan_id, k)
-    return {"success": True, "data": k, "message": "Kegiatan diperbarui", "meta": None}
+    return ok(k, "Kegiatan diperbarui")
 
 
 @router.delete("/kegiatan/{kegiatan_id}")
-def delete_kegiatan(kegiatan_id: str):
+def delete_kegiatan(kegiatan_id: str, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, UKM_ADMIN)
     k = find_by_id("kegiatan_ukm", kegiatan_id)
     if not k or k.get("deleted_at"):
         raise HTTPException(404, "Kegiatan tidak ditemukan")
     soft_delete("kegiatan_ukm", kegiatan_id)
-    return {"success": True, "data": None, "message": "Kegiatan dihapus", "meta": None}
+    return ok(None, "Kegiatan dihapus")

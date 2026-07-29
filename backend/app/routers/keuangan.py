@@ -4,7 +4,7 @@ from typing import Optional
 from datetime import datetime, timezone, date
 import secrets
 from app.utils.db import read_all, find_by_id, insert, update, soft_delete, search_rows, paginate
-from app.utils.dev import get_user_from_request, check_role
+from app.utils.dev import get_user_from_request, check_role, get_mahasiswa_for_user
 
 router = APIRouter(prefix="/keuangan", tags=["Keuangan"])
 
@@ -35,9 +35,17 @@ def ringkasan(
     semester_akademik: str = Query(""),
     authorization: str = Header(default="dev"),
 ):
-    get_user_from_request(authorization)
-    tagihan = [t for t in read_all("tagihan") if not t.get("deleted_at")]
-    pembayaran = [p for p in read_all("pembayaran") if not p.get("deleted_at")]
+    user = get_user_from_request(authorization)
+    # Mahasiswa hanya bisa lihat ringkasan keuangannya sendiri
+    if user.get("role") == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        mhs_id = mhs["id"] if mhs else ""
+        tagihan = [t for t in read_all("tagihan") if not t.get("deleted_at") and t.get("mahasiswa_id") == mhs_id]
+        pembayaran = [p for p in read_all("pembayaran") if not p.get("deleted_at") and p.get("mahasiswa_id") == mhs_id]
+    else:
+        check_role(user, ADMIN_KEU)
+        tagihan = [t for t in read_all("tagihan") if not t.get("deleted_at")]
+        pembayaran = [p for p in read_all("pembayaran") if not p.get("deleted_at")]
     if semester_akademik:
         tagihan = [t for t in tagihan if t.get("semester_akademik") == semester_akademik]
 
@@ -76,8 +84,17 @@ def list_tagihan(
     mahasiswa_id: str = Query(""),
     authorization: str = Header(default="dev"),
 ):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     rows = [t for t in read_all("tagihan") if not t.get("deleted_at")]
+
+    # Mahasiswa hanya lihat tagihan dirinya sendiri
+    if user.get("role") == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        mhs_id = mhs["id"] if mhs else ""
+        rows = [r for r in rows if r.get("mahasiswa_id") == mhs_id]
+    else:
+        check_role(user, ADMIN_KEU)
+
     rows = search_rows(rows, ["mahasiswa_nama", "mahasiswa_nim", "jenis", "semester_akademik"], search)
     if status:
         rows = [r for r in rows if r.get("status") == status]
@@ -86,6 +103,10 @@ def list_tagihan(
     if jenis:
         rows = [r for r in rows if r.get("jenis") == jenis]
     if mahasiswa_id:
+        if user.get("role") == "mahasiswa":
+            mhs = get_mahasiswa_for_user(user)
+            if not mhs or mhs["id"] != mahasiswa_id:
+                raise HTTPException(403, "Akses ditolak")
         rows = [r for r in rows if r.get("mahasiswa_id") == mahasiswa_id]
     rows.sort(key=lambda r: r.get("created_at", ""), reverse=True)
     items, meta = paginate(rows, page, per_page)
@@ -94,18 +115,29 @@ def list_tagihan(
 # ── GET tagihan semesters ──────────────────────────────────────
 @router.get("/tagihan/semesters")
 def list_semesters(authorization: str = Header(default="dev")):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     rows = [t for t in read_all("tagihan") if not t.get("deleted_at")]
+    if user.get("role") == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        mhs_id = mhs["id"] if mhs else ""
+        rows = [r for r in rows if r.get("mahasiswa_id") == mhs_id]
     semesters = sorted(set(r.get("semester_akademik", "") for r in rows if r.get("semester_akademik")), reverse=True)
     return ok(semesters)
 
 # ── GET tagihan detail ─────────────────────────────────────────
 @router.get("/tagihan/{tagihan_id}")
 def get_tagihan(tagihan_id: str, authorization: str = Header(default="dev")):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     t = find_by_id("tagihan", tagihan_id)
     if not t or t.get("deleted_at"):
         raise HTTPException(404, "Tagihan tidak ditemukan")
+
+    # Mahasiswa hanya bisa lihat tagihan miliknya
+    if user.get("role") == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        if not mhs or t.get("mahasiswa_id") != mhs["id"]:
+            raise HTTPException(403, "Akses ditolak")
+
     payments = [p for p in read_all("pembayaran")
                 if p.get("tagihan_id") == tagihan_id and not p.get("deleted_at")]
     payments.sort(key=lambda p: p.get("tgl_bayar", ""), reverse=True)

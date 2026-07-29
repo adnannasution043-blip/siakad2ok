@@ -3,10 +3,12 @@ from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime, timezone
 from app.utils.db import read_all, find_by_id, insert, update, soft_delete, search_rows, paginate
-from app.utils.dev import get_user_from_request, check_role
+from app.utils.dev import (
+    get_user_from_request, check_role,
+    get_mahasiswa_for_user, get_dosen_for_user, get_kelas_ids_untuk_dosen,
+)
 
 def _calc_ip(rows: list) -> dict:
-    """Calculate IP/IPK from a list of nilai rows."""
     total_sks   = sum(r.get("sks", 0) for r in rows)
     sks_lulus   = sum(r.get("sks", 0) for r in rows if r.get("nilai_huruf") not in ("E",))
     mutu        = sum(r.get("bobot", 0) * r.get("sks", 0) for r in rows)
@@ -25,7 +27,6 @@ def now_iso():
     return datetime.now(timezone.utc).isoformat()
 
 def _to_huruf(nilai: float) -> tuple[str, float]:
-    """Return (huruf, bobot) from numeric nilai_akhir (0-100)."""
     if nilai >= 85: return "A",  4.0
     if nilai >= 80: return "B+", 3.5
     if nilai >= 75: return "B",  3.0
@@ -37,6 +38,33 @@ def _to_huruf(nilai: float) -> tuple[str, float]:
 def _calc_akhir(uts, uas, tugas,
                 bobot_uts=0.35, bobot_uas=0.45, bobot_tugas=0.20) -> float:
     return round(uts * bobot_uts + uas * bobot_uas + tugas * bobot_tugas, 2)
+
+def _scope_rows_nilai(rows: list, user: dict) -> list:
+    """Filter baris nilai sesuai hak akses role."""
+    role = user.get("role")
+    if role in ("super_admin", "admin_akademik", "kaprodi", "staf"):
+        return rows
+    if role == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        mhs_id = mhs["id"] if mhs else ""
+        return [r for r in rows if r.get("mahasiswa_id") == mhs_id]
+    if role == "dosen":
+        dosen = get_dosen_for_user(user)
+        if not dosen:
+            return []
+        kelas_ids = get_kelas_ids_untuk_dosen(dosen["id"])
+        return [r for r in rows if r.get("kelas_id") in kelas_ids]
+    return []
+
+def _assert_dosen_owns_kelas(user: dict, kelas_id: str):
+    """Raise 403 jika dosen bukan pengampu kelas ini."""
+    if user.get("role") == "dosen":
+        dosen = get_dosen_for_user(user)
+        if not dosen:
+            raise HTTPException(403, "Data dosen tidak ditemukan")
+        kelas = find_by_id("kelas", kelas_id)
+        if not kelas or kelas.get("dosen_id") != dosen["id"]:
+            raise HTTPException(403, "Anda bukan dosen pengampu kelas ini")
 
 # ── GET list ───────────────────────────────────────────────────
 @router.get("")
@@ -52,8 +80,9 @@ def list_nilai(
     locked: str = Query(""),
     authorization: str = Header(default="dev"),
 ):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     rows = [n for n in read_all("nilai") if not n.get("deleted_at")]
+    rows = _scope_rows_nilai(rows, user)
     rows = search_rows(rows, ["mata_kuliah_nama", "semester_akademik",
                                "input_oleh_nama", "mahasiswa_nim", "mahasiswa_nama"], search)
     if semester_akademik:
@@ -61,6 +90,10 @@ def list_nilai(
     if nilai_huruf:
         rows = [r for r in rows if r.get("nilai_huruf") == nilai_huruf]
     if mahasiswa_id:
+        if user.get("role") == "mahasiswa":
+            mhs = get_mahasiswa_for_user(user)
+            if not mhs or mhs["id"] != mahasiswa_id:
+                raise HTTPException(403, "Akses ditolak")
         rows = [r for r in rows if r.get("mahasiswa_id") == mahasiswa_id]
     if kelas_id:
         rows = [r for r in rows if r.get("kelas_id") == kelas_id]
@@ -77,8 +110,9 @@ def list_nilai(
 # ── GET semesters ──────────────────────────────────────────────
 @router.get("/semesters")
 def list_semesters(authorization: str = Header(default="dev")):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     rows = [n for n in read_all("nilai") if not n.get("deleted_at")]
+    rows = _scope_rows_nilai(rows, user)
     semesters = sorted(set(r.get("semester_akademik", "") for r in rows if r.get("semester_akademik")), reverse=True)
     return ok(semesters)
 
@@ -89,8 +123,9 @@ def rekap_nilai(
     kelas_id: str = Query(""),
     authorization: str = Header(default="dev"),
 ):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     rows = [n for n in read_all("nilai") if not n.get("deleted_at")]
+    rows = _scope_rows_nilai(rows, user)
     if semester_akademik:
         rows = [r for r in rows if r.get("semester_akademik") == semester_akademik]
     if kelas_id:
@@ -116,7 +151,14 @@ def get_khs(
     semester_akademik: str = Query(...),
     authorization: str = Header(default="dev"),
 ):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
+
+    # Mahasiswa hanya bisa lihat KHS dirinya sendiri
+    if user.get("role") == "mahasiswa":
+        mhs_own = get_mahasiswa_for_user(user)
+        if not mhs_own or mhs_own["id"] != mahasiswa_id:
+            raise HTTPException(403, "Akses ditolak")
+
     mhs = find_by_id("mahasiswa", mahasiswa_id)
     if not mhs:
         raise HTTPException(404, "Mahasiswa tidak ditemukan")
@@ -141,7 +183,14 @@ def get_transkrip(
     mahasiswa_id: str = Query(...),
     authorization: str = Header(default="dev"),
 ):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
+
+    # Mahasiswa hanya bisa lihat transkrip dirinya sendiri
+    if user.get("role") == "mahasiswa":
+        mhs_own = get_mahasiswa_for_user(user)
+        if not mhs_own or mhs_own["id"] != mahasiswa_id:
+            raise HTTPException(403, "Akses ditolak")
+
     mhs = find_by_id("mahasiswa", mahasiswa_id)
     if not mhs:
         raise HTTPException(404, "Mahasiswa tidak ditemukan")
@@ -170,10 +219,25 @@ def get_transkrip(
 # ── GET detail ─────────────────────────────────────────────────
 @router.get("/{nilai_id}")
 def get_nilai(nilai_id: str, authorization: str = Header(default="dev")):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     n = find_by_id("nilai", nilai_id)
     if not n or n.get("deleted_at"):
         raise HTTPException(404, "Nilai tidak ditemukan")
+
+    role = user.get("role")
+    if role == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        if not mhs or n.get("mahasiswa_id") != mhs["id"]:
+            raise HTTPException(403, "Akses ditolak")
+    elif role == "dosen":
+        dosen = get_dosen_for_user(user)
+        if dosen:
+            kelas_ids = get_kelas_ids_untuk_dosen(dosen["id"])
+            if n.get("kelas_id") not in kelas_ids:
+                raise HTTPException(403, "Akses ditolak")
+        else:
+            raise HTTPException(403, "Akses ditolak")
+
     return ok(n)
 
 # ── POST input nilai ───────────────────────────────────────────
@@ -197,7 +261,9 @@ def input_nilai(body: NilaiInput, authorization: str = Header(default="dev")):
     if krs.get("status") != "disetujui":
         raise HTTPException(400, f"KRS berstatus '{krs.get('status')}' — nilai hanya bisa diinput untuk KRS yang disetujui")
 
-    # Validate component values
+    # Dosen hanya bisa input nilai untuk kelas yang diampu
+    _assert_dosen_owns_kelas(user, krs.get("kelas_id", ""))
+
     for field, val in [("UTS", body.nilai_uts), ("UAS", body.nilai_uas), ("Tugas", body.nilai_tugas)]:
         if not (0 <= val <= 100):
             raise HTTPException(400, f"Nilai {field} harus antara 0–100")
@@ -205,14 +271,12 @@ def input_nilai(body: NilaiInput, authorization: str = Header(default="dev")):
     if abs(body.bobot_uts + body.bobot_uas + body.bobot_tugas - 1.0) > 0.001:
         raise HTTPException(400, "Total bobot harus 1.0 (100%)")
 
-    # Check existing nilai for this KRS
     all_nilai = read_all("nilai")
     existing = next((n for n in all_nilai
                      if n.get("krs_id") == body.krs_id and not n.get("deleted_at")), None)
     if existing:
         if existing.get("locked"):
             raise HTTPException(400, "Nilai sudah dikunci — gunakan alur koreksi untuk mengubah")
-        # Update existing draft
         akhir = _calc_akhir(body.nilai_uts, body.nilai_uas, body.nilai_tugas,
                              body.bobot_uts, body.bobot_uas, body.bobot_tugas)
         huruf, bobot = _to_huruf(akhir)
@@ -228,9 +292,7 @@ def input_nilai(body: NilaiInput, authorization: str = Header(default="dev")):
         })
         return ok(updated, "Nilai berhasil diperbarui")
 
-    # Enrich from KRS
     kelas = find_by_id("kelas", krs.get("kelas_id", ""))
-
     akhir = _calc_akhir(body.nilai_uts, body.nilai_uas, body.nilai_tugas,
                         body.bobot_uts, body.bobot_uas, body.bobot_tugas)
     huruf, bobot = _to_huruf(akhir)
@@ -278,6 +340,8 @@ def update_nilai(nilai_id: str, body: NilaiUpdate, authorization: str = Header(d
     if n.get("locked"):
         raise HTTPException(400, "Nilai sudah dikunci — gunakan alur koreksi untuk mengubah")
 
+    _assert_dosen_owns_kelas(user, n.get("kelas_id", ""))
+
     uts   = body.nilai_uts   if body.nilai_uts   is not None else n.get("nilai_uts", 0)
     uas   = body.nilai_uas   if body.nilai_uas   is not None else n.get("nilai_uas", 0)
     tugas = body.nilai_tugas if body.nilai_tugas is not None else n.get("nilai_tugas", 0)
@@ -305,6 +369,9 @@ def kunci_nilai(nilai_id: str, authorization: str = Header(default="dev")):
         raise HTTPException(404, "Nilai tidak ditemukan")
     if n.get("locked"):
         raise HTTPException(400, "Nilai sudah terkunci")
+
+    _assert_dosen_owns_kelas(user, n.get("kelas_id", ""))
+
     updated = update("nilai", nilai_id, {
         "locked": True,
         "locked_at": now_iso(),
@@ -322,6 +389,9 @@ class KunciMassalBody(BaseModel):
 def kunci_massal(body: KunciMassalBody, authorization: str = Header(default="dev")):
     user = get_user_from_request(authorization)
     check_role(user, DOSEN)
+
+    _assert_dosen_owns_kelas(user, body.kelas_id)
+
     rows = [n for n in read_all("nilai")
             if not n.get("deleted_at")
             and n.get("kelas_id") == body.kelas_id

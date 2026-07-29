@@ -4,11 +4,15 @@ from typing import Optional
 from datetime import datetime, timezone, timedelta
 import secrets
 from app.utils.db import read_all, find_by_id, insert, update, soft_delete, search_rows, paginate
-from app.utils.dev import get_user_from_request, check_role
+from app.utils.dev import (
+    get_user_from_request, check_role,
+    get_mahasiswa_for_user, get_dosen_for_user, get_kelas_ids_untuk_dosen,
+)
 
 router = APIRouter(prefix="/presensi", tags=["Presensi"])
 
-DOSEN = ["super_admin", "admin_akademik", "kaprodi", "dosen", "staf"]
+ADMIN = ["super_admin", "admin_akademik", "staf"]
+DOSEN_ADMIN = ["super_admin", "admin_akademik", "kaprodi", "dosen", "staf"]
 
 def ok(data=None, message="Berhasil", meta=None):
     return {"success": True, "data": data, "message": message, "meta": meta}
@@ -28,11 +32,62 @@ def _enrich_sesi(s):
             pass
     return {**s, "kelas": kelas, "qr_active": active}
 
+def _assert_dosen_owns_kelas(user: dict, kelas_id: str):
+    """Raise 403 if dosen role and they don't own this kelas."""
+    role = user.get("role")
+    if role in ADMIN or role == "kaprodi":
+        return
+    if role == "dosen":
+        dosen = get_dosen_for_user(user)
+        kelas = find_by_id("kelas", kelas_id)
+        if not dosen or not kelas or kelas.get("dosen_id") != dosen["id"]:
+            raise HTTPException(403, "Anda tidak mengajar kelas ini")
+
+def _kelas_ids_for_user(user: dict) -> set | None:
+    """Return set of kelas_ids the user can see, or None for unrestricted."""
+    role = user.get("role")
+    if role in ADMIN:
+        return None
+    if role == "dosen":
+        dosen = get_dosen_for_user(user)
+        return get_kelas_ids_untuk_dosen(dosen["id"]) if dosen else set()
+    if role == "kaprodi":
+        dosen = get_dosen_for_user(user)
+        if dosen and dosen.get("prodi_id"):
+            return {k["id"] for k in read_all("kelas")
+                    if k.get("program_studi_id") == dosen["prodi_id"] and not k.get("deleted_at")}
+        return None
+    if role == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        if mhs:
+            return {k.get("kelas_id") for k in read_all("krs")
+                    if k.get("mahasiswa_id") == mhs["id"] and k.get("status") == "disetujui"
+                    and not k.get("deleted_at")}
+        return set()
+    return set()
+
 # ── GET rekap (stats) ──────────────────────────────────────────
 @router.get("/rekap")
 def rekap_presensi(authorization: str = Header(default="dev")):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     rows = [p for p in read_all("presensi") if not p.get("deleted_at")]
+
+    role = user.get("role")
+    if role == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        mhs_id = mhs["id"] if mhs else ""
+        rows = [p for p in rows if p.get("mahasiswa_id") == mhs_id]
+    elif role == "dosen":
+        dosen = get_dosen_for_user(user)
+        kelas_ids = get_kelas_ids_untuk_dosen(dosen["id"]) if dosen else set()
+        rows = [p for p in rows if p.get("kelas_id") in kelas_ids]
+    elif role == "kaprodi":
+        dosen = get_dosen_for_user(user)
+        if dosen and dosen.get("prodi_id"):
+            kelas_prodi = {k["id"] for k in read_all("kelas")
+                           if k.get("program_studi_id") == dosen["prodi_id"] and not k.get("deleted_at")}
+            rows = [p for p in rows if p.get("kelas_id") in kelas_prodi]
+
     distribusi: dict[str, int] = {}
     for p in rows:
         s = p.get("status", "?")
@@ -53,14 +108,35 @@ def rekap_kelas(
     mahasiswa_id: str = Query(""),
     authorization: str = Header(default="dev"),
 ):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
+    role = user.get("role")
+
     rows = [p for p in read_all("presensi") if not p.get("deleted_at")]
+
+    if role == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        mhs_id = mhs["id"] if mhs else ""
+        if mahasiswa_id and mahasiswa_id != mhs_id:
+            raise HTTPException(403, "Akses ditolak")
+        rows = [p for p in rows if p.get("mahasiswa_id") == mhs_id]
+    elif role == "dosen":
+        dosen = get_dosen_for_user(user)
+        kelas_ids = get_kelas_ids_untuk_dosen(dosen["id"]) if dosen else set()
+        if kelas_id and kelas_id not in kelas_ids:
+            raise HTTPException(403, "Anda tidak mengajar kelas ini")
+        rows = [p for p in rows if p.get("kelas_id") in kelas_ids]
+    elif role == "kaprodi":
+        dosen = get_dosen_for_user(user)
+        if dosen and dosen.get("prodi_id"):
+            kelas_prodi = {k["id"] for k in read_all("kelas")
+                           if k.get("program_studi_id") == dosen["prodi_id"] and not k.get("deleted_at")}
+            rows = [p for p in rows if p.get("kelas_id") in kelas_prodi]
+
     if kelas_id:
         rows = [r for r in rows if r.get("kelas_id") == kelas_id]
     if mahasiswa_id:
         rows = [r for r in rows if r.get("mahasiswa_id") == mahasiswa_id]
 
-    # Aggregate by mahasiswa
     by_mhs: dict[str, dict] = {}
     for p in rows:
         mid = p.get("mahasiswa_id", "")
@@ -93,10 +169,18 @@ def list_sesi(
     per_page: int = Query(20, ge=1, le=1000),
     authorization: str = Header(default="dev"),
 ):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     rows = [s for s in read_all("sesi_kuliah") if not s.get("deleted_at")]
+
+    allowed_kelas = _kelas_ids_for_user(user)
+    if allowed_kelas is not None:
+        rows = [r for r in rows if r.get("kelas_id") in allowed_kelas]
+
     if kelas_id:
+        if allowed_kelas is not None and kelas_id not in allowed_kelas:
+            raise HTTPException(403, "Akses ditolak untuk kelas ini")
         rows = [r for r in rows if r.get("kelas_id") == kelas_id]
+
     rows.sort(key=lambda r: (r.get("tanggal", ""), r.get("pertemuan_ke", 0)), reverse=True)
     items, meta = paginate(rows, page, per_page)
     enriched = [_enrich_sesi(s) for s in items]
@@ -105,11 +189,15 @@ def list_sesi(
 # ── GET sesi detail ────────────────────────────────────────────
 @router.get("/sesi/{sesi_id}")
 def get_sesi(sesi_id: str, authorization: str = Header(default="dev")):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     s = find_by_id("sesi_kuliah", sesi_id)
     if not s or s.get("deleted_at"):
         raise HTTPException(404, "Sesi tidak ditemukan")
-    # Count presensi for this sesi
+
+    allowed_kelas = _kelas_ids_for_user(user)
+    if allowed_kelas is not None and s.get("kelas_id") not in allowed_kelas:
+        raise HTTPException(403, "Akses ditolak")
+
     prs = [p for p in read_all("presensi") if p.get("sesi_id") == sesi_id and not p.get("deleted_at")]
     return ok({**_enrich_sesi(s), "presensi_count": len(prs), "presensi": prs})
 
@@ -123,13 +211,13 @@ class SesiCreate(BaseModel):
 @router.post("/sesi")
 def buat_sesi(body: SesiCreate, authorization: str = Header(default="dev")):
     user = get_user_from_request(authorization)
-    check_role(user, DOSEN)
+    check_role(user, DOSEN_ADMIN)
+    _assert_dosen_owns_kelas(user, body.kelas_id)
 
     kelas = find_by_id("kelas", body.kelas_id)
     if not kelas or kelas.get("deleted_at"):
         raise HTTPException(404, "Kelas tidak ditemukan")
 
-    # Check duplicate pertemuan
     existing = [s for s in read_all("sesi_kuliah")
                 if s.get("kelas_id") == body.kelas_id
                 and s.get("pertemuan_ke") == body.pertemuan_ke
@@ -156,14 +244,15 @@ def buat_sesi(body: SesiCreate, authorization: str = Header(default="dev")):
 @router.post("/sesi/{sesi_id}/mulai")
 def mulai_sesi(sesi_id: str, authorization: str = Header(default="dev")):
     user = get_user_from_request(authorization)
-    check_role(user, DOSEN)
+    check_role(user, DOSEN_ADMIN)
     s = find_by_id("sesi_kuliah", sesi_id)
     if not s or s.get("deleted_at"):
         raise HTTPException(404, "Sesi tidak ditemukan")
+    _assert_dosen_owns_kelas(user, s.get("kelas_id", ""))
     if s.get("status") == "selesai":
         raise HTTPException(400, "Sesi sudah selesai, tidak bisa dimulai kembali")
 
-    token = secrets.token_hex(8)  # 16 hex chars
+    token = secrets.token_hex(8)
     expires = (datetime.now(timezone.utc) + timedelta(minutes=15)).isoformat()
     updated = update("sesi_kuliah", sesi_id, {
         "status":        "aktif",
@@ -177,10 +266,11 @@ def mulai_sesi(sesi_id: str, authorization: str = Header(default="dev")):
 @router.post("/sesi/{sesi_id}/perpanjang")
 def perpanjang_qr(sesi_id: str, authorization: str = Header(default="dev")):
     user = get_user_from_request(authorization)
-    check_role(user, DOSEN)
+    check_role(user, DOSEN_ADMIN)
     s = find_by_id("sesi_kuliah", sesi_id)
     if not s or s.get("deleted_at"):
         raise HTTPException(404, "Sesi tidak ditemukan")
+    _assert_dosen_owns_kelas(user, s.get("kelas_id", ""))
     if s.get("status") != "aktif":
         raise HTTPException(400, "Sesi tidak aktif")
 
@@ -193,12 +283,12 @@ def perpanjang_qr(sesi_id: str, authorization: str = Header(default="dev")):
 @router.post("/sesi/{sesi_id}/selesai")
 def selesai_sesi(sesi_id: str, authorization: str = Header(default="dev")):
     user = get_user_from_request(authorization)
-    check_role(user, DOSEN)
+    check_role(user, DOSEN_ADMIN)
     s = find_by_id("sesi_kuliah", sesi_id)
     if not s or s.get("deleted_at"):
         raise HTTPException(404, "Sesi tidak ditemukan")
+    _assert_dosen_owns_kelas(user, s.get("kelas_id", ""))
 
-    # Auto-mark alpha for KRS students who didn't attend
     kelas_id = s.get("kelas_id", "")
     krs_list = [k for k in read_all("krs")
                 if k.get("kelas_id") == kelas_id
@@ -238,9 +328,14 @@ class ScanBody(BaseModel):
 
 @router.post("/scan")
 def scan_presensi(body: ScanBody, authorization: str = Header(default="dev")):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
 
-    # Find active sesi with this token
+    # Mahasiswa hanya bisa scan untuk dirinya sendiri
+    if user.get("role") == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        if not mhs or mhs["id"] != body.mahasiswa_id:
+            raise HTTPException(403, "Mahasiswa hanya bisa scan untuk dirinya sendiri")
+
     sesi = next((s for s in read_all("sesi_kuliah")
                  if s.get("qr_token") == body.qr_token
                  and s.get("status") == "aktif"
@@ -248,7 +343,6 @@ def scan_presensi(body: ScanBody, authorization: str = Header(default="dev")):
     if not sesi:
         raise HTTPException(400, "Token tidak valid atau sesi tidak aktif")
 
-    # Check QR not expired
     if sesi.get("qr_expires_at"):
         try:
             exp = datetime.fromisoformat(sesi["qr_expires_at"].replace("Z", "+00:00"))
@@ -259,7 +353,6 @@ def scan_presensi(body: ScanBody, authorization: str = Header(default="dev")):
         except Exception:
             pass
 
-    # Check mahasiswa is enrolled in kelas
     kelas_id = sesi.get("kelas_id", "")
     enrolled = any(k for k in read_all("krs")
                    if k.get("mahasiswa_id") == body.mahasiswa_id
@@ -269,7 +362,6 @@ def scan_presensi(body: ScanBody, authorization: str = Header(default="dev")):
     if not enrolled:
         raise HTTPException(400, "Mahasiswa tidak terdaftar di kelas ini")
 
-    # Check duplicate scan
     sesi_id = sesi.get("id")
     dup = any(p for p in read_all("presensi")
               if p.get("sesi_id") == sesi_id
@@ -295,13 +387,13 @@ def scan_presensi(body: ScanBody, authorization: str = Header(default="dev")):
 class ManualBody(BaseModel):
     sesi_id: str
     mahasiswa_id: str
-    status: str       # hadir | izin | sakit | alpha
+    status: str
     keterangan: Optional[str] = None
 
 @router.post("/manual")
 def input_manual(body: ManualBody, authorization: str = Header(default="dev")):
     user = get_user_from_request(authorization)
-    check_role(user, DOSEN)
+    check_role(user, DOSEN_ADMIN)
 
     if body.status not in ("hadir", "izin", "sakit", "alpha"):
         raise HTTPException(400, "Status tidak valid")
@@ -310,12 +402,13 @@ def input_manual(body: ManualBody, authorization: str = Header(default="dev")):
     if not sesi or sesi.get("deleted_at"):
         raise HTTPException(404, "Sesi tidak ditemukan")
 
+    _assert_dosen_owns_kelas(user, sesi.get("kelas_id", ""))
+
     kelas_id = sesi.get("kelas_id", "")
     mhs = find_by_id("mahasiswa", body.mahasiswa_id)
     if not mhs:
         raise HTTPException(404, "Mahasiswa tidak ditemukan")
 
-    # Upsert — update if exists, insert if not
     all_prs = read_all("presensi")
     existing = next((p for p in all_prs
                      if p.get("sesi_id") == body.sesi_id
@@ -348,12 +441,13 @@ class UpdateBody(BaseModel):
 @router.put("/{presensi_id}")
 def update_presensi(presensi_id: str, body: UpdateBody, authorization: str = Header(default="dev")):
     user = get_user_from_request(authorization)
-    check_role(user, DOSEN)
+    check_role(user, DOSEN_ADMIN)
     if body.status not in ("hadir", "izin", "sakit", "alpha"):
         raise HTTPException(400, "Status tidak valid")
     p = find_by_id("presensi", presensi_id)
     if not p or p.get("deleted_at"):
         raise HTTPException(404, "Presensi tidak ditemukan")
+    _assert_dosen_owns_kelas(user, p.get("kelas_id", ""))
     updated = update("presensi", presensi_id, {
         "status": body.status,
         "keterangan": body.keterangan,
@@ -371,8 +465,17 @@ def list_presensi(
     sesi_id: str = Query(""),
     authorization: str = Header(default="dev"),
 ):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     rows = [p for p in read_all("presensi") if not p.get("deleted_at")]
+
+    allowed_kelas = _kelas_ids_for_user(user)
+    if allowed_kelas is not None:
+        rows = [p for p in rows if p.get("kelas_id") in allowed_kelas]
+    if user.get("role") == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        mhs_id = mhs["id"] if mhs else ""
+        rows = [p for p in rows if p.get("mahasiswa_id") == mhs_id]
+
     rows = search_rows(rows, ["mahasiswa_nama", "mahasiswa_nim"], search)
     if status:
         rows = [r for r in rows if r.get("status") == status]
@@ -387,8 +490,11 @@ def list_presensi(
 # ── GET kelas list (helper for filter dropdowns) ───────────────
 @router.get("/kelas")
 def list_kelas(authorization: str = Header(default="dev")):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
     rows = [k for k in read_all("kelas") if not k.get("deleted_at")]
+    allowed_kelas = _kelas_ids_for_user(user)
+    if allowed_kelas is not None:
+        rows = [k for k in rows if k["id"] in allowed_kelas]
     rows.sort(key=lambda r: r.get("mata_kuliah_nama", ""))
     return ok(rows)
 

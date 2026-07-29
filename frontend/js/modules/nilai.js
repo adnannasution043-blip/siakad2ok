@@ -116,6 +116,13 @@ const NilaiModule = (() => {
           </svg>
           Input Nilai
         </button>
+        <button onclick="NilaiModule.cetakNilai()"
+          class="px-4 py-2 border border-slate-300 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-slate-50 text-slate-700 whitespace-nowrap">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+          </svg>
+          Cetak Nilai
+        </button>
       </div>
 
       ${UI.card(`
@@ -492,6 +499,96 @@ const NilaiModule = (() => {
     }
   }
 
+  // ── CETAK NILAI ────────────────────────────────────────────
+  const cetakNilai = async () => {
+    if (!state.list.length) return UI.toast('Tidak ada data nilai untuk dicetak', 'warning')
+    const tgl = new Date().toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' })
+    const semLabel = state.semester_akademik || 'Semua Semester'
+    const hurufLabel = state.nilai_huruf ? ` — Nilai ${state.nilai_huruf}` : ''
+    const nilaiColor = (h) => {
+      if (h==='A') return '#16a34a'
+      if (h==='B+'||h==='B') return '#2563eb'
+      if (h==='C+'||h==='C') return '#d97706'
+      if (h==='D') return '#ea580c'
+      return '#dc2626'
+    }
+    const rows = state.list.map((n, i) => {
+      const uts   = typeof n.nilai_uts   === 'number' ? n.nilai_uts.toFixed(1)   : '—'
+      const uas   = typeof n.nilai_uas   === 'number' ? n.nilai_uas.toFixed(1)   : '—'
+      const tugas = typeof n.nilai_tugas === 'number' ? n.nilai_tugas.toFixed(1) : '—'
+      const akhir = typeof n.nilai_akhir === 'number' ? n.nilai_akhir.toFixed(2) : '—'
+      const huruf = n.nilai_huruf || '—'
+      const color = n.nilai_huruf ? nilaiColor(n.nilai_huruf) : '#64748b'
+      return `
+        <tr>
+          <td class="c">${i+1}</td>
+          <td class="c small">${n.mahasiswa_nim||'—'}</td>
+          <td>${n.mahasiswa_nama||'—'}</td>
+          <td>${n.mata_kuliah_nama||'—'}</td>
+          <td class="c">${n.semester_akademik||'—'}</td>
+          <td class="c">${uts}</td>
+          <td class="c">${uas}</td>
+          <td class="c">${tugas}</td>
+          <td class="c"><b>${akhir}</b></td>
+          <td class="c" style="color:${color};font-weight:bold">${huruf}</td>
+          <td class="c small">${n.locked?'Terkunci':'Draft'}</td>
+        </tr>`
+    }).join('')
+    const w = window.open('', '_blank', 'width=1100,height=720')
+    if (!w) return UI.toast('Izinkan popup di browser untuk mencetak', 'warning')
+    w.document.write(`<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Daftar Nilai</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;font-size:10pt;color:#000;padding:12mm 15mm}
+@media print{body{padding:0}@page{size:A4 landscape;margin:10mm 12mm}}
+h1{font-size:13pt;text-align:center;text-transform:uppercase;margin-bottom:3px}
+h2{font-size:10pt;text-align:center;font-weight:normal;margin-bottom:8px}
+hr.thick{border:0;border-top:2px solid #000;margin:5px 0 8px}
+.info{display:flex;gap:30px;margin-bottom:8px;font-size:9.5pt}
+.info span{display:block}
+table{width:100%;border-collapse:collapse;font-size:8.5pt}
+th{background:#ddd;border:1px solid #666;padding:3px 5px;text-align:left;font-weight:bold}
+td{border:1px solid #999;padding:2px 5px}
+tr:nth-child(even) td{background:#f5f5f5}
+.c{text-align:center}.small{font-size:8pt;color:#555}
+.footer{margin-top:24px;display:flex;justify-content:flex-end}
+.ttd{text-align:center;min-width:180px}
+.ttd .line{margin-top:55px;border-top:1px solid #000;padding-top:2px;font-size:9pt}
+</style></head><body>
+<h2>DAFTAR NILAI AKADEMIK</h2>
+<h1>SIAKAD — Sistem Informasi Akademik</h1>
+<hr class="thick">
+<div class="info">
+  <span><b>Semester</b>: ${semLabel}${hurufLabel}</span>
+  <span><b>Jumlah Data</b>: ${state.list.length} mahasiswa</span>
+  <span><b>Tanggal Cetak</b>: ${tgl}</span>
+</div>
+<table>
+  <thead><tr>
+    <th class="c" style="width:28px">No</th>
+    <th class="c" style="width:80px">NIM</th>
+    <th style="width:140px">Nama Mahasiswa</th>
+    <th style="width:140px">Mata Kuliah</th>
+    <th class="c" style="width:80px">Semester</th>
+    <th class="c" style="width:40px">UTS</th>
+    <th class="c" style="width:40px">UAS</th>
+    <th class="c" style="width:45px">Tugas</th>
+    <th class="c" style="width:50px">Akhir</th>
+    <th class="c" style="width:40px">Huruf</th>
+    <th class="c" style="width:55px">Status</th>
+  </tr></thead>
+  <tbody>${rows}</tbody>
+</table>
+<div class="footer"><div class="ttd">
+  <div>Dosen / Admin Akademik,</div>
+  <div class="line">___________________________</div>
+</div></div>
+<script>setTimeout(()=>window.print(),400)</script>
+</body></html>`)
+    w.document.close()
+  }
+
   // ── FILTER / SEARCH / PAGINATION ───────────────────────────
   let searchTimer = null
   const onSearch = (val) => {
@@ -511,5 +608,6 @@ const NilaiModule = (() => {
     render, onSearch, onFilter, goPage,
     openInput, openEdit, closeModal, onKrsChange, submitForm, calcPreview,
     kunci, openKoreksi, closeKoreksiModal, submitKoreksi,
+    cetakNilai,
   }
 })()

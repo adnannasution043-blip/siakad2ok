@@ -7,7 +7,10 @@ from app.utils.db import (
     search_rows, filter_rows, paginate, find_one
 )
 from app.utils.security import hash_password
-from app.utils.dev import get_user_from_request, check_role, DEV_MODE
+from app.utils.dev import (
+    get_user_from_request, check_role, DEV_MODE,
+    get_mahasiswa_for_user, get_dosen_for_user, get_kelas_ids_untuk_dosen,
+)
 
 router = APIRouter(prefix="/mahasiswa", tags=["Mahasiswa"])
 
@@ -31,8 +34,32 @@ def list_mahasiswa(
     angkatan: Optional[int] = Query(None),
     authorization: str = Header(default="dev"),
 ):
-    get_user_from_request(authorization)
+    user = get_user_from_request(authorization)
+    role = user.get("role")
+
     rows = [r for r in read_all("mahasiswa") if r.get("deleted_at") is None]
+
+    # Scope by role
+    if role == "mahasiswa":
+        mhs = get_mahasiswa_for_user(user)
+        rows = [mhs] if mhs else []
+    elif role == "dosen":
+        # Dosen hanya lihat mahasiswa di kelas yang diampu
+        dosen = get_dosen_for_user(user)
+        if dosen:
+            kelas_ids = get_kelas_ids_untuk_dosen(dosen["id"])
+            krs_all = [k for k in read_all("krs") if not k.get("deleted_at")]
+            mhs_ids = {k["mahasiswa_id"] for k in krs_all if k.get("kelas_id") in kelas_ids}
+            rows = [r for r in rows if r["id"] in mhs_ids]
+        else:
+            rows = []
+    elif role == "kaprodi":
+        # Kaprodi lihat mahasiswa di prodinya
+        dosen = get_dosen_for_user(user)
+        if dosen and dosen.get("prodi_id"):
+            rows = [r for r in rows if r.get("program_studi_id") == dosen["prodi_id"]]
+    # admin_akademik, super_admin, staf → semua
+
     rows = search_rows(rows, ["nama_lengkap", "nim", "email"], search)
     rows = filter_rows(rows, status=status, program_studi_id=prodi_id)
     if angkatan:
