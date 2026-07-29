@@ -19,9 +19,10 @@ app = FastAPI(
 @app.on_event("startup")
 def on_startup():
     if os.getenv("DATABASE_URL"):
-        from app.utils.db import init_db, seed_from_json
+        from app.utils.db import init_db, seed_from_json, reseed_users
         init_db()
         seed_from_json()
+        reseed_users()  # always sync user records from JSON (passwords/roles)
 
 app.add_middleware(
     CORSMiddleware,

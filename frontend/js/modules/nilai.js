@@ -57,13 +57,16 @@ const NilaiModule = (() => {
   }
 
   const fetchList = async () => {
-    const res = await API.get('/nilai', {
+    const params = {
       page: state.page, per_page: 20,
       search: state.search,
       semester_akademik: state.semester_akademik,
       nilai_huruf: state.nilai_huruf,
       locked: state.locked,
-    })
+    }
+    if (Auth.hasRole('mahasiswa'))     params.mahasiswa_id = Auth.getEntityId() || ''
+    else if (Auth.hasRole('dosen'))    params.dosen_id     = Auth.getEntityId() || ''
+    const res = await API.get('/nilai', params)
     state.list = res.data
     state.meta = res.meta
     renderTable()

@@ -2,7 +2,7 @@
   {
     "id": "usr-001",
     "email": "admin@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$0P5Eak4v.Djpa0mZhuRhbujHexWUKpFA1a2BuglF5dPjJkCBW3Sf6",
     "role": "super_admin",
     "nama": "Administrator",
     "is_active": true,
@@ -13,7 +13,7 @@
   {
     "id": "usr-002",
     "email": "akademik@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "admin_akademik",
     "nama": "Admin Akademik",
     "is_active": true,
@@ -24,7 +24,7 @@
   {
     "id": "usr-003",
     "email": "keuangan@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "admin_keuangan",
     "nama": "Admin Keuangan",
     "is_active": true,
@@ -35,7 +35,7 @@
   {
     "id": "usr-004",
     "email": "kaprodi@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "kaprodi",
     "nama": "Kaprodi TI",
     "is_active": true,
@@ -46,7 +46,7 @@
   {
     "id": "usr-005",
     "email": "lppm@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "lppm",
     "nama": "Admin LPPM",
     "is_active": true,
@@ -57,7 +57,7 @@
   {
     "id": "usr-dosen-001",
     "email": "dosen1@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Andi Wijaya, M.Kom",
     "is_active": true,
@@ -68,7 +68,7 @@
   {
     "id": "usr-dosen-002",
     "email": "dosen2@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Budi Santoso, M.T",
     "is_active": true,
@@ -79,7 +79,7 @@
   {
     "id": "usr-dosen-003",
     "email": "dosen3@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Citra Dewi, M.Cs",
     "is_active": true,
@@ -90,7 +90,7 @@
   {
     "id": "usr-dosen-004",
     "email": "dosen4@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Dian Prasetyo, M.Kom",
     "is_active": true,
@@ -101,7 +101,7 @@
   {
     "id": "usr-dosen-005",
     "email": "dosen5@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Eko Susanto, M.T",
     "is_active": true,
@@ -112,7 +112,7 @@
   {
     "id": "usr-dosen-006",
     "email": "dosen6@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Fitri Handayani, M.Kom",
     "is_active": true,
@@ -123,7 +123,7 @@
   {
     "id": "usr-dosen-007",
     "email": "dosen7@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Gunawan Hadi, M.T",
     "is_active": true,
@@ -134,7 +134,7 @@
   {
     "id": "usr-dosen-008",
     "email": "dosen8@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Hesti Rahayu, M.Pd",
     "is_active": true,
@@ -145,7 +145,7 @@
   {
     "id": "usr-dosen-009",
     "email": "dosen9@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "M. Irfan Maulana, M.Kom",
     "is_active": true,
@@ -156,7 +156,7 @@
   {
     "id": "usr-dosen-010",
     "email": "dosen10@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Joko Wibowo, M.T",
     "is_active": true,
@@ -167,7 +167,7 @@
   {
     "id": "usr-dosen-011",
     "email": "dosen11@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Kartika Sari, M.Kom",
     "is_active": true,
@@ -178,7 +178,7 @@
   {
     "id": "usr-dosen-012",
     "email": "dosen12@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Luki Hartono, M.T",
     "is_active": true,
@@ -189,7 +189,7 @@
   {
     "id": "usr-dosen-013",
     "email": "dosen13@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Maya Kusuma, M.Kom",
     "is_active": true,
@@ -200,7 +200,7 @@
   {
     "id": "usr-dosen-014",
     "email": "dosen14@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Nanda Permata, M.T",
     "is_active": true,
@@ -211,7 +211,7 @@
   {
     "id": "usr-dosen-015",
     "email": "dosen15@siakad.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "dosen",
     "nama": "Dr. Oscar Pratama, M.Kom",
     "is_active": true,
@@ -222,7 +222,7 @@
   {
     "id": "usr-mhs-0001",
     "email": "tiara1@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Tiara Agustina",
     "is_active": true,
@@ -233,7 +233,7 @@
   {
     "id": "usr-mhs-0002",
     "email": "gilang2@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gilang Ramadhan",
     "is_active": true,
@@ -244,7 +244,7 @@
   {
     "id": "usr-mhs-0003",
     "email": "hendra3@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hendra Gunawan",
     "is_active": true,
@@ -255,7 +255,7 @@
   {
     "id": "usr-mhs-0004",
     "email": "putri4@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Putri Cantika",
     "is_active": true,
@@ -266,7 +266,7 @@
   {
     "id": "usr-mhs-0005",
     "email": "eka5@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eka Wulandari",
     "is_active": true,
@@ -277,7 +277,7 @@
   {
     "id": "usr-mhs-0006",
     "email": "tiara6@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Tiara Agustina",
     "is_active": true,
@@ -288,7 +288,7 @@
   {
     "id": "usr-mhs-0007",
     "email": "maya7@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Maya Anggraini",
     "is_active": true,
@@ -299,7 +299,7 @@
   {
     "id": "usr-mhs-0008",
     "email": "putri8@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Putri Cantika",
     "is_active": true,
@@ -310,7 +310,7 @@
   {
     "id": "usr-mhs-0009",
     "email": "dani9@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dani Kurniawan",
     "is_active": true,
@@ -321,7 +321,7 @@
   {
     "id": "usr-mhs-0010",
     "email": "dimas10@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dimas Aditya",
     "is_active": true,
@@ -332,7 +332,7 @@
   {
     "id": "usr-mhs-0011",
     "email": "indah11@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -343,7 +343,7 @@
   {
     "id": "usr-mhs-0012",
     "email": "hadi12@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hadi Prasetyo",
     "is_active": true,
@@ -354,7 +354,7 @@
   {
     "id": "usr-mhs-0013",
     "email": "maya13@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Maya Anggraini",
     "is_active": true,
@@ -365,7 +365,7 @@
   {
     "id": "usr-mhs-0014",
     "email": "julia14@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Julia Maharani",
     "is_active": true,
@@ -376,7 +376,7 @@
   {
     "id": "usr-mhs-0015",
     "email": "julia15@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Julia Maharani",
     "is_active": true,
@@ -387,7 +387,7 @@
   {
     "id": "usr-mhs-0016",
     "email": "tiara16@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Tiara Agustina",
     "is_active": true,
@@ -398,7 +398,7 @@
   {
     "id": "usr-mhs-0017",
     "email": "gita17@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gita Nirmala",
     "is_active": true,
@@ -409,7 +409,7 @@
   {
     "id": "usr-mhs-0018",
     "email": "cahyo18@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cahyo Prabowo",
     "is_active": true,
@@ -420,7 +420,7 @@
   {
     "id": "usr-mhs-0019",
     "email": "vicky19@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vicky Sanjaya",
     "is_active": true,
@@ -431,7 +431,7 @@
   {
     "id": "usr-mhs-0020",
     "email": "fikri20@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fikri Maulana",
     "is_active": true,
@@ -442,7 +442,7 @@
   {
     "id": "usr-mhs-0021",
     "email": "joko21@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Joko Widodo",
     "is_active": true,
@@ -453,7 +453,7 @@
   {
     "id": "usr-mhs-0022",
     "email": "cahyo22@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cahyo Prabowo",
     "is_active": true,
@@ -464,7 +464,7 @@
   {
     "id": "usr-mhs-0023",
     "email": "fani23@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fani Rahayu",
     "is_active": true,
@@ -475,7 +475,7 @@
   {
     "id": "usr-mhs-0024",
     "email": "prayogi24@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Prayogi Saputra",
     "is_active": true,
@@ -486,7 +486,7 @@
   {
     "id": "usr-mhs-0025",
     "email": "dimas25@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dimas Aditya",
     "is_active": true,
@@ -497,7 +497,7 @@
   {
     "id": "usr-mhs-0026",
     "email": "surya26@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Surya Dharma",
     "is_active": true,
@@ -508,7 +508,7 @@
   {
     "id": "usr-mhs-0027",
     "email": "cahyo27@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cahyo Prabowo",
     "is_active": true,
@@ -519,7 +519,7 @@
   {
     "id": "usr-mhs-0028",
     "email": "maya28@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Maya Anggraini",
     "is_active": true,
@@ -530,7 +530,7 @@
   {
     "id": "usr-mhs-0029",
     "email": "vicky29@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vicky Sanjaya",
     "is_active": true,
@@ -541,7 +541,7 @@
   {
     "id": "usr-mhs-0030",
     "email": "umar30@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Umar Farhan",
     "is_active": true,
@@ -552,7 +552,7 @@
   {
     "id": "usr-mhs-0031",
     "email": "putri31@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Putri Cantika",
     "is_active": true,
@@ -563,7 +563,7 @@
   {
     "id": "usr-mhs-0032",
     "email": "nanda32@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Nanda Putra",
     "is_active": true,
@@ -574,7 +574,7 @@
   {
     "id": "usr-mhs-0033",
     "email": "ulfa33@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ulfa Khoiriyah",
     "is_active": true,
@@ -585,7 +585,7 @@
   {
     "id": "usr-mhs-0034",
     "email": "laila34@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Laila Nurjanah",
     "is_active": true,
@@ -596,7 +596,7 @@
   {
     "id": "usr-mhs-0035",
     "email": "putri35@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Putri Cantika",
     "is_active": true,
@@ -607,7 +607,7 @@
   {
     "id": "usr-mhs-0036",
     "email": "olivia36@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Olivia Sari",
     "is_active": true,
@@ -618,7 +618,7 @@
   {
     "id": "usr-mhs-0037",
     "email": "gilang37@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gilang Ramadhan",
     "is_active": true,
@@ -629,7 +629,7 @@
   {
     "id": "usr-mhs-0038",
     "email": "kartika38@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kartika Putri",
     "is_active": true,
@@ -640,7 +640,7 @@
   {
     "id": "usr-mhs-0039",
     "email": "indah39@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -651,7 +651,7 @@
   {
     "id": "usr-mhs-0040",
     "email": "hendra40@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hendra Gunawan",
     "is_active": true,
@@ -662,7 +662,7 @@
   {
     "id": "usr-mhs-0041",
     "email": "indah41@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -673,7 +673,7 @@
   {
     "id": "usr-mhs-0042",
     "email": "kartika42@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kartika Putri",
     "is_active": true,
@@ -684,7 +684,7 @@
   {
     "id": "usr-mhs-0043",
     "email": "nanda43@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Nanda Putra",
     "is_active": true,
@@ -695,7 +695,7 @@
   {
     "id": "usr-mhs-0044",
     "email": "ayu44@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ayu Lestari",
     "is_active": true,
@@ -706,7 +706,7 @@
   {
     "id": "usr-mhs-0045",
     "email": "rina45@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rina Marlina",
     "is_active": true,
@@ -717,7 +717,7 @@
   {
     "id": "usr-mhs-0046",
     "email": "kartika46@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kartika Putri",
     "is_active": true,
@@ -728,7 +728,7 @@
   {
     "id": "usr-mhs-0047",
     "email": "gilang47@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gilang Ramadhan",
     "is_active": true,
@@ -739,7 +739,7 @@
   {
     "id": "usr-mhs-0048",
     "email": "vicky48@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vicky Sanjaya",
     "is_active": true,
@@ -750,7 +750,7 @@
   {
     "id": "usr-mhs-0049",
     "email": "ulfa49@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ulfa Khoiriyah",
     "is_active": true,
@@ -761,7 +761,7 @@
   {
     "id": "usr-mhs-0050",
     "email": "maya50@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Maya Anggraini",
     "is_active": true,
@@ -772,7 +772,7 @@
   {
     "id": "usr-mhs-0051",
     "email": "diana51@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Diana Puspita",
     "is_active": true,
@@ -783,7 +783,7 @@
   {
     "id": "usr-mhs-0052",
     "email": "yusuf52@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yusuf Rahman",
     "is_active": true,
@@ -794,7 +794,7 @@
   {
     "id": "usr-mhs-0053",
     "email": "luthfi53@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Luthfi Hakim",
     "is_active": true,
@@ -805,7 +805,7 @@
   {
     "id": "usr-mhs-0054",
     "email": "prayogi54@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Prayogi Saputra",
     "is_active": true,
@@ -816,7 +816,7 @@
   {
     "id": "usr-mhs-0055",
     "email": "zahra55@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zahra Nabila",
     "is_active": true,
@@ -827,7 +827,7 @@
   {
     "id": "usr-mhs-0056",
     "email": "yusuf56@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yusuf Rahman",
     "is_active": true,
@@ -838,7 +838,7 @@
   {
     "id": "usr-mhs-0057",
     "email": "muhammad57@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Muhammad Rizki",
     "is_active": true,
@@ -849,7 +849,7 @@
   {
     "id": "usr-mhs-0058",
     "email": "wulan58@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wulan Dari",
     "is_active": true,
@@ -860,7 +860,7 @@
   {
     "id": "usr-mhs-0059",
     "email": "ani59@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ani Rahayu",
     "is_active": true,
@@ -871,7 +871,7 @@
   {
     "id": "usr-mhs-0060",
     "email": "wahyu60@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wahyu Nugroho",
     "is_active": true,
@@ -882,7 +882,7 @@
   {
     "id": "usr-mhs-0061",
     "email": "gita61@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gita Nirmala",
     "is_active": true,
@@ -893,7 +893,7 @@
   {
     "id": "usr-mhs-0062",
     "email": "zahra62@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zahra Nabila",
     "is_active": true,
@@ -904,7 +904,7 @@
   {
     "id": "usr-mhs-0063",
     "email": "fitri63@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fitri Amalia",
     "is_active": true,
@@ -915,7 +915,7 @@
   {
     "id": "usr-mhs-0064",
     "email": "fitri64@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fitri Amalia",
     "is_active": true,
@@ -926,7 +926,7 @@
   {
     "id": "usr-mhs-0065",
     "email": "fani65@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fani Rahayu",
     "is_active": true,
@@ -937,7 +937,7 @@
   {
     "id": "usr-mhs-0066",
     "email": "vina66@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vina Permata",
     "is_active": true,
@@ -948,7 +948,7 @@
   {
     "id": "usr-mhs-0067",
     "email": "ayu67@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ayu Lestari",
     "is_active": true,
@@ -959,7 +959,7 @@
   {
     "id": "usr-mhs-0068",
     "email": "tiara68@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Tiara Agustina",
     "is_active": true,
@@ -970,7 +970,7 @@
   {
     "id": "usr-mhs-0069",
     "email": "sari69@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Sari Dewi",
     "is_active": true,
@@ -981,7 +981,7 @@
   {
     "id": "usr-mhs-0070",
     "email": "gita70@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gita Nirmala",
     "is_active": true,
@@ -992,7 +992,7 @@
   {
     "id": "usr-mhs-0071",
     "email": "kevin71@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kevin Pratama",
     "is_active": true,
@@ -1003,7 +1003,7 @@
   {
     "id": "usr-mhs-0072",
     "email": "gilang72@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gilang Ramadhan",
     "is_active": true,
@@ -1014,7 +1014,7 @@
   {
     "id": "usr-mhs-0073",
     "email": "vina73@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vina Permata",
     "is_active": true,
@@ -1025,7 +1025,7 @@
   {
     "id": "usr-mhs-0074",
     "email": "yuni74@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yuni Astuti",
     "is_active": true,
@@ -1036,7 +1036,7 @@
   {
     "id": "usr-mhs-0075",
     "email": "ahmad75@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ahmad Fauzi",
     "is_active": true,
@@ -1047,7 +1047,7 @@
   {
     "id": "usr-mhs-0076",
     "email": "julia76@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Julia Maharani",
     "is_active": true,
@@ -1058,7 +1058,7 @@
   {
     "id": "usr-mhs-0077",
     "email": "clara77@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Clara Monica",
     "is_active": true,
@@ -1069,7 +1069,7 @@
   {
     "id": "usr-mhs-0078",
     "email": "wulan78@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wulan Dari",
     "is_active": true,
@@ -1080,7 +1080,7 @@
   {
     "id": "usr-mhs-0079",
     "email": "ivan79@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ivan Setiawan",
     "is_active": true,
@@ -1091,7 +1091,7 @@
   {
     "id": "usr-mhs-0080",
     "email": "zahra80@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zahra Nabila",
     "is_active": true,
@@ -1102,7 +1102,7 @@
   {
     "id": "usr-mhs-0081",
     "email": "vina81@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vina Permata",
     "is_active": true,
@@ -1113,7 +1113,7 @@
   {
     "id": "usr-mhs-0082",
     "email": "taufik82@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Taufik Hidayat",
     "is_active": true,
@@ -1124,7 +1124,7 @@
   {
     "id": "usr-mhs-0083",
     "email": "dani83@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dani Kurniawan",
     "is_active": true,
@@ -1135,7 +1135,7 @@
   {
     "id": "usr-mhs-0084",
     "email": "muhammad84@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Muhammad Rizki",
     "is_active": true,
@@ -1146,7 +1146,7 @@
   {
     "id": "usr-mhs-0085",
     "email": "dimas85@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dimas Aditya",
     "is_active": true,
@@ -1157,7 +1157,7 @@
   {
     "id": "usr-mhs-0086",
     "email": "eka86@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eka Wulandari",
     "is_active": true,
@@ -1168,7 +1168,7 @@
   {
     "id": "usr-mhs-0087",
     "email": "yuni87@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yuni Astuti",
     "is_active": true,
@@ -1179,7 +1179,7 @@
   {
     "id": "usr-mhs-0088",
     "email": "zahra88@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zahra Nabila",
     "is_active": true,
@@ -1190,7 +1190,7 @@
   {
     "id": "usr-mhs-0089",
     "email": "hendra89@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hendra Gunawan",
     "is_active": true,
@@ -1201,7 +1201,7 @@
   {
     "id": "usr-mhs-0090",
     "email": "olivia90@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Olivia Sari",
     "is_active": true,
@@ -1212,7 +1212,7 @@
   {
     "id": "usr-mhs-0091",
     "email": "hendra91@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hendra Gunawan",
     "is_active": true,
@@ -1223,7 +1223,7 @@
   {
     "id": "usr-mhs-0092",
     "email": "budi92@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Budi Santoso",
     "is_active": true,
@@ -1234,7 +1234,7 @@
   {
     "id": "usr-mhs-0093",
     "email": "ani93@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ani Rahayu",
     "is_active": true,
@@ -1245,7 +1245,7 @@
   {
     "id": "usr-mhs-0094",
     "email": "olivia94@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Olivia Sari",
     "is_active": true,
@@ -1256,7 +1256,7 @@
   {
     "id": "usr-mhs-0095",
     "email": "olivia95@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Olivia Sari",
     "is_active": true,
@@ -1267,7 +1267,7 @@
   {
     "id": "usr-mhs-0096",
     "email": "zaki96@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zaki Abdullah",
     "is_active": true,
@@ -1278,7 +1278,7 @@
   {
     "id": "usr-mhs-0097",
     "email": "joko97@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Joko Widodo",
     "is_active": true,
@@ -1289,7 +1289,7 @@
   {
     "id": "usr-mhs-0098",
     "email": "tiara98@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Tiara Agustina",
     "is_active": true,
@@ -1300,7 +1300,7 @@
   {
     "id": "usr-mhs-0099",
     "email": "yuni99@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yuni Astuti",
     "is_active": true,
@@ -1311,7 +1311,7 @@
   {
     "id": "usr-mhs-0100",
     "email": "dimas100@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dimas Aditya",
     "is_active": true,
@@ -1322,7 +1322,7 @@
   {
     "id": "usr-mhs-0101",
     "email": "indah101@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -1333,7 +1333,7 @@
   {
     "id": "usr-mhs-0102",
     "email": "yuni102@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yuni Astuti",
     "is_active": true,
@@ -1344,7 +1344,7 @@
   {
     "id": "usr-mhs-0103",
     "email": "fajar103@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fajar Hidayat",
     "is_active": true,
@@ -1355,7 +1355,7 @@
   {
     "id": "usr-mhs-0104",
     "email": "agus104@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Agus Salim",
     "is_active": true,
@@ -1366,7 +1366,7 @@
   {
     "id": "usr-mhs-0105",
     "email": "vicky105@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vicky Sanjaya",
     "is_active": true,
@@ -1377,7 +1377,7 @@
   {
     "id": "usr-mhs-0106",
     "email": "joko106@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Joko Widodo",
     "is_active": true,
@@ -1388,7 +1388,7 @@
   {
     "id": "usr-mhs-0107",
     "email": "sari107@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Sari Dewi",
     "is_active": true,
@@ -1399,7 +1399,7 @@
   {
     "id": "usr-mhs-0108",
     "email": "kartika108@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kartika Putri",
     "is_active": true,
@@ -1410,7 +1410,7 @@
   {
     "id": "usr-mhs-0109",
     "email": "cica109@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cica Handayani",
     "is_active": true,
@@ -1421,7 +1421,7 @@
   {
     "id": "usr-mhs-0110",
     "email": "fajar110@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fajar Hidayat",
     "is_active": true,
@@ -1432,7 +1432,7 @@
   {
     "id": "usr-mhs-0111",
     "email": "vicky111@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vicky Sanjaya",
     "is_active": true,
@@ -1443,7 +1443,7 @@
   {
     "id": "usr-mhs-0112",
     "email": "zahra112@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zahra Nabila",
     "is_active": true,
@@ -1454,7 +1454,7 @@
   {
     "id": "usr-mhs-0113",
     "email": "wulan113@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wulan Dari",
     "is_active": true,
@@ -1465,7 +1465,7 @@
   {
     "id": "usr-mhs-0114",
     "email": "maya114@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Maya Anggraini",
     "is_active": true,
@@ -1476,7 +1476,7 @@
   {
     "id": "usr-mhs-0115",
     "email": "ani115@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ani Rahayu",
     "is_active": true,
@@ -1487,7 +1487,7 @@
   {
     "id": "usr-mhs-0116",
     "email": "julia116@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Julia Maharani",
     "is_active": true,
@@ -1498,7 +1498,7 @@
   {
     "id": "usr-mhs-0117",
     "email": "kartika117@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kartika Putri",
     "is_active": true,
@@ -1509,7 +1509,7 @@
   {
     "id": "usr-mhs-0118",
     "email": "luthfi118@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Luthfi Hakim",
     "is_active": true,
@@ -1520,7 +1520,7 @@
   {
     "id": "usr-mhs-0119",
     "email": "eka119@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eka Wulandari",
     "is_active": true,
@@ -1531,7 +1531,7 @@
   {
     "id": "usr-mhs-0120",
     "email": "bagas120@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bagas Wicaksono",
     "is_active": true,
@@ -1542,7 +1542,7 @@
   {
     "id": "usr-mhs-0121",
     "email": "ayu121@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ayu Lestari",
     "is_active": true,
@@ -1553,7 +1553,7 @@
   {
     "id": "usr-mhs-0122",
     "email": "hana122@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hana Pertiwi",
     "is_active": true,
@@ -1564,7 +1564,7 @@
   {
     "id": "usr-mhs-0123",
     "email": "ulfa123@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ulfa Khoiriyah",
     "is_active": true,
@@ -1575,7 +1575,7 @@
   {
     "id": "usr-mhs-0124",
     "email": "ivan124@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ivan Setiawan",
     "is_active": true,
@@ -1586,7 +1586,7 @@
   {
     "id": "usr-mhs-0125",
     "email": "ivan125@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ivan Setiawan",
     "is_active": true,
@@ -1597,7 +1597,7 @@
   {
     "id": "usr-mhs-0126",
     "email": "gilang126@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gilang Ramadhan",
     "is_active": true,
@@ -1608,7 +1608,7 @@
   {
     "id": "usr-mhs-0127",
     "email": "joko127@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Joko Widodo",
     "is_active": true,
@@ -1619,7 +1619,7 @@
   {
     "id": "usr-mhs-0128",
     "email": "eko128@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eko Putra",
     "is_active": true,
@@ -1630,7 +1630,7 @@
   {
     "id": "usr-mhs-0129",
     "email": "taufik129@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Taufik Hidayat",
     "is_active": true,
@@ -1641,7 +1641,7 @@
   {
     "id": "usr-mhs-0130",
     "email": "cahyo130@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cahyo Prabowo",
     "is_active": true,
@@ -1652,7 +1652,7 @@
   {
     "id": "usr-mhs-0131",
     "email": "ulfa131@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ulfa Khoiriyah",
     "is_active": true,
@@ -1663,7 +1663,7 @@
   {
     "id": "usr-mhs-0132",
     "email": "hendra132@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hendra Gunawan",
     "is_active": true,
@@ -1674,7 +1674,7 @@
   {
     "id": "usr-mhs-0133",
     "email": "dimas133@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dimas Aditya",
     "is_active": true,
@@ -1685,7 +1685,7 @@
   {
     "id": "usr-mhs-0134",
     "email": "hendra134@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hendra Gunawan",
     "is_active": true,
@@ -1696,7 +1696,7 @@
   {
     "id": "usr-mhs-0135",
     "email": "ayu135@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ayu Lestari",
     "is_active": true,
@@ -1707,7 +1707,7 @@
   {
     "id": "usr-mhs-0136",
     "email": "gilang136@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gilang Ramadhan",
     "is_active": true,
@@ -1718,7 +1718,7 @@
   {
     "id": "usr-mhs-0137",
     "email": "gita137@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gita Nirmala",
     "is_active": true,
@@ -1729,7 +1729,7 @@
   {
     "id": "usr-mhs-0138",
     "email": "zaki138@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zaki Abdullah",
     "is_active": true,
@@ -1740,7 +1740,7 @@
   {
     "id": "usr-mhs-0139",
     "email": "rina139@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rina Marlina",
     "is_active": true,
@@ -1751,7 +1751,7 @@
   {
     "id": "usr-mhs-0140",
     "email": "kevin140@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kevin Pratama",
     "is_active": true,
@@ -1762,7 +1762,7 @@
   {
     "id": "usr-mhs-0141",
     "email": "cahyo141@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cahyo Prabowo",
     "is_active": true,
@@ -1773,7 +1773,7 @@
   {
     "id": "usr-mhs-0142",
     "email": "surya142@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Surya Dharma",
     "is_active": true,
@@ -1784,7 +1784,7 @@
   {
     "id": "usr-mhs-0143",
     "email": "ayu143@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ayu Lestari",
     "is_active": true,
@@ -1795,7 +1795,7 @@
   {
     "id": "usr-mhs-0144",
     "email": "ahmad144@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ahmad Fauzi",
     "is_active": true,
@@ -1806,7 +1806,7 @@
   {
     "id": "usr-mhs-0145",
     "email": "olivia145@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Olivia Sari",
     "is_active": true,
@@ -1817,7 +1817,7 @@
   {
     "id": "usr-mhs-0146",
     "email": "nisa146@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Nisa Rahmawati",
     "is_active": true,
@@ -1828,7 +1828,7 @@
   {
     "id": "usr-mhs-0147",
     "email": "chandra147@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Chandra Putra",
     "is_active": true,
@@ -1839,7 +1839,7 @@
   {
     "id": "usr-mhs-0148",
     "email": "zaki148@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zaki Abdullah",
     "is_active": true,
@@ -1850,7 +1850,7 @@
   {
     "id": "usr-mhs-0149",
     "email": "dani149@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dani Kurniawan",
     "is_active": true,
@@ -1861,7 +1861,7 @@
   {
     "id": "usr-mhs-0150",
     "email": "hana150@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hana Pertiwi",
     "is_active": true,
@@ -1872,7 +1872,7 @@
   {
     "id": "usr-mhs-0151",
     "email": "bagas151@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bagas Wicaksono",
     "is_active": true,
@@ -1883,7 +1883,7 @@
   {
     "id": "usr-mhs-0152",
     "email": "hana152@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hana Pertiwi",
     "is_active": true,
@@ -1894,7 +1894,7 @@
   {
     "id": "usr-mhs-0153",
     "email": "olivia153@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Olivia Sari",
     "is_active": true,
@@ -1905,7 +1905,7 @@
   {
     "id": "usr-mhs-0154",
     "email": "rizal154@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rizal Maulana",
     "is_active": true,
@@ -1916,7 +1916,7 @@
   {
     "id": "usr-mhs-0155",
     "email": "agus155@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Agus Salim",
     "is_active": true,
@@ -1927,7 +1927,7 @@
   {
     "id": "usr-mhs-0156",
     "email": "eka156@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eka Wulandari",
     "is_active": true,
@@ -1938,7 +1938,7 @@
   {
     "id": "usr-mhs-0157",
     "email": "cahyo157@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cahyo Prabowo",
     "is_active": true,
@@ -1949,7 +1949,7 @@
   {
     "id": "usr-mhs-0158",
     "email": "eka158@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eka Wulandari",
     "is_active": true,
@@ -1960,7 +1960,7 @@
   {
     "id": "usr-mhs-0159",
     "email": "fajar159@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fajar Hidayat",
     "is_active": true,
@@ -1971,7 +1971,7 @@
   {
     "id": "usr-mhs-0160",
     "email": "diana160@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Diana Puspita",
     "is_active": true,
@@ -1982,7 +1982,7 @@
   {
     "id": "usr-mhs-0161",
     "email": "sari161@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Sari Dewi",
     "is_active": true,
@@ -1993,7 +1993,7 @@
   {
     "id": "usr-mhs-0162",
     "email": "kevin162@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kevin Pratama",
     "is_active": true,
@@ -2004,7 +2004,7 @@
   {
     "id": "usr-mhs-0163",
     "email": "fikri163@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fikri Maulana",
     "is_active": true,
@@ -2015,7 +2015,7 @@
   {
     "id": "usr-mhs-0164",
     "email": "prayogi164@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Prayogi Saputra",
     "is_active": true,
@@ -2026,7 +2026,7 @@
   {
     "id": "usr-mhs-0165",
     "email": "dimas165@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dimas Aditya",
     "is_active": true,
@@ -2037,7 +2037,7 @@
   {
     "id": "usr-mhs-0166",
     "email": "cahyo166@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cahyo Prabowo",
     "is_active": true,
@@ -2048,7 +2048,7 @@
   {
     "id": "usr-mhs-0167",
     "email": "fani167@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fani Rahayu",
     "is_active": true,
@@ -2059,7 +2059,7 @@
   {
     "id": "usr-mhs-0168",
     "email": "bunga168@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bunga Citra",
     "is_active": true,
@@ -2070,7 +2070,7 @@
   {
     "id": "usr-mhs-0169",
     "email": "indah169@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -2081,7 +2081,7 @@
   {
     "id": "usr-mhs-0170",
     "email": "kevin170@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kevin Pratama",
     "is_active": true,
@@ -2092,7 +2092,7 @@
   {
     "id": "usr-mhs-0171",
     "email": "bagas171@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bagas Wicaksono",
     "is_active": true,
@@ -2103,7 +2103,7 @@
   {
     "id": "usr-mhs-0172",
     "email": "bagas172@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bagas Wicaksono",
     "is_active": true,
@@ -2114,7 +2114,7 @@
   {
     "id": "usr-mhs-0173",
     "email": "indah173@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -2125,7 +2125,7 @@
   {
     "id": "usr-mhs-0174",
     "email": "vina174@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vina Permata",
     "is_active": true,
@@ -2136,7 +2136,7 @@
   {
     "id": "usr-mhs-0175",
     "email": "ani175@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ani Rahayu",
     "is_active": true,
@@ -2147,7 +2147,7 @@
   {
     "id": "usr-mhs-0176",
     "email": "wulan176@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wulan Dari",
     "is_active": true,
@@ -2158,7 +2158,7 @@
   {
     "id": "usr-mhs-0177",
     "email": "kartika177@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kartika Putri",
     "is_active": true,
@@ -2169,7 +2169,7 @@
   {
     "id": "usr-mhs-0178",
     "email": "taufik178@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Taufik Hidayat",
     "is_active": true,
@@ -2180,7 +2180,7 @@
   {
     "id": "usr-mhs-0179",
     "email": "ayu179@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ayu Lestari",
     "is_active": true,
@@ -2191,7 +2191,7 @@
   {
     "id": "usr-mhs-0180",
     "email": "oscar180@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Oscar Firmansyah",
     "is_active": true,
@@ -2202,7 +2202,7 @@
   {
     "id": "usr-mhs-0181",
     "email": "yuni181@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yuni Astuti",
     "is_active": true,
@@ -2213,7 +2213,7 @@
   {
     "id": "usr-mhs-0182",
     "email": "taufik182@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Taufik Hidayat",
     "is_active": true,
@@ -2224,7 +2224,7 @@
   {
     "id": "usr-mhs-0183",
     "email": "wahyu183@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wahyu Nugroho",
     "is_active": true,
@@ -2235,7 +2235,7 @@
   {
     "id": "usr-mhs-0184",
     "email": "ani184@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ani Rahayu",
     "is_active": true,
@@ -2246,7 +2246,7 @@
   {
     "id": "usr-mhs-0185",
     "email": "joko185@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Joko Widodo",
     "is_active": true,
@@ -2257,7 +2257,7 @@
   {
     "id": "usr-mhs-0186",
     "email": "hadi186@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hadi Prasetyo",
     "is_active": true,
@@ -2268,7 +2268,7 @@
   {
     "id": "usr-mhs-0187",
     "email": "maya187@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Maya Anggraini",
     "is_active": true,
@@ -2279,7 +2279,7 @@
   {
     "id": "usr-mhs-0188",
     "email": "vina188@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vina Permata",
     "is_active": true,
@@ -2290,7 +2290,7 @@
   {
     "id": "usr-mhs-0189",
     "email": "eko189@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eko Putra",
     "is_active": true,
@@ -2301,7 +2301,7 @@
   {
     "id": "usr-mhs-0190",
     "email": "eka190@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eka Wulandari",
     "is_active": true,
@@ -2312,7 +2312,7 @@
   {
     "id": "usr-mhs-0191",
     "email": "tiara191@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Tiara Agustina",
     "is_active": true,
@@ -2323,7 +2323,7 @@
   {
     "id": "usr-mhs-0192",
     "email": "olivia192@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Olivia Sari",
     "is_active": true,
@@ -2334,7 +2334,7 @@
   {
     "id": "usr-mhs-0193",
     "email": "luthfi193@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Luthfi Hakim",
     "is_active": true,
@@ -2345,7 +2345,7 @@
   {
     "id": "usr-mhs-0194",
     "email": "cahyo194@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cahyo Prabowo",
     "is_active": true,
@@ -2356,7 +2356,7 @@
   {
     "id": "usr-mhs-0195",
     "email": "eka195@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eka Wulandari",
     "is_active": true,
@@ -2367,7 +2367,7 @@
   {
     "id": "usr-mhs-0196",
     "email": "hendra196@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hendra Gunawan",
     "is_active": true,
@@ -2378,7 +2378,7 @@
   {
     "id": "usr-mhs-0197",
     "email": "hadi197@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hadi Prasetyo",
     "is_active": true,
@@ -2389,7 +2389,7 @@
   {
     "id": "usr-mhs-0198",
     "email": "surya198@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Surya Dharma",
     "is_active": true,
@@ -2400,7 +2400,7 @@
   {
     "id": "usr-mhs-0199",
     "email": "putri199@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Putri Cantika",
     "is_active": true,
@@ -2411,7 +2411,7 @@
   {
     "id": "usr-mhs-0200",
     "email": "tiara200@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Tiara Agustina",
     "is_active": true,
@@ -2422,7 +2422,7 @@
   {
     "id": "usr-mhs-0201",
     "email": "gilang201@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gilang Ramadhan",
     "is_active": true,
@@ -2433,7 +2433,7 @@
   {
     "id": "usr-mhs-0202",
     "email": "dani202@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dani Kurniawan",
     "is_active": true,
@@ -2444,7 +2444,7 @@
   {
     "id": "usr-mhs-0203",
     "email": "bagas203@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bagas Wicaksono",
     "is_active": true,
@@ -2455,7 +2455,7 @@
   {
     "id": "usr-mhs-0204",
     "email": "muhammad204@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Muhammad Rizki",
     "is_active": true,
@@ -2466,7 +2466,7 @@
   {
     "id": "usr-mhs-0205",
     "email": "bella205@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bella Safitri",
     "is_active": true,
@@ -2477,7 +2477,7 @@
   {
     "id": "usr-mhs-0206",
     "email": "budi206@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Budi Santoso",
     "is_active": true,
@@ -2488,7 +2488,7 @@
   {
     "id": "usr-mhs-0207",
     "email": "taufik207@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Taufik Hidayat",
     "is_active": true,
@@ -2499,7 +2499,7 @@
   {
     "id": "usr-mhs-0208",
     "email": "rizal208@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rizal Maulana",
     "is_active": true,
@@ -2510,7 +2510,7 @@
   {
     "id": "usr-mhs-0209",
     "email": "eka209@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eka Wulandari",
     "is_active": true,
@@ -2521,7 +2521,7 @@
   {
     "id": "usr-mhs-0210",
     "email": "chandra210@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Chandra Putra",
     "is_active": true,
@@ -2532,7 +2532,7 @@
   {
     "id": "usr-mhs-0211",
     "email": "indah211@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -2543,7 +2543,7 @@
   {
     "id": "usr-mhs-0212",
     "email": "fajar212@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fajar Hidayat",
     "is_active": true,
@@ -2554,7 +2554,7 @@
   {
     "id": "usr-mhs-0213",
     "email": "oscar213@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Oscar Firmansyah",
     "is_active": true,
@@ -2565,7 +2565,7 @@
   {
     "id": "usr-mhs-0214",
     "email": "hendra214@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hendra Gunawan",
     "is_active": true,
@@ -2576,7 +2576,7 @@
   {
     "id": "usr-mhs-0215",
     "email": "sari215@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Sari Dewi",
     "is_active": true,
@@ -2587,7 +2587,7 @@
   {
     "id": "usr-mhs-0216",
     "email": "nisa216@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Nisa Rahmawati",
     "is_active": true,
@@ -2598,7 +2598,7 @@
   {
     "id": "usr-mhs-0217",
     "email": "fajar217@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fajar Hidayat",
     "is_active": true,
@@ -2609,7 +2609,7 @@
   {
     "id": "usr-mhs-0218",
     "email": "dewi218@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dewi Susanti",
     "is_active": true,
@@ -2620,7 +2620,7 @@
   {
     "id": "usr-mhs-0219",
     "email": "oscar219@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Oscar Firmansyah",
     "is_active": true,
@@ -2631,7 +2631,7 @@
   {
     "id": "usr-mhs-0220",
     "email": "rina220@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rina Marlina",
     "is_active": true,
@@ -2642,7 +2642,7 @@
   {
     "id": "usr-mhs-0221",
     "email": "agus221@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Agus Salim",
     "is_active": true,
@@ -2653,7 +2653,7 @@
   {
     "id": "usr-mhs-0222",
     "email": "fajar222@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fajar Hidayat",
     "is_active": true,
@@ -2664,7 +2664,7 @@
   {
     "id": "usr-mhs-0223",
     "email": "clara223@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Clara Monica",
     "is_active": true,
@@ -2675,7 +2675,7 @@
   {
     "id": "usr-mhs-0224",
     "email": "fitri224@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fitri Amalia",
     "is_active": true,
@@ -2686,7 +2686,7 @@
   {
     "id": "usr-mhs-0225",
     "email": "maya225@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Maya Anggraini",
     "is_active": true,
@@ -2697,7 +2697,7 @@
   {
     "id": "usr-mhs-0226",
     "email": "fitri226@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fitri Amalia",
     "is_active": true,
@@ -2708,7 +2708,7 @@
   {
     "id": "usr-mhs-0227",
     "email": "vina227@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vina Permata",
     "is_active": true,
@@ -2719,7 +2719,7 @@
   {
     "id": "usr-mhs-0228",
     "email": "nanda228@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Nanda Putra",
     "is_active": true,
@@ -2730,7 +2730,7 @@
   {
     "id": "usr-mhs-0229",
     "email": "ulfa229@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ulfa Khoiriyah",
     "is_active": true,
@@ -2741,7 +2741,7 @@
   {
     "id": "usr-mhs-0230",
     "email": "bagas230@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bagas Wicaksono",
     "is_active": true,
@@ -2752,7 +2752,7 @@
   {
     "id": "usr-mhs-0231",
     "email": "indah231@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -2763,7 +2763,7 @@
   {
     "id": "usr-mhs-0232",
     "email": "agus232@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Agus Salim",
     "is_active": true,
@@ -2774,7 +2774,7 @@
   {
     "id": "usr-mhs-0233",
     "email": "yusuf233@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yusuf Rahman",
     "is_active": true,
@@ -2785,7 +2785,7 @@
   {
     "id": "usr-mhs-0234",
     "email": "indah234@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -2796,7 +2796,7 @@
   {
     "id": "usr-mhs-0235",
     "email": "luthfi235@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Luthfi Hakim",
     "is_active": true,
@@ -2807,7 +2807,7 @@
   {
     "id": "usr-mhs-0236",
     "email": "hadi236@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hadi Prasetyo",
     "is_active": true,
@@ -2818,7 +2818,7 @@
   {
     "id": "usr-mhs-0237",
     "email": "luthfi237@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Luthfi Hakim",
     "is_active": true,
@@ -2829,7 +2829,7 @@
   {
     "id": "usr-mhs-0238",
     "email": "vina238@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vina Permata",
     "is_active": true,
@@ -2840,7 +2840,7 @@
   {
     "id": "usr-mhs-0239",
     "email": "rizal239@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rizal Maulana",
     "is_active": true,
@@ -2851,7 +2851,7 @@
   {
     "id": "usr-mhs-0240",
     "email": "ani240@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ani Rahayu",
     "is_active": true,
@@ -2862,7 +2862,7 @@
   {
     "id": "usr-mhs-0241",
     "email": "cica241@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cica Handayani",
     "is_active": true,
@@ -2873,7 +2873,7 @@
   {
     "id": "usr-mhs-0242",
     "email": "ivan242@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ivan Setiawan",
     "is_active": true,
@@ -2884,7 +2884,7 @@
   {
     "id": "usr-mhs-0243",
     "email": "hana243@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hana Pertiwi",
     "is_active": true,
@@ -2895,7 +2895,7 @@
   {
     "id": "usr-mhs-0244",
     "email": "vina244@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vina Permata",
     "is_active": true,
@@ -2906,7 +2906,7 @@
   {
     "id": "usr-mhs-0245",
     "email": "rizal245@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rizal Maulana",
     "is_active": true,
@@ -2917,7 +2917,7 @@
   {
     "id": "usr-mhs-0246",
     "email": "vina246@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vina Permata",
     "is_active": true,
@@ -2928,7 +2928,7 @@
   {
     "id": "usr-mhs-0247",
     "email": "bunga247@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bunga Citra",
     "is_active": true,
@@ -2939,7 +2939,7 @@
   {
     "id": "usr-mhs-0248",
     "email": "dimas248@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dimas Aditya",
     "is_active": true,
@@ -2950,7 +2950,7 @@
   {
     "id": "usr-mhs-0249",
     "email": "vicky249@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vicky Sanjaya",
     "is_active": true,
@@ -2961,7 +2961,7 @@
   {
     "id": "usr-mhs-0250",
     "email": "wulan250@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wulan Dari",
     "is_active": true,
@@ -2972,7 +2972,7 @@
   {
     "id": "usr-mhs-0251",
     "email": "clara251@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Clara Monica",
     "is_active": true,
@@ -2983,7 +2983,7 @@
   {
     "id": "usr-mhs-0252",
     "email": "bagas252@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bagas Wicaksono",
     "is_active": true,
@@ -2994,7 +2994,7 @@
   {
     "id": "usr-mhs-0253",
     "email": "elsa253@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Elsa Maharani",
     "is_active": true,
@@ -3005,7 +3005,7 @@
   {
     "id": "usr-mhs-0254",
     "email": "ayu254@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ayu Lestari",
     "is_active": true,
@@ -3016,7 +3016,7 @@
   {
     "id": "usr-mhs-0255",
     "email": "wulan255@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wulan Dari",
     "is_active": true,
@@ -3027,7 +3027,7 @@
   {
     "id": "usr-mhs-0256",
     "email": "tiara256@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Tiara Agustina",
     "is_active": true,
@@ -3038,7 +3038,7 @@
   {
     "id": "usr-mhs-0257",
     "email": "zahra257@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zahra Nabila",
     "is_active": true,
@@ -3049,7 +3049,7 @@
   {
     "id": "usr-mhs-0258",
     "email": "budi258@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Budi Santoso",
     "is_active": true,
@@ -3060,7 +3060,7 @@
   {
     "id": "usr-mhs-0259",
     "email": "bunga259@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bunga Citra",
     "is_active": true,
@@ -3071,7 +3071,7 @@
   {
     "id": "usr-mhs-0260",
     "email": "yusuf260@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yusuf Rahman",
     "is_active": true,
@@ -3082,7 +3082,7 @@
   {
     "id": "usr-mhs-0261",
     "email": "hadi261@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hadi Prasetyo",
     "is_active": true,
@@ -3093,7 +3093,7 @@
   {
     "id": "usr-mhs-0262",
     "email": "ahmad262@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ahmad Fauzi",
     "is_active": true,
@@ -3104,7 +3104,7 @@
   {
     "id": "usr-mhs-0263",
     "email": "yusuf263@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yusuf Rahman",
     "is_active": true,
@@ -3115,7 +3115,7 @@
   {
     "id": "usr-mhs-0264",
     "email": "ahmad264@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ahmad Fauzi",
     "is_active": true,
@@ -3126,7 +3126,7 @@
   {
     "id": "usr-mhs-0265",
     "email": "ivan265@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ivan Setiawan",
     "is_active": true,
@@ -3137,7 +3137,7 @@
   {
     "id": "usr-mhs-0266",
     "email": "fitri266@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fitri Amalia",
     "is_active": true,
@@ -3148,7 +3148,7 @@
   {
     "id": "usr-mhs-0267",
     "email": "zahra267@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zahra Nabila",
     "is_active": true,
@@ -3159,7 +3159,7 @@
   {
     "id": "usr-mhs-0268",
     "email": "taufik268@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Taufik Hidayat",
     "is_active": true,
@@ -3170,7 +3170,7 @@
   {
     "id": "usr-mhs-0269",
     "email": "chandra269@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Chandra Putra",
     "is_active": true,
@@ -3181,7 +3181,7 @@
   {
     "id": "usr-mhs-0270",
     "email": "kartika270@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kartika Putri",
     "is_active": true,
@@ -3192,7 +3192,7 @@
   {
     "id": "usr-mhs-0271",
     "email": "maya271@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Maya Anggraini",
     "is_active": true,
@@ -3203,7 +3203,7 @@
   {
     "id": "usr-mhs-0272",
     "email": "ayu272@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ayu Lestari",
     "is_active": true,
@@ -3214,7 +3214,7 @@
   {
     "id": "usr-mhs-0273",
     "email": "bunga273@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bunga Citra",
     "is_active": true,
@@ -3225,7 +3225,7 @@
   {
     "id": "usr-mhs-0274",
     "email": "dewi274@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dewi Susanti",
     "is_active": true,
@@ -3236,7 +3236,7 @@
   {
     "id": "usr-mhs-0275",
     "email": "oscar275@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Oscar Firmansyah",
     "is_active": true,
@@ -3247,7 +3247,7 @@
   {
     "id": "usr-mhs-0276",
     "email": "yuni276@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yuni Astuti",
     "is_active": true,
@@ -3258,7 +3258,7 @@
   {
     "id": "usr-mhs-0277",
     "email": "gilang277@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gilang Ramadhan",
     "is_active": true,
@@ -3269,7 +3269,7 @@
   {
     "id": "usr-mhs-0278",
     "email": "hadi278@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hadi Prasetyo",
     "is_active": true,
@@ -3280,7 +3280,7 @@
   {
     "id": "usr-mhs-0279",
     "email": "hendra279@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hendra Gunawan",
     "is_active": true,
@@ -3291,7 +3291,7 @@
   {
     "id": "usr-mhs-0280",
     "email": "hana280@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hana Pertiwi",
     "is_active": true,
@@ -3302,7 +3302,7 @@
   {
     "id": "usr-mhs-0281",
     "email": "kartika281@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kartika Putri",
     "is_active": true,
@@ -3313,7 +3313,7 @@
   {
     "id": "usr-mhs-0282",
     "email": "vicky282@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vicky Sanjaya",
     "is_active": true,
@@ -3324,7 +3324,7 @@
   {
     "id": "usr-mhs-0283",
     "email": "nisa283@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Nisa Rahmawati",
     "is_active": true,
@@ -3335,7 +3335,7 @@
   {
     "id": "usr-mhs-0284",
     "email": "zaki284@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zaki Abdullah",
     "is_active": true,
@@ -3346,7 +3346,7 @@
   {
     "id": "usr-mhs-0285",
     "email": "bagas285@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bagas Wicaksono",
     "is_active": true,
@@ -3357,7 +3357,7 @@
   {
     "id": "usr-mhs-0286",
     "email": "hendra286@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hendra Gunawan",
     "is_active": true,
@@ -3368,7 +3368,7 @@
   {
     "id": "usr-mhs-0287",
     "email": "hadi287@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hadi Prasetyo",
     "is_active": true,
@@ -3379,7 +3379,7 @@
   {
     "id": "usr-mhs-0288",
     "email": "joko288@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Joko Widodo",
     "is_active": true,
@@ -3390,7 +3390,7 @@
   {
     "id": "usr-mhs-0289",
     "email": "dewi289@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dewi Susanti",
     "is_active": true,
@@ -3401,7 +3401,7 @@
   {
     "id": "usr-mhs-0290",
     "email": "budi290@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Budi Santoso",
     "is_active": true,
@@ -3412,7 +3412,7 @@
   {
     "id": "usr-mhs-0291",
     "email": "ahmad291@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ahmad Fauzi",
     "is_active": true,
@@ -3423,7 +3423,7 @@
   {
     "id": "usr-mhs-0292",
     "email": "eka292@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eka Wulandari",
     "is_active": true,
@@ -3434,7 +3434,7 @@
   {
     "id": "usr-mhs-0293",
     "email": "ulfa293@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ulfa Khoiriyah",
     "is_active": true,
@@ -3445,7 +3445,7 @@
   {
     "id": "usr-mhs-0294",
     "email": "kartika294@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kartika Putri",
     "is_active": true,
@@ -3456,7 +3456,7 @@
   {
     "id": "usr-mhs-0295",
     "email": "fajar295@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fajar Hidayat",
     "is_active": true,
@@ -3467,7 +3467,7 @@
   {
     "id": "usr-mhs-0296",
     "email": "budi296@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Budi Santoso",
     "is_active": true,
@@ -3478,7 +3478,7 @@
   {
     "id": "usr-mhs-0297",
     "email": "julia297@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Julia Maharani",
     "is_active": true,
@@ -3489,7 +3489,7 @@
   {
     "id": "usr-mhs-0298",
     "email": "vicky298@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vicky Sanjaya",
     "is_active": true,
@@ -3500,7 +3500,7 @@
   {
     "id": "usr-mhs-0299",
     "email": "nanda299@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Nanda Putra",
     "is_active": true,
@@ -3511,7 +3511,7 @@
   {
     "id": "usr-mhs-0300",
     "email": "putri300@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Putri Cantika",
     "is_active": true,
@@ -3522,7 +3522,7 @@
   {
     "id": "usr-mhs-0301",
     "email": "elsa301@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Elsa Maharani",
     "is_active": true,
@@ -3533,7 +3533,7 @@
   {
     "id": "usr-mhs-0302",
     "email": "yuni302@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yuni Astuti",
     "is_active": true,
@@ -3544,7 +3544,7 @@
   {
     "id": "usr-mhs-0303",
     "email": "muhammad303@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Muhammad Rizki",
     "is_active": true,
@@ -3555,7 +3555,7 @@
   {
     "id": "usr-mhs-0304",
     "email": "hadi304@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hadi Prasetyo",
     "is_active": true,
@@ -3566,7 +3566,7 @@
   {
     "id": "usr-mhs-0305",
     "email": "umar305@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Umar Farhan",
     "is_active": true,
@@ -3577,7 +3577,7 @@
   {
     "id": "usr-mhs-0306",
     "email": "hana306@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hana Pertiwi",
     "is_active": true,
@@ -3588,7 +3588,7 @@
   {
     "id": "usr-mhs-0307",
     "email": "elsa307@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Elsa Maharani",
     "is_active": true,
@@ -3599,7 +3599,7 @@
   {
     "id": "usr-mhs-0308",
     "email": "joko308@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Joko Widodo",
     "is_active": true,
@@ -3610,7 +3610,7 @@
   {
     "id": "usr-mhs-0309",
     "email": "umar309@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Umar Farhan",
     "is_active": true,
@@ -3621,7 +3621,7 @@
   {
     "id": "usr-mhs-0310",
     "email": "eka310@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eka Wulandari",
     "is_active": true,
@@ -3632,7 +3632,7 @@
   {
     "id": "usr-mhs-0311",
     "email": "ani311@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ani Rahayu",
     "is_active": true,
@@ -3643,7 +3643,7 @@
   {
     "id": "usr-mhs-0312",
     "email": "ayu312@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ayu Lestari",
     "is_active": true,
@@ -3654,7 +3654,7 @@
   {
     "id": "usr-mhs-0313",
     "email": "bagas313@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bagas Wicaksono",
     "is_active": true,
@@ -3665,7 +3665,7 @@
   {
     "id": "usr-mhs-0314",
     "email": "ahmad314@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ahmad Fauzi",
     "is_active": true,
@@ -3676,7 +3676,7 @@
   {
     "id": "usr-mhs-0315",
     "email": "cica315@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cica Handayani",
     "is_active": true,
@@ -3687,7 +3687,7 @@
   {
     "id": "usr-mhs-0316",
     "email": "cica316@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cica Handayani",
     "is_active": true,
@@ -3698,7 +3698,7 @@
   {
     "id": "usr-mhs-0317",
     "email": "yuni317@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yuni Astuti",
     "is_active": true,
@@ -3709,7 +3709,7 @@
   {
     "id": "usr-mhs-0318",
     "email": "kartika318@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kartika Putri",
     "is_active": true,
@@ -3720,7 +3720,7 @@
   {
     "id": "usr-mhs-0319",
     "email": "nanda319@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Nanda Putra",
     "is_active": true,
@@ -3731,7 +3731,7 @@
   {
     "id": "usr-mhs-0320",
     "email": "zaki320@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zaki Abdullah",
     "is_active": true,
@@ -3742,7 +3742,7 @@
   {
     "id": "usr-mhs-0321",
     "email": "fani321@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fani Rahayu",
     "is_active": true,
@@ -3753,7 +3753,7 @@
   {
     "id": "usr-mhs-0322",
     "email": "zaki322@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zaki Abdullah",
     "is_active": true,
@@ -3764,7 +3764,7 @@
   {
     "id": "usr-mhs-0323",
     "email": "chandra323@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Chandra Putra",
     "is_active": true,
@@ -3775,7 +3775,7 @@
   {
     "id": "usr-mhs-0324",
     "email": "vicky324@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vicky Sanjaya",
     "is_active": true,
@@ -3786,7 +3786,7 @@
   {
     "id": "usr-mhs-0325",
     "email": "rina325@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rina Marlina",
     "is_active": true,
@@ -3797,7 +3797,7 @@
   {
     "id": "usr-mhs-0326",
     "email": "yusuf326@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yusuf Rahman",
     "is_active": true,
@@ -3808,7 +3808,7 @@
   {
     "id": "usr-mhs-0327",
     "email": "muhammad327@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Muhammad Rizki",
     "is_active": true,
@@ -3819,7 +3819,7 @@
   {
     "id": "usr-mhs-0328",
     "email": "rina328@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rina Marlina",
     "is_active": true,
@@ -3830,7 +3830,7 @@
   {
     "id": "usr-mhs-0329",
     "email": "ani329@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ani Rahayu",
     "is_active": true,
@@ -3841,7 +3841,7 @@
   {
     "id": "usr-mhs-0330",
     "email": "agus330@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Agus Salim",
     "is_active": true,
@@ -3852,7 +3852,7 @@
   {
     "id": "usr-mhs-0331",
     "email": "prayogi331@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Prayogi Saputra",
     "is_active": true,
@@ -3863,7 +3863,7 @@
   {
     "id": "usr-mhs-0332",
     "email": "putri332@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Putri Cantika",
     "is_active": true,
@@ -3874,7 +3874,7 @@
   {
     "id": "usr-mhs-0333",
     "email": "rina333@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rina Marlina",
     "is_active": true,
@@ -3885,7 +3885,7 @@
   {
     "id": "usr-mhs-0334",
     "email": "dani334@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dani Kurniawan",
     "is_active": true,
@@ -3896,7 +3896,7 @@
   {
     "id": "usr-mhs-0335",
     "email": "oscar335@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Oscar Firmansyah",
     "is_active": true,
@@ -3907,7 +3907,7 @@
   {
     "id": "usr-mhs-0336",
     "email": "laila336@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Laila Nurjanah",
     "is_active": true,
@@ -3918,7 +3918,7 @@
   {
     "id": "usr-mhs-0337",
     "email": "fikri337@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fikri Maulana",
     "is_active": true,
@@ -3929,7 +3929,7 @@
   {
     "id": "usr-mhs-0338",
     "email": "umar338@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Umar Farhan",
     "is_active": true,
@@ -3940,7 +3940,7 @@
   {
     "id": "usr-mhs-0339",
     "email": "nanda339@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Nanda Putra",
     "is_active": true,
@@ -3951,7 +3951,7 @@
   {
     "id": "usr-mhs-0340",
     "email": "bunga340@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bunga Citra",
     "is_active": true,
@@ -3962,7 +3962,7 @@
   {
     "id": "usr-mhs-0341",
     "email": "dani341@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dani Kurniawan",
     "is_active": true,
@@ -3973,7 +3973,7 @@
   {
     "id": "usr-mhs-0342",
     "email": "cahyo342@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cahyo Prabowo",
     "is_active": true,
@@ -3984,7 +3984,7 @@
   {
     "id": "usr-mhs-0343",
     "email": "yusuf343@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yusuf Rahman",
     "is_active": true,
@@ -3995,7 +3995,7 @@
   {
     "id": "usr-mhs-0344",
     "email": "ahmad344@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ahmad Fauzi",
     "is_active": true,
@@ -4006,7 +4006,7 @@
   {
     "id": "usr-mhs-0345",
     "email": "joko345@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Joko Widodo",
     "is_active": true,
@@ -4017,7 +4017,7 @@
   {
     "id": "usr-mhs-0346",
     "email": "rizal346@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rizal Maulana",
     "is_active": true,
@@ -4028,7 +4028,7 @@
   {
     "id": "usr-mhs-0347",
     "email": "oscar347@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Oscar Firmansyah",
     "is_active": true,
@@ -4039,7 +4039,7 @@
   {
     "id": "usr-mhs-0348",
     "email": "laila348@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Laila Nurjanah",
     "is_active": true,
@@ -4050,7 +4050,7 @@
   {
     "id": "usr-mhs-0349",
     "email": "yuni349@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yuni Astuti",
     "is_active": true,
@@ -4061,7 +4061,7 @@
   {
     "id": "usr-mhs-0350",
     "email": "hana350@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hana Pertiwi",
     "is_active": true,
@@ -4072,7 +4072,7 @@
   {
     "id": "usr-mhs-0351",
     "email": "dani351@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dani Kurniawan",
     "is_active": true,
@@ -4083,7 +4083,7 @@
   {
     "id": "usr-mhs-0352",
     "email": "gilang352@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gilang Ramadhan",
     "is_active": true,
@@ -4094,7 +4094,7 @@
   {
     "id": "usr-mhs-0353",
     "email": "fani353@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fani Rahayu",
     "is_active": true,
@@ -4105,7 +4105,7 @@
   {
     "id": "usr-mhs-0354",
     "email": "dimas354@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dimas Aditya",
     "is_active": true,
@@ -4116,7 +4116,7 @@
   {
     "id": "usr-mhs-0355",
     "email": "muhammad355@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Muhammad Rizki",
     "is_active": true,
@@ -4127,7 +4127,7 @@
   {
     "id": "usr-mhs-0356",
     "email": "budi356@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Budi Santoso",
     "is_active": true,
@@ -4138,7 +4138,7 @@
   {
     "id": "usr-mhs-0357",
     "email": "sari357@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Sari Dewi",
     "is_active": true,
@@ -4149,7 +4149,7 @@
   {
     "id": "usr-mhs-0358",
     "email": "indah358@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -4160,7 +4160,7 @@
   {
     "id": "usr-mhs-0359",
     "email": "wahyu359@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wahyu Nugroho",
     "is_active": true,
@@ -4171,7 +4171,7 @@
   {
     "id": "usr-mhs-0360",
     "email": "laila360@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Laila Nurjanah",
     "is_active": true,
@@ -4182,7 +4182,7 @@
   {
     "id": "usr-mhs-0361",
     "email": "fajar361@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fajar Hidayat",
     "is_active": true,
@@ -4193,7 +4193,7 @@
   {
     "id": "usr-mhs-0362",
     "email": "elsa362@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Elsa Maharani",
     "is_active": true,
@@ -4204,7 +4204,7 @@
   {
     "id": "usr-mhs-0363",
     "email": "fajar363@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fajar Hidayat",
     "is_active": true,
@@ -4215,7 +4215,7 @@
   {
     "id": "usr-mhs-0364",
     "email": "yuni364@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Yuni Astuti",
     "is_active": true,
@@ -4226,7 +4226,7 @@
   {
     "id": "usr-mhs-0365",
     "email": "eka365@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eka Wulandari",
     "is_active": true,
@@ -4237,7 +4237,7 @@
   {
     "id": "usr-mhs-0366",
     "email": "eko366@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eko Putra",
     "is_active": true,
@@ -4248,7 +4248,7 @@
   {
     "id": "usr-mhs-0367",
     "email": "bunga367@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bunga Citra",
     "is_active": true,
@@ -4259,7 +4259,7 @@
   {
     "id": "usr-mhs-0368",
     "email": "ulfa368@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ulfa Khoiriyah",
     "is_active": true,
@@ -4270,7 +4270,7 @@
   {
     "id": "usr-mhs-0369",
     "email": "agus369@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Agus Salim",
     "is_active": true,
@@ -4281,7 +4281,7 @@
   {
     "id": "usr-mhs-0370",
     "email": "gilang370@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Gilang Ramadhan",
     "is_active": true,
@@ -4292,7 +4292,7 @@
   {
     "id": "usr-mhs-0371",
     "email": "indah371@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -4303,7 +4303,7 @@
   {
     "id": "usr-mhs-0372",
     "email": "indah372@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -4314,7 +4314,7 @@
   {
     "id": "usr-mhs-0373",
     "email": "laila373@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Laila Nurjanah",
     "is_active": true,
@@ -4325,7 +4325,7 @@
   {
     "id": "usr-mhs-0374",
     "email": "luthfi374@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Luthfi Hakim",
     "is_active": true,
@@ -4336,7 +4336,7 @@
   {
     "id": "usr-mhs-0375",
     "email": "hana375@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hana Pertiwi",
     "is_active": true,
@@ -4347,7 +4347,7 @@
   {
     "id": "usr-mhs-0376",
     "email": "diana376@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Diana Puspita",
     "is_active": true,
@@ -4358,7 +4358,7 @@
   {
     "id": "usr-mhs-0377",
     "email": "ahmad377@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ahmad Fauzi",
     "is_active": true,
@@ -4369,7 +4369,7 @@
   {
     "id": "usr-mhs-0378",
     "email": "julia378@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Julia Maharani",
     "is_active": true,
@@ -4380,7 +4380,7 @@
   {
     "id": "usr-mhs-0379",
     "email": "agus379@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Agus Salim",
     "is_active": true,
@@ -4391,7 +4391,7 @@
   {
     "id": "usr-mhs-0380",
     "email": "ivan380@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ivan Setiawan",
     "is_active": true,
@@ -4402,7 +4402,7 @@
   {
     "id": "usr-mhs-0381",
     "email": "olivia381@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Olivia Sari",
     "is_active": true,
@@ -4413,7 +4413,7 @@
   {
     "id": "usr-mhs-0382",
     "email": "cica382@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cica Handayani",
     "is_active": true,
@@ -4424,7 +4424,7 @@
   {
     "id": "usr-mhs-0383",
     "email": "laila383@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Laila Nurjanah",
     "is_active": true,
@@ -4435,7 +4435,7 @@
   {
     "id": "usr-mhs-0384",
     "email": "bagas384@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bagas Wicaksono",
     "is_active": true,
@@ -4446,7 +4446,7 @@
   {
     "id": "usr-mhs-0385",
     "email": "vina385@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vina Permata",
     "is_active": true,
@@ -4457,7 +4457,7 @@
   {
     "id": "usr-mhs-0386",
     "email": "maya386@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Maya Anggraini",
     "is_active": true,
@@ -4468,7 +4468,7 @@
   {
     "id": "usr-mhs-0387",
     "email": "maya387@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Maya Anggraini",
     "is_active": true,
@@ -4479,7 +4479,7 @@
   {
     "id": "usr-mhs-0388",
     "email": "laila388@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Laila Nurjanah",
     "is_active": true,
@@ -4490,7 +4490,7 @@
   {
     "id": "usr-mhs-0389",
     "email": "kevin389@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kevin Pratama",
     "is_active": true,
@@ -4501,7 +4501,7 @@
   {
     "id": "usr-mhs-0390",
     "email": "umar390@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Umar Farhan",
     "is_active": true,
@@ -4512,7 +4512,7 @@
   {
     "id": "usr-mhs-0391",
     "email": "taufik391@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Taufik Hidayat",
     "is_active": true,
@@ -4523,7 +4523,7 @@
   {
     "id": "usr-mhs-0392",
     "email": "prayogi392@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Prayogi Saputra",
     "is_active": true,
@@ -4534,7 +4534,7 @@
   {
     "id": "usr-mhs-0393",
     "email": "zaki393@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zaki Abdullah",
     "is_active": true,
@@ -4545,7 +4545,7 @@
   {
     "id": "usr-mhs-0394",
     "email": "bella394@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bella Safitri",
     "is_active": true,
@@ -4556,7 +4556,7 @@
   {
     "id": "usr-mhs-0395",
     "email": "kevin395@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kevin Pratama",
     "is_active": true,
@@ -4567,7 +4567,7 @@
   {
     "id": "usr-mhs-0396",
     "email": "taufik396@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Taufik Hidayat",
     "is_active": true,
@@ -4578,7 +4578,7 @@
   {
     "id": "usr-mhs-0397",
     "email": "chandra397@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Chandra Putra",
     "is_active": true,
@@ -4589,7 +4589,7 @@
   {
     "id": "usr-mhs-0398",
     "email": "zaki398@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Zaki Abdullah",
     "is_active": true,
@@ -4600,7 +4600,7 @@
   {
     "id": "usr-mhs-0399",
     "email": "kartika399@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Kartika Putri",
     "is_active": true,
@@ -4611,7 +4611,7 @@
   {
     "id": "usr-mhs-0400",
     "email": "dani400@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dani Kurniawan",
     "is_active": true,
@@ -4622,7 +4622,7 @@
   {
     "id": "usr-mhs-0401",
     "email": "muhammad401@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Muhammad Rizki",
     "is_active": true,
@@ -4633,7 +4633,7 @@
   {
     "id": "usr-mhs-0402",
     "email": "tiara402@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Tiara Agustina",
     "is_active": true,
@@ -4644,7 +4644,7 @@
   {
     "id": "usr-mhs-0403",
     "email": "cica403@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cica Handayani",
     "is_active": true,
@@ -4655,7 +4655,7 @@
   {
     "id": "usr-mhs-0404",
     "email": "rina404@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rina Marlina",
     "is_active": true,
@@ -4666,7 +4666,7 @@
   {
     "id": "usr-mhs-0405",
     "email": "fani405@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fani Rahayu",
     "is_active": true,
@@ -4677,7 +4677,7 @@
   {
     "id": "usr-mhs-0406",
     "email": "fajar406@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fajar Hidayat",
     "is_active": true,
@@ -4688,7 +4688,7 @@
   {
     "id": "usr-mhs-0407",
     "email": "bagas407@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Bagas Wicaksono",
     "is_active": true,
@@ -4699,7 +4699,7 @@
   {
     "id": "usr-mhs-0408",
     "email": "tiara408@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Tiara Agustina",
     "is_active": true,
@@ -4710,7 +4710,7 @@
   {
     "id": "usr-mhs-0409",
     "email": "wulan409@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wulan Dari",
     "is_active": true,
@@ -4721,7 +4721,7 @@
   {
     "id": "usr-mhs-0410",
     "email": "fajar410@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Fajar Hidayat",
     "is_active": true,
@@ -4732,7 +4732,7 @@
   {
     "id": "usr-mhs-0411",
     "email": "hana411@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Hana Pertiwi",
     "is_active": true,
@@ -4743,7 +4743,7 @@
   {
     "id": "usr-mhs-0412",
     "email": "chandra412@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Chandra Putra",
     "is_active": true,
@@ -4754,7 +4754,7 @@
   {
     "id": "usr-mhs-0413",
     "email": "ulfa413@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Ulfa Khoiriyah",
     "is_active": true,
@@ -4765,7 +4765,7 @@
   {
     "id": "usr-mhs-0414",
     "email": "vina414@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Vina Permata",
     "is_active": true,
@@ -4776,7 +4776,7 @@
   {
     "id": "usr-mhs-0415",
     "email": "cica415@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Cica Handayani",
     "is_active": true,
@@ -4787,7 +4787,7 @@
   {
     "id": "usr-mhs-0416",
     "email": "wahyu416@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wahyu Nugroho",
     "is_active": true,
@@ -4798,7 +4798,7 @@
   {
     "id": "usr-mhs-0417",
     "email": "eko417@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Eko Putra",
     "is_active": true,
@@ -4809,7 +4809,7 @@
   {
     "id": "usr-mhs-0418",
     "email": "dimas418@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Dimas Aditya",
     "is_active": true,
@@ -4820,7 +4820,7 @@
   {
     "id": "usr-mhs-0419",
     "email": "indah419@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Indah Lestari",
     "is_active": true,
@@ -4831,7 +4831,7 @@
   {
     "id": "usr-mhs-0420",
     "email": "diana420@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Diana Puspita",
     "is_active": true,
@@ -4842,7 +4842,7 @@
   {
     "id": "usr-mhs-0421",
     "email": "wahyu421@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Wahyu Nugroho",
     "is_active": true,
@@ -4853,7 +4853,7 @@
   {
     "id": "usr-mhs-0422",
     "email": "rizal422@mhs.ac.id",
-    "password_hash": "$2b$12$W6PZKeYYaTCGTaEJYZLkruL72z6/smqnELejo7jrQw9IXfDJlrQHu",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
     "role": "mahasiswa",
     "nama": "Rizal Maulana",
     "is_active": true,
@@ -4871,6 +4871,17 @@
     "id": "6aeff9b5-2a73-4ed8-917f-51dc0aac70af",
     "created_at": "2026-07-26T06:57:59.472443",
     "updated_at": "2026-07-26T06:57:59.472453",
+    "deleted_at": null
+  },
+  {
+    "id": "usr-staf-001",
+    "email": "staf@siakad.ac.id",
+    "password_hash": "$2b$10$SCKt.lkl1pbgZoP8NSwHm.GV6pcSB9lgzFU/IAz3vb.TfGXYWwLMe",
+    "role": "staf",
+    "nama": "Staf Administrasi",
+    "is_active": true,
+    "foto_url": null,
+    "created_at": "2026-07-28T00:00:00",
     "deleted_at": null
   }
 ]

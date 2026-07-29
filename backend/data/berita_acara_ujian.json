@@ -1,1 +1,1076 @@
-[]
+[
+  {
+    "id": "bau-a90398e4",
+    "jadwal_ujian_id": "a90398e4-c724-4e79-8888-55519121b684",
+    "mata_kuliah_nama": "Algoritma dan Pemrograman",
+    "mata_kuliah_kode": "TI101",
+    "jenis": "UTS",
+    "tanggal": "2024-10-15",
+    "jam_mulai": "08:00",
+    "jam_selesai": "10:00",
+    "ruang_nama": "Ruang B303",
+    "dosen_id": "dosen-008",
+    "dosen_nama": "Dr. Hesti Rahayu, M.Pd",
+    "pengawas": [
+      "Dr. Hesti Rahayu, M.Pd"
+    ],
+    "semester_akademik": "2024/2025-1",
+    "jumlah_peserta_terdaftar": 24,
+    "jumlah_peserta_hadir": 21,
+    "jumlah_peserta_tidak_hadir": 3,
+    "peserta_hadir": [
+      {
+        "mahasiswa_id": "mhs-0166",
+        "nim": "2023SI0166",
+        "nama": "Cahyo Prabowo"
+      },
+      {
+        "mahasiswa_id": "mhs-0078",
+        "nim": "2024TI0078",
+        "nama": "Wulan Dari"
+      },
+      {
+        "mahasiswa_id": "mhs-0203",
+        "nim": "2020AK0203",
+        "nama": "Bagas Wicaksono"
+      },
+      {
+        "mahasiswa_id": "mhs-0334",
+        "nim": "2021MN0334",
+        "nama": "Dani Kurniawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0025",
+        "nim": "2021TI0025",
+        "nama": "Dimas Aditya"
+      },
+      {
+        "mahasiswa_id": "mhs-0038",
+        "nim": "2021TI0038",
+        "nama": "Kartika Putri"
+      },
+      {
+        "mahasiswa_id": "mhs-0421",
+        "nim": "2024MN0421",
+        "nama": "Wahyu Nugroho"
+      },
+      {
+        "mahasiswa_id": "mhs-0275",
+        "nim": "2023AK0275",
+        "nama": "Oscar Firmansyah"
+      },
+      {
+        "mahasiswa_id": "mhs-0049",
+        "nim": "2022TI0049",
+        "nama": "Ulfa Khoiriyah"
+      },
+      {
+        "mahasiswa_id": "mhs-0188",
+        "nim": "2024SI0188",
+        "nama": "Vina Permata"
+      },
+      {
+        "mahasiswa_id": "mhs-0299",
+        "nim": "2024AK0299",
+        "nama": "Nanda Putra"
+      },
+      {
+        "mahasiswa_id": "mhs-0030",
+        "nim": "2021TI0030",
+        "nama": "Umar Farhan"
+      },
+      {
+        "mahasiswa_id": "mhs-0260",
+        "nim": "2023AK0260",
+        "nama": "Yusuf Rahman"
+      },
+      {
+        "mahasiswa_id": "mhs-0110",
+        "nim": "2020SI0110",
+        "nama": "Fajar Hidayat"
+      },
+      {
+        "mahasiswa_id": "mhs-0020",
+        "nim": "2021TI0020",
+        "nama": "Fikri Maulana"
+      },
+      {
+        "mahasiswa_id": "mhs-0045",
+        "nim": "2022TI0045",
+        "nama": "Rina Marlina"
+      },
+      {
+        "mahasiswa_id": "mhs-0223",
+        "nim": "2021AK0223",
+        "nama": "Clara Monica"
+      },
+      {
+        "mahasiswa_id": "mhs-0215",
+        "nim": "2020AK0215",
+        "nama": "Sari Dewi"
+      },
+      {
+        "mahasiswa_id": "mhs-0036",
+        "nim": "2021TI0036",
+        "nama": "Olivia Sari"
+      },
+      {
+        "mahasiswa_id": "mhs-0124",
+        "nim": "2021SI0124",
+        "nama": "Ivan Setiawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0047",
+        "nim": "2022TI0047",
+        "nama": "Gilang Ramadhan"
+      }
+    ],
+    "peserta_tidak_hadir": [
+      {
+        "mahasiswa_id": "mhs-0283",
+        "nim": "2024AK0283",
+        "nama": "Nisa Rahmawati",
+        "keterangan": "sakit"
+      },
+      {
+        "mahasiswa_id": "mhs-0218",
+        "nim": "2021AK0218",
+        "nama": "Dewi Susanti",
+        "keterangan": "sakit"
+      },
+      {
+        "mahasiswa_id": "mhs-0031",
+        "nim": "2021TI0031",
+        "nama": "Putri Cantika",
+        "keterangan": "sakit"
+      }
+    ],
+    "catatan": null,
+    "status": "selesai",
+    "ditandatangani_dosen": true,
+    "ditandatangani_pengawas": true,
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  },
+  {
+    "id": "bau-dc059924",
+    "jadwal_ujian_id": "dc059924-3096-40c5-a9c1-ad9103de7c3d",
+    "mata_kuliah_nama": "Matematika Diskrit",
+    "mata_kuliah_kode": "TI102",
+    "jenis": "UTS",
+    "tanggal": "2024-10-24",
+    "jam_mulai": "08:00",
+    "jam_selesai": "10:00",
+    "ruang_nama": "Ruang C303",
+    "dosen_id": "dosen-005",
+    "dosen_nama": "Dr. Eko Susanto, M.T",
+    "pengawas": [
+      "Dr. Eko Susanto, M.T"
+    ],
+    "semester_akademik": "2024/2025-1",
+    "jumlah_peserta_terdaftar": 20,
+    "jumlah_peserta_hadir": 17,
+    "jumlah_peserta_tidak_hadir": 3,
+    "peserta_hadir": [
+      {
+        "mahasiswa_id": "mhs-0286",
+        "nim": "2024AK0286",
+        "nama": "Hendra Gunawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0069",
+        "nim": "2023TI0069",
+        "nama": "Sari Dewi"
+      },
+      {
+        "mahasiswa_id": "mhs-0149",
+        "nim": "2022SI0149",
+        "nama": "Dani Kurniawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0215",
+        "nim": "2020AK0215",
+        "nama": "Sari Dewi"
+      },
+      {
+        "mahasiswa_id": "mhs-0074",
+        "nim": "2023TI0074",
+        "nama": "Yuni Astuti"
+      },
+      {
+        "mahasiswa_id": "mhs-0277",
+        "nim": "2023AK0277",
+        "nama": "Gilang Ramadhan"
+      },
+      {
+        "mahasiswa_id": "mhs-0061",
+        "nim": "2023TI0061",
+        "nama": "Gita Nirmala"
+      },
+      {
+        "mahasiswa_id": "mhs-0293",
+        "nim": "2024AK0293",
+        "nama": "Ulfa Khoiriyah"
+      },
+      {
+        "mahasiswa_id": "mhs-0158",
+        "nim": "2023SI0158",
+        "nama": "Eka Wulandari"
+      },
+      {
+        "mahasiswa_id": "mhs-0287",
+        "nim": "2024AK0287",
+        "nama": "Hadi Prasetyo"
+      },
+      {
+        "mahasiswa_id": "mhs-0418",
+        "nim": "2024MN0418",
+        "nama": "Dimas Aditya"
+      },
+      {
+        "mahasiswa_id": "mhs-0350",
+        "nim": "2021MN0350",
+        "nama": "Hana Pertiwi"
+      },
+      {
+        "mahasiswa_id": "mhs-0093",
+        "nim": "2024TI0093",
+        "nama": "Ani Rahayu"
+      },
+      {
+        "mahasiswa_id": "mhs-0053",
+        "nim": "2022TI0053",
+        "nama": "Luthfi Hakim"
+      },
+      {
+        "mahasiswa_id": "mhs-0298",
+        "nim": "2024AK0298",
+        "nama": "Vicky Sanjaya"
+      },
+      {
+        "mahasiswa_id": "mhs-0328",
+        "nim": "2020MN0328",
+        "nama": "Rina Marlina"
+      },
+      {
+        "mahasiswa_id": "mhs-0097",
+        "nim": "2020SI0097",
+        "nama": "Joko Widodo"
+      }
+    ],
+    "peserta_tidak_hadir": [
+      {
+        "mahasiswa_id": "mhs-0191",
+        "nim": "2024SI0191",
+        "nama": "Tiara Agustina",
+        "keterangan": "alpha"
+      },
+      {
+        "mahasiswa_id": "mhs-0050",
+        "nim": "2022TI0050",
+        "nama": "Maya Anggraini",
+        "keterangan": "izin"
+      },
+      {
+        "mahasiswa_id": "mhs-0281",
+        "nim": "2024AK0281",
+        "nama": "Kartika Putri",
+        "keterangan": "izin"
+      }
+    ],
+    "catatan": null,
+    "status": "selesai",
+    "ditandatangani_dosen": true,
+    "ditandatangani_pengawas": true,
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  },
+  {
+    "id": "bau-7b34aa34",
+    "jadwal_ujian_id": "7b34aa34-e3ee-4a23-b132-7d567a3fe6bb",
+    "mata_kuliah_nama": "Matematika Diskrit",
+    "mata_kuliah_kode": "TI102",
+    "jenis": "UTS",
+    "tanggal": "2024-10-26",
+    "jam_mulai": "08:00",
+    "jam_selesai": "10:00",
+    "ruang_nama": "Ruang B404",
+    "dosen_id": "dosen-003",
+    "dosen_nama": "Dr. Citra Dewi, M.Cs",
+    "pengawas": [
+      "Dr. Citra Dewi, M.Cs"
+    ],
+    "semester_akademik": "2024/2025-1",
+    "jumlah_peserta_terdaftar": 24,
+    "jumlah_peserta_hadir": 22,
+    "jumlah_peserta_tidak_hadir": 2,
+    "peserta_hadir": [
+      {
+        "mahasiswa_id": "mhs-0154",
+        "nim": "2022SI0154",
+        "nama": "Rizal Maulana"
+      },
+      {
+        "mahasiswa_id": "mhs-0128",
+        "nim": "2021SI0128",
+        "nama": "Eko Putra"
+      },
+      {
+        "mahasiswa_id": "mhs-0407",
+        "nim": "2024MN0407",
+        "nama": "Bagas Wicaksono"
+      },
+      {
+        "mahasiswa_id": "mhs-0093",
+        "nim": "2024TI0093",
+        "nama": "Ani Rahayu"
+      },
+      {
+        "mahasiswa_id": "mhs-0358",
+        "nim": "2022MN0358",
+        "nama": "Indah Lestari"
+      },
+      {
+        "mahasiswa_id": "mhs-0400",
+        "nim": "2024MN0400",
+        "nama": "Dani Kurniawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0125",
+        "nim": "2021SI0125",
+        "nama": "Ivan Setiawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0042",
+        "nim": "2022TI0042",
+        "nama": "Kartika Putri"
+      },
+      {
+        "mahasiswa_id": "mhs-0295",
+        "nim": "2024AK0295",
+        "nama": "Fajar Hidayat"
+      },
+      {
+        "mahasiswa_id": "mhs-0269",
+        "nim": "2023AK0269",
+        "nama": "Chandra Putra"
+      },
+      {
+        "mahasiswa_id": "mhs-0254",
+        "nim": "2022AK0254",
+        "nama": "Ayu Lestari"
+      },
+      {
+        "mahasiswa_id": "mhs-0176",
+        "nim": "2023SI0176",
+        "nama": "Wulan Dari"
+      },
+      {
+        "mahasiswa_id": "mhs-0374",
+        "nim": "2022MN0374",
+        "nama": "Luthfi Hakim"
+      },
+      {
+        "mahasiswa_id": "mhs-0230",
+        "nim": "2021AK0230",
+        "nama": "Bagas Wicaksono"
+      },
+      {
+        "mahasiswa_id": "mhs-0148",
+        "nim": "2022SI0148",
+        "nama": "Zaki Abdullah"
+      },
+      {
+        "mahasiswa_id": "mhs-0312",
+        "nim": "2020MN0312",
+        "nama": "Ayu Lestari"
+      },
+      {
+        "mahasiswa_id": "mhs-0038",
+        "nim": "2021TI0038",
+        "nama": "Kartika Putri"
+      },
+      {
+        "mahasiswa_id": "mhs-0061",
+        "nim": "2023TI0061",
+        "nama": "Gita Nirmala"
+      },
+      {
+        "mahasiswa_id": "mhs-0263",
+        "nim": "2023AK0263",
+        "nama": "Yusuf Rahman"
+      },
+      {
+        "mahasiswa_id": "mhs-0215",
+        "nim": "2020AK0215",
+        "nama": "Sari Dewi"
+      },
+      {
+        "mahasiswa_id": "mhs-0085",
+        "nim": "2024TI0085",
+        "nama": "Dimas Aditya"
+      },
+      {
+        "mahasiswa_id": "mhs-0388",
+        "nim": "2023MN0388",
+        "nama": "Laila Nurjanah"
+      }
+    ],
+    "peserta_tidak_hadir": [
+      {
+        "mahasiswa_id": "mhs-0078",
+        "nim": "2024TI0078",
+        "nama": "Wulan Dari",
+        "keterangan": "izin"
+      },
+      {
+        "mahasiswa_id": "mhs-0251",
+        "nim": "2022AK0251",
+        "nama": "Clara Monica",
+        "keterangan": "alpha"
+      }
+    ],
+    "catatan": null,
+    "status": "selesai",
+    "ditandatangani_dosen": true,
+    "ditandatangani_pengawas": true,
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  },
+  {
+    "id": "bau-75849a06",
+    "jadwal_ujian_id": "75849a06-8133-4900-a873-35e5f1ead58e",
+    "mata_kuliah_nama": "Matematika Diskrit",
+    "mata_kuliah_kode": "TI102",
+    "jenis": "UTS",
+    "tanggal": "2024-10-22",
+    "jam_mulai": "08:00",
+    "jam_selesai": "10:00",
+    "ruang_nama": "Ruang A303",
+    "dosen_id": "dosen-008",
+    "dosen_nama": "Dr. Hesti Rahayu, M.Pd",
+    "pengawas": [
+      "Dr. Hesti Rahayu, M.Pd"
+    ],
+    "semester_akademik": "2024/2025-1",
+    "jumlah_peserta_terdaftar": 17,
+    "jumlah_peserta_hadir": 17,
+    "jumlah_peserta_tidak_hadir": 0,
+    "peserta_hadir": [
+      {
+        "mahasiswa_id": "mhs-0180",
+        "nim": "2024SI0180",
+        "nama": "Oscar Firmansyah"
+      },
+      {
+        "mahasiswa_id": "mhs-0305",
+        "nim": "2020MN0305",
+        "nama": "Umar Farhan"
+      },
+      {
+        "mahasiswa_id": "mhs-0255",
+        "nim": "2022AK0255",
+        "nama": "Wulan Dari"
+      },
+      {
+        "mahasiswa_id": "mhs-0297",
+        "nim": "2024AK0297",
+        "nama": "Julia Maharani"
+      },
+      {
+        "mahasiswa_id": "mhs-0409",
+        "nim": "2024MN0409",
+        "nama": "Wulan Dari"
+      },
+      {
+        "mahasiswa_id": "mhs-0234",
+        "nim": "2021AK0234",
+        "nama": "Indah Lestari"
+      },
+      {
+        "mahasiswa_id": "mhs-0036",
+        "nim": "2021TI0036",
+        "nama": "Olivia Sari"
+      },
+      {
+        "mahasiswa_id": "mhs-0048",
+        "nim": "2022TI0048",
+        "nama": "Vicky Sanjaya"
+      },
+      {
+        "mahasiswa_id": "mhs-0139",
+        "nim": "2022SI0139",
+        "nama": "Rina Marlina"
+      },
+      {
+        "mahasiswa_id": "mhs-0243",
+        "nim": "2022AK0243",
+        "nama": "Hana Pertiwi"
+      },
+      {
+        "mahasiswa_id": "mhs-0357",
+        "nim": "2022MN0357",
+        "nama": "Sari Dewi"
+      },
+      {
+        "mahasiswa_id": "mhs-0341",
+        "nim": "2021MN0341",
+        "nama": "Dani Kurniawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0034",
+        "nim": "2021TI0034",
+        "nama": "Laila Nurjanah"
+      },
+      {
+        "mahasiswa_id": "mhs-0032",
+        "nim": "2021TI0032",
+        "nama": "Nanda Putra"
+      },
+      {
+        "mahasiswa_id": "mhs-0375",
+        "nim": "2022MN0375",
+        "nama": "Hana Pertiwi"
+      },
+      {
+        "mahasiswa_id": "mhs-0360",
+        "nim": "2022MN0360",
+        "nama": "Laila Nurjanah"
+      },
+      {
+        "mahasiswa_id": "mhs-0159",
+        "nim": "2023SI0159",
+        "nama": "Fajar Hidayat"
+      }
+    ],
+    "peserta_tidak_hadir": [],
+    "catatan": null,
+    "status": "selesai",
+    "ditandatangani_dosen": true,
+    "ditandatangani_pengawas": true,
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  },
+  {
+    "id": "bau-0fd851ac",
+    "jadwal_ujian_id": "0fd851ac-6718-4615-81c2-96d2133e2bd3",
+    "mata_kuliah_nama": "Dasar Sistem Komputer",
+    "mata_kuliah_kode": "TI103",
+    "jenis": "UTS",
+    "tanggal": "2024-10-27",
+    "jam_mulai": "08:00",
+    "jam_selesai": "10:00",
+    "ruang_nama": "Ruang C202",
+    "dosen_id": "dosen-006",
+    "dosen_nama": "Dr. Fitri Handayani, M.Kom",
+    "pengawas": [
+      "Dr. Fitri Handayani, M.Kom"
+    ],
+    "semester_akademik": "2024/2025-1",
+    "jumlah_peserta_terdaftar": 18,
+    "jumlah_peserta_hadir": 18,
+    "jumlah_peserta_tidak_hadir": 0,
+    "peserta_hadir": [
+      {
+        "mahasiswa_id": "mhs-0253",
+        "nim": "2022AK0253",
+        "nama": "Elsa Maharani"
+      },
+      {
+        "mahasiswa_id": "mhs-0031",
+        "nim": "2021TI0031",
+        "nama": "Putri Cantika"
+      },
+      {
+        "mahasiswa_id": "mhs-0112",
+        "nim": "2020SI0112",
+        "nama": "Zahra Nabila"
+      },
+      {
+        "mahasiswa_id": "mhs-0394",
+        "nim": "2023MN0394",
+        "nama": "Bella Safitri"
+      },
+      {
+        "mahasiswa_id": "mhs-0148",
+        "nim": "2022SI0148",
+        "nama": "Zaki Abdullah"
+      },
+      {
+        "mahasiswa_id": "mhs-0067",
+        "nim": "2023TI0067",
+        "nama": "Ayu Lestari"
+      },
+      {
+        "mahasiswa_id": "mhs-0379",
+        "nim": "2023MN0379",
+        "nama": "Agus Salim"
+      },
+      {
+        "mahasiswa_id": "mhs-0127",
+        "nim": "2021SI0127",
+        "nama": "Joko Widodo"
+      },
+      {
+        "mahasiswa_id": "mhs-0204",
+        "nim": "2020AK0204",
+        "nama": "Muhammad Rizki"
+      },
+      {
+        "mahasiswa_id": "mhs-0201",
+        "nim": "2020AK0201",
+        "nama": "Gilang Ramadhan"
+      },
+      {
+        "mahasiswa_id": "mhs-0255",
+        "nim": "2022AK0255",
+        "nama": "Wulan Dari"
+      },
+      {
+        "mahasiswa_id": "mhs-0042",
+        "nim": "2022TI0042",
+        "nama": "Kartika Putri"
+      },
+      {
+        "mahasiswa_id": "mhs-0086",
+        "nim": "2024TI0086",
+        "nama": "Eka Wulandari"
+      },
+      {
+        "mahasiswa_id": "mhs-0230",
+        "nim": "2021AK0230",
+        "nama": "Bagas Wicaksono"
+      },
+      {
+        "mahasiswa_id": "mhs-0206",
+        "nim": "2020AK0206",
+        "nama": "Budi Santoso"
+      },
+      {
+        "mahasiswa_id": "mhs-0282",
+        "nim": "2024AK0282",
+        "nama": "Vicky Sanjaya"
+      },
+      {
+        "mahasiswa_id": "mhs-0143",
+        "nim": "2022SI0143",
+        "nama": "Ayu Lestari"
+      },
+      {
+        "mahasiswa_id": "mhs-0071",
+        "nim": "2023TI0071",
+        "nama": "Kevin Pratama"
+      }
+    ],
+    "peserta_tidak_hadir": [],
+    "catatan": null,
+    "status": "selesai",
+    "ditandatangani_dosen": true,
+    "ditandatangani_pengawas": true,
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  },
+  {
+    "id": "bau-a3296728",
+    "jadwal_ujian_id": "a3296728-e28e-4257-ae7a-51004aeb9db7",
+    "mata_kuliah_nama": "Dasar Sistem Komputer",
+    "mata_kuliah_kode": "TI103",
+    "jenis": "UTS",
+    "tanggal": "2024-10-25",
+    "jam_mulai": "08:00",
+    "jam_selesai": "10:00",
+    "ruang_nama": "Ruang A505",
+    "dosen_id": "dosen-001",
+    "dosen_nama": "Dr. Andi Wijaya, M.Kom",
+    "pengawas": [
+      "Dr. Andi Wijaya, M.Kom"
+    ],
+    "semester_akademik": "2024/2025-1",
+    "jumlah_peserta_terdaftar": 16,
+    "jumlah_peserta_hadir": 13,
+    "jumlah_peserta_tidak_hadir": 3,
+    "peserta_hadir": [
+      {
+        "mahasiswa_id": "mhs-0249",
+        "nim": "2022AK0249",
+        "nama": "Vicky Sanjaya"
+      },
+      {
+        "mahasiswa_id": "mhs-0302",
+        "nim": "2024AK0302",
+        "nama": "Yuni Astuti"
+      },
+      {
+        "mahasiswa_id": "mhs-0094",
+        "nim": "2024TI0094",
+        "nama": "Olivia Sari"
+      },
+      {
+        "mahasiswa_id": "mhs-0135",
+        "nim": "2022SI0135",
+        "nama": "Ayu Lestari"
+      },
+      {
+        "mahasiswa_id": "mhs-0145",
+        "nim": "2022SI0145",
+        "nama": "Olivia Sari"
+      },
+      {
+        "mahasiswa_id": "mhs-0003",
+        "nim": "2020TI0003",
+        "nama": "Hendra Gunawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0075",
+        "nim": "2023TI0075",
+        "nama": "Ahmad Fauzi"
+      },
+      {
+        "mahasiswa_id": "mhs-0215",
+        "nim": "2020AK0215",
+        "nama": "Sari Dewi"
+      },
+      {
+        "mahasiswa_id": "mhs-0274",
+        "nim": "2023AK0274",
+        "nama": "Dewi Susanti"
+      },
+      {
+        "mahasiswa_id": "mhs-0190",
+        "nim": "2024SI0190",
+        "nama": "Eka Wulandari"
+      },
+      {
+        "mahasiswa_id": "mhs-0313",
+        "nim": "2020MN0313",
+        "nama": "Bagas Wicaksono"
+      },
+      {
+        "mahasiswa_id": "mhs-0290",
+        "nim": "2024AK0290",
+        "nama": "Budi Santoso"
+      },
+      {
+        "mahasiswa_id": "mhs-0164",
+        "nim": "2023SI0164",
+        "nama": "Prayogi Saputra"
+      }
+    ],
+    "peserta_tidak_hadir": [
+      {
+        "mahasiswa_id": "mhs-0065",
+        "nim": "2023TI0065",
+        "nama": "Fani Rahayu",
+        "keterangan": "alpha"
+      },
+      {
+        "mahasiswa_id": "mhs-0354",
+        "nim": "2022MN0354",
+        "nama": "Dimas Aditya",
+        "keterangan": "izin"
+      },
+      {
+        "mahasiswa_id": "mhs-0264",
+        "nim": "2023AK0264",
+        "nama": "Ahmad Fauzi",
+        "keterangan": "sakit"
+      }
+    ],
+    "catatan": null,
+    "status": "selesai",
+    "ditandatangani_dosen": true,
+    "ditandatangani_pengawas": true,
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  },
+  {
+    "id": "bau-95cc1e1d",
+    "jadwal_ujian_id": "95cc1e1d-de67-45b7-aa91-6ebb680dfdf3",
+    "mata_kuliah_nama": "Dasar Sistem Komputer",
+    "mata_kuliah_kode": "TI103",
+    "jenis": "UTS",
+    "tanggal": "2024-10-16",
+    "jam_mulai": "08:00",
+    "jam_selesai": "10:00",
+    "ruang_nama": "Ruang B505",
+    "dosen_id": "dosen-002",
+    "dosen_nama": "Dr. Budi Santoso, M.T",
+    "pengawas": [
+      "Dr. Budi Santoso, M.T"
+    ],
+    "semester_akademik": "2024/2025-1",
+    "jumlah_peserta_terdaftar": 22,
+    "jumlah_peserta_hadir": 19,
+    "jumlah_peserta_tidak_hadir": 3,
+    "peserta_hadir": [
+      {
+        "mahasiswa_id": "mhs-0098",
+        "nim": "2020SI0098",
+        "nama": "Tiara Agustina"
+      },
+      {
+        "mahasiswa_id": "mhs-0035",
+        "nim": "2021TI0035",
+        "nama": "Putri Cantika"
+      },
+      {
+        "mahasiswa_id": "mhs-0107",
+        "nim": "2020SI0107",
+        "nama": "Sari Dewi"
+      },
+      {
+        "mahasiswa_id": "mhs-0226",
+        "nim": "2021AK0226",
+        "nama": "Fitri Amalia"
+      },
+      {
+        "mahasiswa_id": "mhs-0084",
+        "nim": "2024TI0084",
+        "nama": "Muhammad Rizki"
+      },
+      {
+        "mahasiswa_id": "mhs-0057",
+        "nim": "2022TI0057",
+        "nama": "Muhammad Rizki"
+      },
+      {
+        "mahasiswa_id": "mhs-0175",
+        "nim": "2023SI0175",
+        "nama": "Ani Rahayu"
+      },
+      {
+        "mahasiswa_id": "mhs-0308",
+        "nim": "2020MN0308",
+        "nama": "Joko Widodo"
+      },
+      {
+        "mahasiswa_id": "mhs-0027",
+        "nim": "2021TI0027",
+        "nama": "Cahyo Prabowo"
+      },
+      {
+        "mahasiswa_id": "mhs-0053",
+        "nim": "2022TI0053",
+        "nama": "Luthfi Hakim"
+      },
+      {
+        "mahasiswa_id": "mhs-0001",
+        "nim": "2020TI0001",
+        "nama": "Tiara Agustina"
+      },
+      {
+        "mahasiswa_id": "mhs-0291",
+        "nim": "2024AK0291",
+        "nama": "Ahmad Fauzi"
+      },
+      {
+        "mahasiswa_id": "mhs-0078",
+        "nim": "2024TI0078",
+        "nama": "Wulan Dari"
+      },
+      {
+        "mahasiswa_id": "mhs-0275",
+        "nim": "2023AK0275",
+        "nama": "Oscar Firmansyah"
+      },
+      {
+        "mahasiswa_id": "mhs-0052",
+        "nim": "2022TI0052",
+        "nama": "Yusuf Rahman"
+      },
+      {
+        "mahasiswa_id": "mhs-0187",
+        "nim": "2024SI0187",
+        "nama": "Maya Anggraini"
+      },
+      {
+        "mahasiswa_id": "mhs-0315",
+        "nim": "2020MN0315",
+        "nama": "Cica Handayani"
+      },
+      {
+        "mahasiswa_id": "mhs-0014",
+        "nim": "2020TI0014",
+        "nama": "Julia Maharani"
+      },
+      {
+        "mahasiswa_id": "mhs-0037",
+        "nim": "2021TI0037",
+        "nama": "Gilang Ramadhan"
+      }
+    ],
+    "peserta_tidak_hadir": [
+      {
+        "mahasiswa_id": "mhs-0193",
+        "nim": "2024SI0193",
+        "nama": "Luthfi Hakim",
+        "keterangan": "izin"
+      },
+      {
+        "mahasiswa_id": "mhs-0077",
+        "nim": "2023TI0077",
+        "nama": "Clara Monica",
+        "keterangan": "sakit"
+      },
+      {
+        "mahasiswa_id": "mhs-0325",
+        "nim": "2020MN0325",
+        "nama": "Rina Marlina",
+        "keterangan": "sakit"
+      }
+    ],
+    "catatan": null,
+    "status": "selesai",
+    "ditandatangani_dosen": true,
+    "ditandatangani_pengawas": true,
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  },
+  {
+    "id": "bau-279028da",
+    "jadwal_ujian_id": "279028da-d183-4364-95bb-15901d69c818",
+    "mata_kuliah_nama": "Pemrograman Web",
+    "mata_kuliah_kode": "TI301",
+    "jenis": "UTS",
+    "tanggal": "2024-10-04",
+    "jam_mulai": "08:00",
+    "jam_selesai": "10:00",
+    "ruang_nama": "Ruang A404",
+    "dosen_id": "dosen-005",
+    "dosen_nama": "Dr. Eko Susanto, M.T",
+    "pengawas": [
+      "Dr. Eko Susanto, M.T"
+    ],
+    "semester_akademik": "2024/2025-1",
+    "jumlah_peserta_terdaftar": 23,
+    "jumlah_peserta_hadir": 21,
+    "jumlah_peserta_tidak_hadir": 2,
+    "peserta_hadir": [
+      {
+        "mahasiswa_id": "mhs-0053",
+        "nim": "2022TI0053",
+        "nama": "Luthfi Hakim"
+      },
+      {
+        "mahasiswa_id": "mhs-0384",
+        "nim": "2023MN0384",
+        "nama": "Bagas Wicaksono"
+      },
+      {
+        "mahasiswa_id": "mhs-0176",
+        "nim": "2023SI0176",
+        "nama": "Wulan Dari"
+      },
+      {
+        "mahasiswa_id": "mhs-0380",
+        "nim": "2023MN0380",
+        "nama": "Ivan Setiawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0136",
+        "nim": "2022SI0136",
+        "nama": "Gilang Ramadhan"
+      },
+      {
+        "mahasiswa_id": "mhs-0246",
+        "nim": "2022AK0246",
+        "nama": "Vina Permata"
+      },
+      {
+        "mahasiswa_id": "mhs-0355",
+        "nim": "2022MN0355",
+        "nama": "Muhammad Rizki"
+      },
+      {
+        "mahasiswa_id": "mhs-0083",
+        "nim": "2024TI0083",
+        "nama": "Dani Kurniawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0265",
+        "nim": "2023AK0265",
+        "nama": "Ivan Setiawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0012",
+        "nim": "2020TI0012",
+        "nama": "Hadi Prasetyo"
+      },
+      {
+        "mahasiswa_id": "mhs-0106",
+        "nim": "2020SI0106",
+        "nama": "Joko Widodo"
+      },
+      {
+        "mahasiswa_id": "mhs-0271",
+        "nim": "2023AK0271",
+        "nama": "Maya Anggraini"
+      },
+      {
+        "mahasiswa_id": "mhs-0186",
+        "nim": "2024SI0186",
+        "nama": "Hadi Prasetyo"
+      },
+      {
+        "mahasiswa_id": "mhs-0076",
+        "nim": "2023TI0076",
+        "nama": "Julia Maharani"
+      },
+      {
+        "mahasiswa_id": "mhs-0354",
+        "nim": "2022MN0354",
+        "nama": "Dimas Aditya"
+      },
+      {
+        "mahasiswa_id": "mhs-0279",
+        "nim": "2023AK0279",
+        "nama": "Hendra Gunawan"
+      },
+      {
+        "mahasiswa_id": "mhs-0014",
+        "nim": "2020TI0014",
+        "nama": "Julia Maharani"
+      },
+      {
+        "mahasiswa_id": "mhs-0389",
+        "nim": "2023MN0389",
+        "nama": "Kevin Pratama"
+      },
+      {
+        "mahasiswa_id": "mhs-0153",
+        "nim": "2022SI0153",
+        "nama": "Olivia Sari"
+      },
+      {
+        "mahasiswa_id": "mhs-0330",
+        "nim": "2021MN0330",
+        "nama": "Agus Salim"
+      },
+      {
+        "mahasiswa_id": "mhs-0047",
+        "nim": "2022TI0047",
+        "nama": "Gilang Ramadhan"
+      }
+    ],
+    "peserta_tidak_hadir": [
+      {
+        "mahasiswa_id": "mhs-0357",
+        "nim": "2022MN0357",
+        "nama": "Sari Dewi",
+        "keterangan": "alpha"
+      },
+      {
+        "mahasiswa_id": "mhs-0134",
+        "nim": "2022SI0134",
+        "nama": "Hendra Gunawan",
+        "keterangan": "sakit"
+      }
+    ],
+    "catatan": null,
+    "status": "selesai",
+    "ditandatangani_dosen": true,
+    "ditandatangani_pengawas": true,
+    "created_at": "2026-07-23T08:41:54.975017",
+    "deleted_at": null
+  }
+]

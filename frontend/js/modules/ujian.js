@@ -13,7 +13,8 @@ const UjianModule = (() => {
 
   // ── render ─────────────────────────────────────────────────
   const render = async () => {
-    const main = document.getElementById('main-content')
+    Router.setPageMeta('Ujian (UTS/UAS)', 'Kelola jadwal ujian, kartu ujian, dan berita acara')
+    const main = document.getElementById('page-content')
     main.innerHTML = `
       <div class="p-4 md:p-6 space-y-4">
         <!-- Header -->

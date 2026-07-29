@@ -33,11 +33,13 @@ const KRSModule = (() => {
   }
 
   const fetchList = async () => {
-    const res = await API.get('/krs', {
+    const params = {
       page: state.page, per_page: 20,
       search: state.search, status: state.status,
       semester_akademik: state.semester_akademik,
-    })
+    }
+    if (Auth.hasRole('mahasiswa')) params.mahasiswa_id = Auth.getEntityId() || ''
+    const res = await API.get('/krs', params)
     state.list = res.data
     state.meta = res.meta
     renderTable()

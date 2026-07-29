@@ -73,7 +73,11 @@ const KHSModule = (() => {
   // ── MAIN RENDER ────────────────────────────────────────────
   const render = async () => {
     Router.setPageMeta('KHS & Transkrip', 'Kartu Hasil Studi dan transkrip nilai mahasiswa')
-    await Promise.all([fetchMahasiswa(), fetchSemesters()])
+    try { await Promise.all([fetchMahasiswa(), fetchSemesters()]) } catch(e) { console.warn('KHS init failed:', e) }
+    // Mahasiswa auto-selects their own record
+    if (Auth.hasRole('mahasiswa') && Auth.getEntityId() && !state.mahasiswa_id) {
+      state.mahasiswa_id = Auth.getEntityId()
+    }
 
     document.getElementById('page-content').innerHTML = `
       <!-- Tab -->

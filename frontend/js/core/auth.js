@@ -1,31 +1,19 @@
 // ============================================================
-// AUTH.JS — Skip login untuk development lokal
-// Ganti DEV_MODE = false kalau sudah mau pakai login beneran
+// AUTH.JS — Authentication helper
+// DEV_MODE = false → real JWT login required
 // ============================================================
-const DEV_MODE = true
-
-const DEV_USER = {
-  id: 'usr-001',
-  email: 'admin@siakad.ac.id',
-  nama: 'Administrator',
-  role: 'super_admin',
-  foto_url: null,
-}
+const DEV_MODE = false
 
 const Auth = (() => {
-  const USER_KEY = 'user'
+  const USER_KEY = 'siakad_user'
 
   const getUser = () => {
-    if (DEV_MODE) return DEV_USER
     try { return JSON.parse(localStorage.getItem(USER_KEY)) } catch { return null }
   }
 
   const setUser = (u) => localStorage.setItem(USER_KEY, JSON.stringify(u))
 
-  const isLoggedIn = () => {
-    if (DEV_MODE) return true
-    return !!API.getToken() && !!getUser()
-  }
+  const isLoggedIn = () => !!API.getToken() && !!getUser()
 
   const login = async (email, password) => {
     const res = await API.post('/auth/login', { email, password })
@@ -35,7 +23,6 @@ const Auth = (() => {
   }
 
   const logout = () => {
-    if (DEV_MODE) return // skip di dev mode
     API.clearTokens()
     localStorage.removeItem(USER_KEY)
   }
@@ -45,5 +32,20 @@ const Auth = (() => {
     return user && roles.includes(user.role)
   }
 
-  return { getUser, setUser, isLoggedIn, login, logout, hasRole }
+  // Returns the linked mahasiswa.id or dosen.id (null for admin roles)
+  const getEntityId = () => {
+    const user = getUser()
+    return user?.entity_id || null
+  }
+
+  // Redirect to dashboard if user doesn't have an allowed role
+  const requireRole = (...roles) => {
+    if (!hasRole(...roles)) {
+      window.location.hash = '#/dashboard'
+      return false
+    }
+    return true
+  }
+
+  return { getUser, setUser, isLoggedIn, login, logout, hasRole, getEntityId, requireRole }
 })()

@@ -33,11 +33,13 @@ const KeuanganModule = (() => {
   }
 
   const fetchTagihan = async () => {
-    const res = await API.get('/keuangan/tagihan', {
+    const params = {
       page: state.tagihanPage, per_page: 20,
       search: state.tagihanSearch, status: state.tagihanStatus,
       semester_akademik: state.tagihanSem, jenis: state.tagihanJenis,
-    })
+    }
+    if (Auth.hasRole('mahasiswa')) params.mahasiswa_id = Auth.getEntityId() || ''
+    const res = await API.get('/keuangan/tagihan', params)
     state.tagihanList = res.data || []
     state.tagihanMeta = res.meta
     renderTagihanTable()
@@ -405,8 +407,8 @@ const KeuanganModule = (() => {
           </td>`
       })
     })
-    document.getElementById('tagihan-pagination').innerHTML =
-      UI.renderPagination(state.tagihanMeta, 'KeuanganModule.goTagihanPage')
+    const pgT = document.getElementById('tagihan-pagination')
+    if (pgT) pgT.innerHTML = UI.renderPagination(state.tagihanMeta, 'KeuanganModule.goTagihanPage')
   }
 
   // ── PEMBAYARAN TAB ─────────────────────────────────────────
@@ -479,8 +481,8 @@ const KeuanganModule = (() => {
             </button>` : '—'}
         </td>`)
     })
-    document.getElementById('pmb-pagination').innerHTML =
-      UI.renderPagination(state.pmbMeta, 'KeuanganModule.goPmbPage')
+    const pgP = document.getElementById('pmb-pagination')
+    if (pgP) pgP.innerHTML = UI.renderPagination(state.pmbMeta, 'KeuanganModule.goPmbPage')
   }
 
   // ── LAPORAN TAB ────────────────────────────────────────────

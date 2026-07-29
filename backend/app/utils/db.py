@@ -62,14 +62,7 @@ def init_db():
 
 
 def seed_from_json():
-    """Seed the database from local JSON files if the store is empty."""
-    with _conn() as conn:
-        with conn.cursor() as cur:
-            cur.execute("SELECT COUNT(*) FROM store")
-            count = cur.fetchone()[0]
-    if count > 0:
-        return  # already seeded
-
+    """Seed each table from local JSON files if that specific table is empty."""
     data_dir = Path(__file__).parent.parent.parent / "data"
     if not data_dir.exists():
         return
@@ -80,7 +73,11 @@ def seed_from_json():
                 table = json_file.stem
                 try:
                     records = json.loads(json_file.read_text(encoding="utf-8"))
-                    if not isinstance(records, list):
+                    if not isinstance(records, list) or not records:
+                        continue
+                    # Check per-table so new tables added after first deploy still get seeded
+                    cur.execute("SELECT COUNT(*) FROM store WHERE table_name = %s", (table,))
+                    if cur.fetchone()[0] > 0:
                         continue
                     for record in records:
                         rid = str(record.get("id", uuid.uuid4()))
@@ -94,6 +91,33 @@ def seed_from_json():
                         )
                 except Exception:
                     pass  # skip malformed files
+
+
+def reseed_users():
+    """Always upsert users from users.json so password/role changes propagate on redeploy."""
+    data_dir = Path(__file__).parent.parent.parent / "data"
+    json_file = data_dir / "users.json"
+    if not json_file.exists():
+        return
+    try:
+        records = json.loads(json_file.read_text(encoding="utf-8"))
+        if not isinstance(records, list):
+            return
+        with _conn() as conn:
+            with conn.cursor() as cur:
+                for record in records:
+                    rid = str(record.get("id", uuid.uuid4()))
+                    cur.execute(
+                        """
+                        INSERT INTO store (table_name, record_id, data)
+                        VALUES ('users', %s, %s)
+                        ON CONFLICT (table_name, record_id) DO UPDATE
+                        SET data = EXCLUDED.data
+                        """,
+                        (rid, json.dumps(record, default=str))
+                    )
+    except Exception:
+        pass
 
 
 # ── Public API — identical signatures to the JSON version ─────────────────────

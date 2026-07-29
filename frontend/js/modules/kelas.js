@@ -74,7 +74,7 @@ const KelasModule = (() => {
   // ── Main render ──────────────────────────────────────────
   const render = async () => {
     Router.setPageMeta('Kelas & Jadwal', 'Manajemen kelas dan jadwal kuliah')
-    await loadRefs()
+    try { await loadRefs() } catch(e) { console.warn('loadRefs failed:', e) }
 
     document.getElementById('page-content').innerHTML = `
       <!-- View toggle -->
