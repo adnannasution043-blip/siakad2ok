@@ -257,11 +257,14 @@ const PengaturanModule = (() => {
   const renderUsersTable = () => {
     const el = document.getElementById('usr-table-wrap')
     if (!el) return
+    const currentUser = Auth.getUser()
+    const isSuperAdmin = currentUser?.role === 'super_admin'
     el.innerHTML = UI.renderTable({
       headers: ['Pengguna', 'Role', 'Status', 'Aksi'],
       emptyText: 'Tidak ada pengguna ditemukan',
       rows: state.users.map(u => {
         const active = u.is_active !== false
+        const canDelete = isSuperAdmin && u.role !== 'super_admin' && u.id !== currentUser?.id
         return `
           <td class="px-4 py-3">
             <div class="flex items-center gap-3">
@@ -308,6 +311,15 @@ const PengaturanModule = (() => {
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/>
                 </svg>
               </button>
+              ${canDelete ? `
+              <button onclick="PengaturanModule.deleteUser('${u.id}', '${(u.nama||'').replace(/'/g,"\\'")}')"
+                title="Hapus akun"
+                class="p-1.5 text-red-500 hover:bg-red-50 rounded-lg">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                </svg>
+              </button>` : ''}
             </div>
           </td>`
       })
@@ -557,6 +569,43 @@ const PengaturanModule = (() => {
     }
   }
 
+  // ── DELETE USER ────────────────────────────────────────────
+  const deleteUser = (userId, nama) => {
+    UI.openModal(`
+      <div class="px-6 py-4 border-b border-red-200 bg-red-50 flex items-center gap-3">
+        <svg class="w-5 h-5 text-red-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+        </svg>
+        <h3 class="text-lg font-semibold text-red-800">Hapus Akun</h3>
+      </div>
+      <div class="px-6 py-5 space-y-4">
+        <p class="text-sm text-slate-600">Anda akan menghapus akun: <strong>${nama}</strong></p>
+        <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800">
+          Akun yang dihapus tidak bisa login lagi. Tindakan ini tidak dapat dibatalkan.
+        </div>
+        <div class="flex gap-3 pt-2">
+          <button onclick="UI.closeModal()"
+            class="flex-1 px-4 py-2 border border-slate-300 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">
+            Batal
+          </button>
+          <button onclick="PengaturanModule.confirmDeleteUser('${userId}')"
+            class="flex-1 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-medium">
+            Hapus Akun
+          </button>
+        </div>
+      </div>
+    `)
+  }
+
+  const confirmDeleteUser = async (userId) => {
+    try {
+      await API.delete(`/users/${userId}`)
+      UI.closeModal()
+      UI.toast('Akun berhasil dihapus', 'success')
+      fetchUsers()
+    } catch(e) { UI.toast(e.message || 'Gagal menghapus akun', 'error') }
+  }
+
   // ── SEARCH / FILTER / PAGINATION ───────────────────────────
   let searchTimer = null
   const onSearch = (val) => {
@@ -572,6 +621,7 @@ const PengaturanModule = (() => {
     openEditUser, submitEditUser,
     toggleActive,
     openResetPassword, submitResetPassword,
+    deleteUser, confirmDeleteUser,
     openReset, submitReset,
     onSearch, onFilter, goPage,
   }

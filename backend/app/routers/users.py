@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from typing import Optional
 import uuid
 from datetime import datetime, timezone
-from app.utils.db import read_all, find_by_id, insert, update, paginate, search_rows
+from app.utils.db import read_all, find_by_id, insert, update, soft_delete, paginate, search_rows
 from app.utils.security import hash_password
 from app.utils.dev import get_user_from_request, check_role
 
@@ -114,6 +114,21 @@ def update_user(user_id: str, body: UserUpdate, authorization: str = Header(defa
         raise HTTPException(400, "Tidak ada perubahan yang dikirim")
     updated = update("users", user_id, updates)
     return ok(_safe(updated), "User berhasil diperbarui")
+
+# ── DELETE user (soft delete) ──────────────────────────────
+@router.delete("/{user_id}")
+def delete_user(user_id: str, authorization: str = Header(default="dev")):
+    user = get_user_from_request(authorization)
+    check_role(user, ["super_admin"])
+    u = find_by_id("users", user_id)
+    if not u:
+        raise HTTPException(404, "User tidak ditemukan")
+    if u.get("role") == "super_admin":
+        raise HTTPException(403, "Akun Super Admin tidak dapat dihapus")
+    if user.get("id") == user_id:
+        raise HTTPException(400, "Tidak dapat menghapus akun sendiri")
+    soft_delete("users", user_id)
+    return ok(message=f"Akun {u.get('nama', '')} berhasil dihapus")
 
 # ── POST reset password ────────────────────────────────────
 class ResetPassword(BaseModel):
