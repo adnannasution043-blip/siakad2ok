@@ -45,7 +45,7 @@ def list_alumni(
     angkatan: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [a for a in read_all("alumni") if not a.get("deleted_at")]
     if program_studi_id:
@@ -136,7 +136,7 @@ def delete_alumni(alumni_id: str):
 def list_yudisium(
     status: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [y for y in read_all("yudisium") if not y.get("deleted_at")]
     if status:

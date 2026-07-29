@@ -36,7 +36,7 @@ def get_stats():
 @router.get("/template")
 def list_template(
     page: int = Query(1, ge=1),
-    per_page: int = Query(50, ge=1, le=100),
+    per_page: int = Query(50, ge=1, le=1000),
     search: str = Query(""),
     is_active: str = Query(""),
 ):
@@ -86,7 +86,7 @@ def delete_template(template_id: str):
 @router.get("/pengajuan")
 def list_pengajuan(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     status: str = Query(""),
     jenis_surat: str = Query(""),

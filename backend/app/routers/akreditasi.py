@@ -42,7 +42,7 @@ def get_stats():
 @router.get("/prodi")
 def list_prodi(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     badan_akreditasi: str = Query(""),
     peringkat: str = Query(""),
@@ -92,7 +92,7 @@ def delete_prodi(prodi_id: str):
 @router.get("/dokumen")
 def list_dokumen(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     prodi_id: str = Query(""),
     jenis: str = Query(""),

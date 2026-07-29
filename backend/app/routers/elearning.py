@@ -38,7 +38,7 @@ def get_stats():
 @router.get("/kursus")
 def list_kursus(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     status: str = Query(""),
     tahun_akademik: str = Query(""),
@@ -130,7 +130,7 @@ def arsipkan_kursus(kursus_id: str):
 @router.get("/materi")
 def list_materi(
     page: int = Query(1, ge=1),
-    per_page: int = Query(50, ge=1, le=100),
+    per_page: int = Query(50, ge=1, le=1000),
     search: str = Query(""),
     kursus_id: str = Query(""),
     tipe: str = Query(""),
@@ -183,7 +183,7 @@ def delete_materi(materi_id: str):
 @router.get("/enrollment")
 def list_enrollment(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     kursus_id: str = Query(""),
     status: str = Query(""),

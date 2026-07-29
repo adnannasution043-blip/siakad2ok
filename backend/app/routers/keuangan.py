@@ -68,7 +68,7 @@ def ringkasan(
 @router.get("/tagihan")
 def list_tagihan(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     status: str = Query(""),
     semester_akademik: str = Query(""),
@@ -237,7 +237,7 @@ def delete_tagihan(tagihan_id: str, authorization: str = Header(default="dev")):
 @router.get("/pembayaran")
 def list_pembayaran(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     status: str = Query(""),
     metode: str = Query(""),

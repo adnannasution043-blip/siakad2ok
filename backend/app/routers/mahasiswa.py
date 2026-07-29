@@ -24,7 +24,7 @@ ADMIN_ROLES = ["super_admin", "admin_akademik", "staf"]
 @router.get("")
 def list_mahasiswa(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     status: str = Query(""),
     prodi_id: str = Query(""),

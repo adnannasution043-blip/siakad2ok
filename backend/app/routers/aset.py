@@ -31,7 +31,7 @@ def get_stats():
 @router.get("")
 def list_aset(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     kategori: str = Query(""),
     kondisi: str = Query(""),

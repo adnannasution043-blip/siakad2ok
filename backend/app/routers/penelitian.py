@@ -37,7 +37,7 @@ def get_stats():
 @router.get("")
 def list_penelitian(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     status: str = Query(""),
     skema: str = Query(""),
@@ -196,7 +196,7 @@ def update_laporan(penelitian_id: str, body: dict):
 @router.get("/luaran/list")
 def list_luaran(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     penelitian_id: str = Query(""),
     jenis: str = Query(""),

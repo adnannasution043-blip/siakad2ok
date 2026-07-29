@@ -33,7 +33,7 @@ def list_ta(
     pembimbing_id: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     ta = [t for t in read_all("tugas_akhir") if not t.get("deleted_at")]
     if status:
@@ -250,7 +250,7 @@ def list_sidang(
     status: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     sidang = [s for s in read_all("sidang_ta") if not s.get("deleted_at")]
     if status:

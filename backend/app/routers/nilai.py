@@ -42,7 +42,7 @@ def _calc_akhir(uts, uas, tugas,
 @router.get("")
 def list_nilai(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     semester_akademik: str = Query(""),
     nilai_huruf: str = Query(""),

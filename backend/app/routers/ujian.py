@@ -63,7 +63,7 @@ def list_jadwal(
     status: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     jadwal = [j for j in read_all("jadwal_ujian") if not j.get("deleted_at")]
     if semester:
@@ -197,7 +197,7 @@ def list_kartu(
     status: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     kartu = [k for k in read_all("kartu_ujian") if not k.get("deleted_at")]
     if semester:
@@ -367,7 +367,7 @@ def list_berita_acara(
     jadwal_id: Optional[str] = None,
     status: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     ba = [b for b in read_all("berita_acara_ujian") if not b.get("deleted_at")]
     if semester:

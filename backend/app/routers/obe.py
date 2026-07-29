@@ -104,7 +104,7 @@ def list_cpl(
     prodi_id: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(50, ge=1, le=100),
+    per_page: int = Query(50, ge=1, le=1000),
 ):
     data = [c for c in read_all("cpl") if not c.get("deleted_at")]
     if prodi_id:
@@ -168,7 +168,7 @@ def list_cpmk(
     mk_id: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(50, ge=1, le=100),
+    per_page: int = Query(50, ge=1, le=1000),
 ):
     data = [c for c in read_all("cpmk") if not c.get("deleted_at")]
     if mk_id:
@@ -233,7 +233,7 @@ def list_rps(
     status: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [r for r in read_all("rps") if not r.get("deleted_at")]
     if mk_id:
@@ -326,7 +326,7 @@ def list_penilaian(
     semester: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [p for p in read_all("penilaian_obe") if not p.get("deleted_at")]
     if mk_id:

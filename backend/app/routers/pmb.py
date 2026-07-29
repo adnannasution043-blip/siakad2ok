@@ -38,7 +38,7 @@ def get_stats():
 @router.get("/gelombang")
 def list_gelombang(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     status: str = Query(""),
     tahun_akademik: str = Query(""),
@@ -146,7 +146,7 @@ def selesaikan_gelombang(gelombang_id: str):
 @router.get("/pendaftar")
 def list_pendaftar(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     gelombang_id: str = Query(""),
     status_seleksi: str = Query(""),

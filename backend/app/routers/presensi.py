@@ -90,7 +90,7 @@ def rekap_kelas(
 def list_sesi(
     kelas_id: str = Query(""),
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     authorization: str = Header(default="dev"),
 ):
     get_user_from_request(authorization)
@@ -364,7 +364,7 @@ def update_presensi(presensi_id: str, body: UpdateBody, authorization: str = Hea
 @router.get("")
 def list_presensi(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     status: str = Query(""),
     kelas_id: str = Query(""),

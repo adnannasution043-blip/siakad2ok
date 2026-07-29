@@ -29,7 +29,7 @@ def get_stats():
 @router.get("/pegawai")
 def list_pegawai(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     status_kepegawaian: str = Query(""),
     unit_kerja: str = Query(""),

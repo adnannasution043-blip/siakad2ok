@@ -57,7 +57,7 @@ def _check_conflict(hari, jam_mulai, jam_selesai, ruang_id, dosen_id, exclude_id
 @router.get("")
 def list_kelas(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     semester_akademik: str = Query(""),
     prodi_id: str = Query(""),

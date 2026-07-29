@@ -22,7 +22,7 @@ def list_magang(
     mahasiswa_id: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [m for m in read_all("magang") if not m.get("deleted_at")]
     if status:

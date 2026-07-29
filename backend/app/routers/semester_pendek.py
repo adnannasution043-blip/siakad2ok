@@ -29,7 +29,7 @@ def list_program(
     status: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [p for p in read_all("program_sp") if not p.get("deleted_at")]
     if status:
@@ -135,7 +135,7 @@ def list_kelas(
     status: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [k for k in read_all("kelas_sp") if not k.get("deleted_at")]
     if program_sp_id:
@@ -237,7 +237,7 @@ def list_peserta(
     kelas_sp_id: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [ps for ps in read_all("peserta_sp") if not ps.get("deleted_at")]
     if program_sp_id:

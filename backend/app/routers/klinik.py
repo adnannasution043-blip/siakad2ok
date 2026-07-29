@@ -41,7 +41,7 @@ def list_kunjungan(
     dari: Optional[str] = None,
     sampai: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [k for k in read_all("kunjungan_klinik") if not k.get("deleted_at")]
     if status:

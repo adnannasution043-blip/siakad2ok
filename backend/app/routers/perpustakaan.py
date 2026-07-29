@@ -46,7 +46,7 @@ def list_koleksi(
     search: Optional[str] = None,
     tersedia: Optional[bool] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [k for k in read_all("koleksi_perpustakaan") if not k.get("deleted_at")]
     if kategori:
@@ -121,7 +121,7 @@ def list_peminjaman(
     mahasiswa_id: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [p for p in read_all("peminjaman_perpustakaan") if not p.get("deleted_at")]
     if status:

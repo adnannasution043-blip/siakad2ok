@@ -18,7 +18,7 @@ def list_ukm(
     status: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [u for u in read_all("ukm") if not u.get("deleted_at")]
     if kategori:
@@ -137,7 +137,7 @@ def list_anggota(
     status: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [a for a in read_all("anggota_ukm") if not a.get("deleted_at")]
     if ukm_id:
@@ -230,7 +230,7 @@ def list_kegiatan(
     status: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [k for k in read_all("kegiatan_ukm") if not k.get("deleted_at")]
     if ukm_id:

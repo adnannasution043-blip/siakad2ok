@@ -38,7 +38,7 @@ def list_notifikasi(
     jenis: Optional[str] = None,
     dibaca: Optional[bool] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(30, ge=1, le=100),
+    per_page: int = Query(30, ge=1, le=1000),
 ):
     data = [n for n in read_all("notifikasi") if not n.get("deleted_at") and n.get("user_id") == DEV_USER_ID]
     if jenis:
@@ -79,7 +79,7 @@ def list_pengumuman(
     kategori: Optional[str] = None,
     target: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [p for p in read_all("pengumuman") if not p.get("deleted_at")]
     if kategori:

@@ -23,7 +23,7 @@ def on_startup():
         init_db()
         seed_from_json()
         reseed_users()  # always sync user records from JSON (passwords/roles)
-        reseed_tables(['cpl', 'cpmk', 'rps', 'penilaian_obe', 'berita_acara_ujian'])  # sync corrected OBE data
+        reseed_tables(['cpl', 'cpmk', 'rps', 'penilaian_obe', 'berita_acara_ujian', 'nilai'])  # sync corrected data
 
 app.add_middleware(
     CORSMiddleware,

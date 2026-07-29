@@ -21,7 +21,7 @@ def list_beasiswa(
     jenis: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [b for b in read_all("beasiswa") if not b.get("deleted_at")]
     if status:
@@ -136,7 +136,7 @@ def list_pendaftar(
     semester: Optional[str] = None,
     search: Optional[str] = None,
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
 ):
     data = [d for d in read_all("daftar_beasiswa") if not d.get("deleted_at")]
     if beasiswa_id:

@@ -34,7 +34,7 @@ def _time_to_min(t: str) -> int:
 @router.get("")
 def list_krs(
     page: int = Query(1, ge=1),
-    per_page: int = Query(20, ge=1, le=100),
+    per_page: int = Query(20, ge=1, le=1000),
     search: str = Query(""),
     status: str = Query(""),
     semester_akademik: str = Query(""),
