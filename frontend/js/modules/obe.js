@@ -77,7 +77,7 @@ const OBEModule = (() => {
 
   const loadStats = async () => {
     try {
-      const res = await api('/api/v1/obe/stats')
+      const res = await api('/obe/stats')
       if (!res.success) return
       const d = res.data
       const cards = [
@@ -135,7 +135,7 @@ const OBEModule = (() => {
     if (search) params.set('search', search)
     if (prodi)  params.set('prodi_id', prodi)
     try {
-      const res = await api(`/api/v1/obe/cpl?${params}`)
+      const res = await api(`/obe/cpl?${params}`)
       const rows = (res.data || [])
       $('cpl-table').innerHTML = rows.length === 0
         ? `<p class="text-center text-slate-400 py-8">Belum ada CPL</p>`
@@ -161,7 +161,7 @@ const OBEModule = (() => {
   const openCPLForm = async (id) => {
     editingId = id || null
     let rec = {}
-    if (id) { try { const r = await api(`/api/v1/obe/cpl/${id}`); rec = r.data || {} } catch(e){} }
+    if (id) { try { const r = await api(`/obe/cpl/${id}`); rec = r.data || {} } catch(e){} }
     showModal(`
       <div class="p-6">
         <h3 class="font-bold text-lg mb-4">${id ? 'Edit' : 'Tambah'} CPL</h3>
@@ -214,8 +214,8 @@ const OBEModule = (() => {
       deskripsi:  $('cf-deskripsi').value.trim(),
     }
     try {
-      if (editingId) await API.put(`/api/v1/obe/cpl/${editingId}`, body)
-      else           await API.post('/api/v1/obe/cpl', body)
+      if (editingId) await API.put(`/obe/cpl/${editingId}`, body)
+      else           await API.post('/obe/cpl', body)
       closeModal()
       UI.toast(`CPL berhasil ${editingId?'diperbarui':'ditambahkan'}`)
       loadStats(); filterCPL()
@@ -224,7 +224,7 @@ const OBEModule = (() => {
 
   const deleteCPL = async (id, kode) => {
     if (!confirm(`Hapus CPL "${kode}"?`)) return
-    try { await API.delete(`/api/v1/obe/cpl/${id}`); UI.toast('CPL dihapus'); loadStats(); filterCPL() }
+    try { await API.delete(`/obe/cpl/${id}`); UI.toast('CPL dihapus'); loadStats(); filterCPL() }
     catch(e) { UI.toast(e.message, 'error') }
   }
 
@@ -246,8 +246,8 @@ const OBEModule = (() => {
     const params = new URLSearchParams({per_page:100})
     if (search) params.set('search', search)
     try {
-      const res  = await api(`/api/v1/obe/cpmk?${params}`)
-      const cpls = await api('/api/v1/obe/cpl?per_page=100')
+      const res  = await api(`/obe/cpmk?${params}`)
+      const cpls = await api('/obe/cpl?per_page=100')
       const cplMap = Object.fromEntries((cpls.data||[]).map(c=>[c.id, c.kode]))
       const rows = res.data || []
       $('cpmk-table').innerHTML = rows.length === 0
@@ -276,8 +276,8 @@ const OBEModule = (() => {
   const openCPMKForm = async (id) => {
     editingId = id || null
     let rec = {}
-    if (id) { try { const r = await api(`/api/v1/obe/cpmk/${id}`); rec = r.data || {} } catch(e){} }
-    const cplRes = await api('/api/v1/obe/cpl?per_page=100')
+    if (id) { try { const r = await api(`/obe/cpmk/${id}`); rec = r.data || {} } catch(e){} }
+    const cplRes = await api('/obe/cpl?per_page=100')
     const cpls   = cplRes.data || []
     const selectedCpls = rec.cpl_ids || []
     showModal(`
@@ -339,8 +339,8 @@ const OBEModule = (() => {
       cpl_ids,
     }
     try {
-      if (editingId) await API.put(`/api/v1/obe/cpmk/${editingId}`, body)
-      else           await API.post('/api/v1/obe/cpmk', body)
+      if (editingId) await API.put(`/obe/cpmk/${editingId}`, body)
+      else           await API.post('/obe/cpmk', body)
       closeModal(); UI.toast(`CPMK berhasil ${editingId?'diperbarui':'ditambahkan'}`)
       loadStats(); filterCPMK()
     } catch(e) { UI.toast(e.message,'error') }
@@ -348,7 +348,7 @@ const OBEModule = (() => {
 
   const deleteCPMK = async (id, kode) => {
     if (!confirm(`Hapus CPMK "${kode}"?`)) return
-    try { await API.delete(`/api/v1/obe/cpmk/${id}`); UI.toast('CPMK dihapus'); loadStats(); filterCPMK() }
+    try { await API.delete(`/obe/cpmk/${id}`); UI.toast('CPMK dihapus'); loadStats(); filterCPMK() }
     catch(e) { UI.toast(e.message,'error') }
   }
 
@@ -378,7 +378,7 @@ const OBEModule = (() => {
     if (search) params.set('search', search)
     if (status) params.set('status', status)
     try {
-      const res  = await api(`/api/v1/obe/rps?${params}`)
+      const res  = await api(`/obe/rps?${params}`)
       const rows = res.data || []
       $('rps-table').innerHTML = rows.length === 0
         ? `<p class="text-center text-slate-400 py-8">Belum ada RPS</p>`
@@ -413,7 +413,7 @@ const OBEModule = (() => {
 
   const viewRPS = async (id) => {
     try {
-      const res = await api(`/api/v1/obe/rps/${id}`)
+      const res = await api(`/obe/rps/${id}`)
       const r   = res.data
       showModal(`
         <div class="p-6">
@@ -457,7 +457,7 @@ const OBEModule = (() => {
   const openRPSForm = async (id) => {
     editingId = id || null
     let rec = {}
-    if (id) { try { const r = await api(`/api/v1/obe/rps/${id}`); rec = r.data || {} } catch(e){} }
+    if (id) { try { const r = await api(`/obe/rps/${id}`); rec = r.data || {} } catch(e){} }
     showModal(`
       <div class="p-6">
         <h3 class="font-bold text-lg mb-4">${id?'Edit':'Buat'} RPS</h3>
@@ -535,8 +535,8 @@ const OBEModule = (() => {
       deskripsi_mk: $('rf-deskripsi').value.trim(),
     }
     try {
-      if (editingId) await API.put(`/api/v1/obe/rps/${editingId}`, body)
-      else           await API.post('/api/v1/obe/rps', body)
+      if (editingId) await API.put(`/obe/rps/${editingId}`, body)
+      else           await API.post('/obe/rps', body)
       closeModal(); UI.toast(`RPS berhasil ${editingId?'diperbarui':'dibuat'}`)
       loadStats(); filterRPS()
     } catch(e) { UI.toast(e.message,'error') }
@@ -544,7 +544,7 @@ const OBEModule = (() => {
 
   const deleteRPS = async (id, nama) => {
     if (!confirm(`Hapus RPS "${nama}"?`)) return
-    try { await API.delete(`/api/v1/obe/rps/${id}`); UI.toast('RPS dihapus'); loadStats(); filterRPS() }
+    try { await API.delete(`/obe/rps/${id}`); UI.toast('RPS dihapus'); loadStats(); filterRPS() }
     catch(e) { UI.toast(e.message,'error') }
   }
 
@@ -566,7 +566,7 @@ const OBEModule = (() => {
     const params = new URLSearchParams({per_page:50})
     if (search) params.set('search', search)
     try {
-      const res  = await api(`/api/v1/obe/penilaian?${params}`)
+      const res  = await api(`/obe/penilaian?${params}`)
       const rows = res.data || []
       $('pen-table').innerHTML = rows.length === 0
         ? `<p class="text-center text-slate-400 py-8">Belum ada data penilaian</p>`
@@ -605,8 +605,8 @@ const OBEModule = (() => {
   const openPenilaianForm = async (id) => {
     editingId = id || null
     let rec = {}
-    if (id) { try { const r = await api(`/api/v1/obe/penilaian/${id}`); rec = r.data || {} } catch(e){} }
-    const cpmkRes  = await api('/api/v1/obe/cpmk?per_page=100')
+    if (id) { try { const r = await api(`/obe/penilaian/${id}`); rec = r.data || {} } catch(e){} }
+    const cpmkRes  = await api('/obe/cpmk?per_page=100')
     const allCPMKs = cpmkRes.data || []
 
     const mkGroups = {}
@@ -725,8 +725,8 @@ const OBEModule = (() => {
       cpmk_scores,
     }
     try {
-      if (editingId) await API.put(`/api/v1/obe/penilaian/${editingId}`, body)
-      else           await API.post('/api/v1/obe/penilaian', body)
+      if (editingId) await API.put(`/obe/penilaian/${editingId}`, body)
+      else           await API.post('/obe/penilaian', body)
       closeModal(); UI.toast(`Penilaian berhasil ${editingId?'diperbarui':'disimpan'}`)
       loadStats(); filterPenilaian()
     } catch(e) { UI.toast(e.message,'error') }
@@ -734,7 +734,7 @@ const OBEModule = (() => {
 
   const deletePenilaian = async (id, nama) => {
     if (!confirm(`Hapus penilaian OBE "${nama}"?`)) return
-    try { await API.delete(`/api/v1/obe/penilaian/${id}`); UI.toast('Data dihapus'); loadStats(); filterPenilaian() }
+    try { await API.delete(`/obe/penilaian/${id}`); UI.toast('Data dihapus'); loadStats(); filterPenilaian() }
     catch(e) { UI.toast(e.message,'error') }
   }
 
@@ -776,7 +776,7 @@ const OBEModule = (() => {
     const prodi  = $('lap-prodi')?.value || ''
     const params = prodi ? `?prodi_id=${prodi}` : ''
     try {
-      const res  = await api(`/api/v1/obe/laporan/cpl${params}`)
+      const res  = await api(`/obe/laporan/cpl${params}`)
       const rows = res.data || []
       $('lap-cpl-body').innerHTML = rows.length === 0
         ? `<p class="text-center text-slate-400 py-6">Belum ada data penilaian untuk menghitung ketercapaian CPL</p>`
@@ -802,7 +802,7 @@ const OBEModule = (() => {
     const mk     = $('lap-mk')?.value || ''
     const params = mk ? `?mk_id=${mk}` : ''
     try {
-      const res  = await api(`/api/v1/obe/laporan/cpmk${params}`)
+      const res  = await api(`/obe/laporan/cpmk${params}`)
       const rows = res.data || []
       $('lap-cpmk-body').innerHTML = rows.length === 0
         ? `<p class="text-center text-slate-400 py-6">Belum ada data penilaian untuk menghitung ketercapaian CPMK</p>`

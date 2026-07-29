@@ -19,10 +19,11 @@ app = FastAPI(
 @app.on_event("startup")
 def on_startup():
     if os.getenv("DATABASE_URL"):
-        from app.utils.db import init_db, seed_from_json, reseed_users
+        from app.utils.db import init_db, seed_from_json, reseed_users, reseed_tables
         init_db()
         seed_from_json()
         reseed_users()  # always sync user records from JSON (passwords/roles)
+        reseed_tables(['cpl', 'cpmk', 'rps', 'penilaian_obe', 'berita_acara_ujian'])  # sync corrected OBE data
 
 app.add_middleware(
     CORSMiddleware,

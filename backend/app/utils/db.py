@@ -120,6 +120,34 @@ def reseed_users():
         pass
 
 
+def reseed_tables(table_names: list):
+    """Always upsert specific tables from JSON files — used to propagate corrected seed data."""
+    data_dir = Path(__file__).parent.parent.parent / "data"
+    try:
+        with _conn() as conn:
+            with conn.cursor() as cur:
+                for table in table_names:
+                    json_file = data_dir / f"{table}.json"
+                    if not json_file.exists():
+                        continue
+                    records = json.loads(json_file.read_text(encoding="utf-8"))
+                    if not isinstance(records, list) or not records:
+                        continue
+                    for record in records:
+                        rid = str(record.get("id", uuid.uuid4()))
+                        cur.execute(
+                            """
+                            INSERT INTO store (table_name, record_id, data)
+                            VALUES (%s, %s, %s)
+                            ON CONFLICT (table_name, record_id) DO UPDATE
+                            SET data = EXCLUDED.data
+                            """,
+                            (table, rid, json.dumps(record, default=str))
+                        )
+    except Exception:
+        pass
+
+
 # ── Public API — identical signatures to the JSON version ─────────────────────
 
 def read_all(table: str) -> list:
