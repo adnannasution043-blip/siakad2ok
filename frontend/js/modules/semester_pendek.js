@@ -12,6 +12,7 @@ const SPModule = (() => {
   // ── Render ────────────────────────────────────────────────
   const render = () => {
     const main = document.getElementById('page-content')
+    Router.setPageMeta('Semester Pendek', 'Program semester pendek dan perkuliahan tambahan')
     main.innerHTML = `
       <div class="p-4 md:p-6 space-y-6">
         <div>

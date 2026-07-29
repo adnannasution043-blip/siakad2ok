@@ -155,6 +155,7 @@ const AkreditasiModule = (() => {
   // ── Render ────────────────────────────────────────────────────────────────
   const render = () => {
     const el = document.getElementById('page-content')
+    Router.setPageMeta('Akreditasi', 'Manajemen dokumen dan borang akreditasi')
     if (!el) return
     el.innerHTML = `
       <div class="p-6 space-y-6">

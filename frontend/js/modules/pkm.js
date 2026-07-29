@@ -225,6 +225,7 @@ const PKMModule = (() => {
   // ── Render ───────────────────────────────────────────────────────────────
   const render = () => {
     const el = document.getElementById('page-content')
+    Router.setPageMeta('Pengabdian Masyarakat (PKM)', 'Manajemen kegiatan pengabdian masyarakat')
     if (!el) return
     el.innerHTML = `
       <div class="p-6 space-y-6">

@@ -42,6 +42,7 @@ const SuratModule = (() => {
   // ── Render Shell ──────────────────────────────────────────
   const render = () => {
     document.getElementById('page-content').innerHTML = `
+    Router.setPageMeta('Surat Menyurat', 'Pengelolaan pengajuan dan template surat')
       <div class="space-y-6">
         <div>
           <h1 class="text-2xl font-bold text-slate-800">Surat Menyurat</h1>

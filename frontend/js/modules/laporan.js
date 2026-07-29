@@ -463,6 +463,7 @@ const LaporanModule = (() => {
 
   const render = () => {
     const el = document.getElementById('page-content')
+    Router.setPageMeta('Laporan & Statistik', 'Laporan akademik, keuangan, dan statistik')
     if (!el) return
     el.innerHTML = `
     <div class="p-6 space-y-6">

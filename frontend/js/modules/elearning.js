@@ -41,6 +41,7 @@ const ElearningModule = (() => {
   // ── Render Shell ──────────────────────────────────────────
   const render = () => {
     document.getElementById('page-content').innerHTML = `
+    Router.setPageMeta('E-Learning', 'Manajemen kursus online, materi, dan peserta')
       <div class="space-y-6">
         <div>
           <h1 class="text-2xl font-bold text-slate-800">E-Learning</h1>

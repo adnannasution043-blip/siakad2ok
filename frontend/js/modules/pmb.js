@@ -50,6 +50,7 @@ const PMBModule = (() => {
   // ── Render Shell ──────────────────────────────────────────
   const render = () => {
     document.getElementById('page-content').innerHTML = `
+    Router.setPageMeta('PMB', 'Penerimaan mahasiswa baru')
       <div class="space-y-6">
         <div class="flex items-center justify-between">
           <div>

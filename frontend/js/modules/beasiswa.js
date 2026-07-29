@@ -12,6 +12,7 @@ const BeasiswaModule = (() => {
   // ── Render ────────────────────────────────────────────────
   const render = () => {
     const app = document.getElementById('page-content')
+    Router.setPageMeta('Beasiswa', 'Manajemen program beasiswa mahasiswa')
     app.innerHTML = `
       <div class="p-4 md:p-6 space-y-6">
         <div class="flex items-center justify-between flex-wrap gap-3">

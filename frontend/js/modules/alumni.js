@@ -306,6 +306,7 @@ const AlumniModule = (() => {
 
   const render = () => {
     const el = document.getElementById('page-content')
+    Router.setPageMeta('Alumni & Yudisium', 'Data alumni dan proses yudisium')
     if (!el) return
     el.innerHTML = `
     <div class="p-6 space-y-6">

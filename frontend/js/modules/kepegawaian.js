@@ -83,6 +83,7 @@ const KepegawaianModule = (() => {
 
   const render = () => {
     const el = document.getElementById('page-content')
+    Router.setPageMeta('Kepegawaian', 'Manajemen data pegawai dan tenaga kependidikan')
     if (!el) return
     el.innerHTML = `
       <div class="p-6 space-y-6">

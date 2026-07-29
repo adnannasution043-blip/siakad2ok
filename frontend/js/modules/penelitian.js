@@ -213,6 +213,7 @@ const PenelitianModule = (() => {
   // ── Render ───────────────────────────────────────────────────────────────
   const render = () => {
     const el = document.getElementById('page-content')
+    Router.setPageMeta('Penelitian', 'Manajemen penelitian dosen & luaran')
     if (!el) return
     el.innerHTML = `
       <div class="p-6 space-y-6">

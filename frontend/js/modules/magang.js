@@ -10,6 +10,7 @@ const MagangModule = (() => {
 
   const render = async () => {
     const main = document.getElementById('page-content')
+    Router.setPageMeta('Magang / PKL', 'Program magang dan praktik kerja lapangan')
     main.innerHTML = `
       <div class="p-4 md:p-6 space-y-4">
         <div>

@@ -12,6 +12,7 @@ const UKMModule = (() => {
   // ── Render ────────────────────────────────────────────────
   const render = () => {
     const main = document.getElementById('page-content')
+    Router.setPageMeta('UKM & Organisasi', 'Unit kegiatan mahasiswa dan organisasi kampus')
     main.innerHTML = `
       <div class="p-4 md:p-6 space-y-6">
         <div>

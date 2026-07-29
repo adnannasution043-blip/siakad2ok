@@ -164,6 +164,7 @@ const KlinikModule = (() => {
 
   const render = () => {
     const el = document.getElementById('page-content')
+    Router.setPageMeta('Klinik & Kesehatan', 'Layanan kesehatan dan kunjungan klinik')
     if (!el) return
     el.innerHTML = `
     <div class="p-6 space-y-6">

@@ -264,6 +264,7 @@ const NotifikasiModule = (() => {
 
   const render = () => {
     const el = document.getElementById('page-content')
+    Router.setPageMeta('Notifikasi', 'Pemberitahuan dan pengumuman sistem')
     if (!el) return
     el.innerHTML = `
     <div class="p-6 space-y-6">

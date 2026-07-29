@@ -102,6 +102,7 @@ const AsetModule = (() => {
   // ── Render ───────────────────────────────────────────────────────────────
   const render = () => {
     const el = document.getElementById('page-content')
+    Router.setPageMeta('Aset & Inventaris', 'Manajemen aset dan inventaris kampus')
     if (!el) return
     el.innerHTML = `
       <div class="p-6 space-y-6">

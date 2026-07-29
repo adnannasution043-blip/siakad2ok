@@ -43,6 +43,7 @@ const OBEModule = (() => {
   // ── render shell ────────────────────────────────────────────
   const render = () => {
     const el = $('page-content')
+    Router.setPageMeta('OBE — Outcome Based Education', 'CPL, CPMK, RPS, Penilaian, dan Laporan Ketercapaian')
     if (!el) return
     el.innerHTML = `
       <div class="mb-6">

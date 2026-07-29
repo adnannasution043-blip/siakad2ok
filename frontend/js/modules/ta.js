@@ -13,6 +13,7 @@ const TAModule = (() => {
   // ── render ─────────────────────────────────────────────────
   const render = async () => {
     const main = document.getElementById('page-content')
+    Router.setPageMeta('Tugas Akhir', 'Manajemen tugas akhir mahasiswa')
     main.innerHTML = `
       <div class="p-4 md:p-6 space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">

@@ -268,6 +268,7 @@ const PerpustakaanModule = (() => {
 
   const render = () => {
     const el = document.getElementById('page-content')
+    Router.setPageMeta('Perpustakaan', 'Manajemen koleksi dan peminjaman buku')
     if (!el) return
     el.innerHTML = `
     <div class="p-6 space-y-6">
