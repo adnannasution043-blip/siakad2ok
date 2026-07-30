@@ -6,7 +6,7 @@ const MahasiswaModule = (() => {
 
   // ── State ──────────────────────────────────────────────
   let state = {
-    list: [], meta: null, prodiList: [],
+    list: [], meta: null, prodiList: [], dosenList: [],
     page: 1, search: '', status: '', prodi_id: '',
     loading: false,
   }
@@ -29,6 +29,12 @@ const MahasiswaModule = (() => {
     if (state.prodiList.length) return
     const res = await API.get('/mahasiswa/prodi')
     state.prodiList = res.data || []
+  }
+
+  const fetchDosen = async () => {
+    if (state.dosenList.length) return
+    const res = await API.get('/dosen', { per_page: 200, status: 'aktif' })
+    state.dosenList = res.data || []
   }
 
   // ── Render Utama ───────────────────────────────────────
@@ -81,8 +87,11 @@ const MahasiswaModule = (() => {
   }
 
   const renderTable = () => {
+    const user = Auth.getUser()
+    const isAdmin = ['super_admin', 'admin_akademik'].includes(user?.role)
+
     document.getElementById('mhs-table-wrap').innerHTML = UI.renderTable({
-      headers: ['NIM', 'Nama Lengkap', 'Program Studi', 'Angkatan', 'Sem.', 'IPK', 'Status', 'Aksi'],
+      headers: ['NIM', 'Nama Lengkap', 'Program Studi', 'Dosen Wali', 'Angkatan', 'IPK', 'Status', 'Aksi'],
       emptyText: 'Tidak ada data mahasiswa',
       rows: state.list.map(m => `
         <td class="px-4 py-3 font-mono text-xs text-slate-600">${m.nim}</td>
@@ -91,8 +100,12 @@ const MahasiswaModule = (() => {
           <div class="text-xs text-slate-400">${m.email || ''}</div>
         </td>
         <td class="px-4 py-3 text-sm text-slate-600">${m.program_studi?.nama || '—'}</td>
+        <td class="px-4 py-3">
+          ${m.dosen_wali_nama
+            ? `<div class="text-sm text-slate-700">${m.dosen_wali_nama}</div>`
+            : `<span class="text-xs text-slate-400 italic">Belum ditetapkan</span>`}
+        </td>
         <td class="px-4 py-3 text-sm text-slate-600 text-center">${m.angkatan}</td>
-        <td class="px-4 py-3 text-sm text-slate-600 text-center">${m.semester_aktif}</td>
         <td class="px-4 py-3 text-sm font-medium text-slate-800 text-center">${Number(m.ipk).toFixed(2)}</td>
         <td class="px-4 py-3">${UI.statusBadge(m.status)}</td>
         <td class="px-4 py-3">
@@ -101,6 +114,11 @@ const MahasiswaModule = (() => {
               class="p-1.5 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-primary-600 transition-colors">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
             </button>
+            ${isAdmin ? `
+            <button onclick="MahasiswaModule.openDosenWali('${m.id}', '${(m.nama_lengkap||'').replace(/'/g,"\\'")}', '${m.dosen_wali_id||''}', '${(m.dosen_wali_nama||'').replace(/'/g,"\\'")}' )" title="Atur Dosen Wali"
+              class="p-1.5 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-indigo-600 transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </button>
             <button onclick="MahasiswaModule.openForm('${m.id}')" title="Edit"
               class="p-1.5 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-blue-600 transition-colors">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
@@ -108,7 +126,7 @@ const MahasiswaModule = (() => {
             <button onclick="MahasiswaModule.confirmDelete('${m.id}', '${m.nama_lengkap}')" title="Hapus"
               class="p-1.5 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-red-600 transition-colors">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
-            </button>
+            </button>` : ''}
           </div>
         </td>
       `)
@@ -252,6 +270,15 @@ const MahasiswaModule = (() => {
             ${row('Tempat, Tgl Lahir', m.tempat_lahir && m.tanggal_lahir ? `${m.tempat_lahir}, ${m.tanggal_lahir}` : '—')}
             ${row('Angkatan', m.angkatan)}
             ${row('Alamat', m.alamat || '—')}
+            <tr class="border-b border-slate-100">
+              <td class="py-2 pr-4 text-slate-500 font-medium w-40">Dosen Wali</td>
+              <td class="py-2 text-slate-800 flex items-center gap-2">
+                ${m.dosen_wali_nama || '<span class="text-slate-400 italic">Belum ditetapkan</span>'}
+                ${['super_admin','admin_akademik'].includes(Auth.getUser()?.role) ? `
+                <button onclick="UI.closeModal(); MahasiswaModule.openDosenWali('${m.id}', '${(m.nama_lengkap||'').replace(/'/g,"\\'")}', '${m.dosen_wali_id||''}', '${(m.dosen_wali_nama||'').replace(/'/g,"\\'")}')"
+                  class="text-xs text-indigo-600 hover:underline ml-1">Ubah</button>` : ''}
+              </td>
+            </tr>
           </table>
           <div class="flex justify-end gap-2">
             <button onclick="UI.closeModal()" class="px-4 py-2 border border-slate-300 text-slate-700 text-sm rounded-lg hover:bg-slate-50">Tutup</button>
@@ -297,5 +324,79 @@ const MahasiswaModule = (() => {
     } catch (e) { UI.toast(e.message, 'error') }
   }
 
-  return { render, onSearch, onFilter, goPage, openForm, openDetail, confirmDelete, doDelete }
+  // ── Dosen Wali ─────────────────────────────────────────
+  const openDosenWali = async (mahasiswaId, namaMhs, currentDosenId, currentDosenNama) => {
+    await fetchDosen()
+
+    const options = state.dosenList.map(d =>
+      `<option value="${d.id}" ${d.id === currentDosenId ? 'selected' : ''}>${d.nama_lengkap}${d.nidn ? ' ('+d.nidn+')' : ''}</option>`
+    ).join('')
+
+    UI.openModal(`
+      <div class="p-5">
+        <div class="flex items-start gap-3 mb-4">
+          <div class="w-9 h-9 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold text-slate-800">Atur Dosen Wali</h3>
+            <p class="text-sm text-slate-500">${namaMhs}</p>
+          </div>
+        </div>
+
+        ${currentDosenNama ? `
+        <div class="mb-4 p-3 bg-indigo-50 border border-indigo-100 rounded-lg text-sm text-indigo-700">
+          Dosen wali saat ini: <strong>${currentDosenNama}</strong>
+        </div>` : `
+        <div class="mb-4 p-3 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-500 italic">
+          Belum ada dosen wali yang ditetapkan.
+        </div>`}
+
+        <div class="space-y-3">
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1">Pilih Dosen Wali</label>
+            <select id="dw-select"
+              class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white">
+              <option value="">— Pilih dosen —</option>
+              ${options}
+            </select>
+          </div>
+          <div id="dw-err" class="hidden text-red-600 text-sm bg-red-50 px-3 py-2 rounded-lg"></div>
+        </div>
+
+        <div class="flex gap-3 mt-5">
+          <button onclick="UI.closeModal()"
+            class="flex-1 px-4 py-2 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50">Batal</button>
+          ${currentDosenId ? `
+          <button onclick="MahasiswaModule.submitDosenWali('${mahasiswaId}', null)" id="dw-clear-btn"
+            class="px-4 py-2 border border-red-300 text-red-600 text-sm font-medium rounded-lg hover:bg-red-50 transition-colors">Cabut</button>` : ''}
+          <button onclick="MahasiswaModule.submitDosenWali('${mahasiswaId}', document.getElementById('dw-select').value)" id="dw-save-btn"
+            class="flex-1 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors">Simpan</button>
+        </div>
+      </div>
+    `)
+  }
+
+  const submitDosenWali = async (mahasiswaId, dosenId) => {
+    const errEl = document.getElementById('dw-err')
+    const saveBtn = document.getElementById('dw-save-btn')
+    if (errEl) errEl.classList.add('hidden')
+    if (saveBtn) { saveBtn.disabled = true; saveBtn.textContent = 'Menyimpan…' }
+
+    try {
+      const res = await API.put(`/mahasiswa/${mahasiswaId}/dosen-wali`, { dosen_id: dosenId || null })
+      UI.toast(res.message || 'Dosen wali berhasil diperbarui')
+      UI.closeModal()
+      state.dosenList = []  // invalidate dosen cache so list rerenders
+      await fetchList()
+    } catch (e) {
+      if (errEl) { errEl.textContent = e.message; errEl.classList.remove('hidden') }
+      else UI.toast(e.message, 'error')
+      if (saveBtn) { saveBtn.disabled = false; saveBtn.textContent = 'Simpan' }
+    }
+  }
+
+  return { render, onSearch, onFilter, goPage, openForm, openDetail, confirmDelete, doDelete, openDosenWali, submitDosenWali }
 })()

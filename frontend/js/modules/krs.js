@@ -7,8 +7,10 @@ const KRSModule = (() => {
 
   let state = {
     list: [], meta: null, semesters: [], stats: null,
-    page: 1, search: '', status: '', semester_akademik: '',
-    mhsList: [], kelasList: [],
+    page: 1, search: '', status: '', semester_akademik: '', dosen_wali_id: '',
+    mhsList: [], kelasList: [], dosenWaliList: [],
+    myProfile: null,   // mahasiswa profile (role=mahasiswa)
+    myDosen: null,     // dosen profile (role=dosen)
   }
 
   // ── Data loaders ──────────────────────────────────────────
@@ -37,6 +39,7 @@ const KRSModule = (() => {
       page: state.page, per_page: 20,
       search: state.search, status: state.status,
       semester_akademik: state.semester_akademik,
+      dosen_wali_id: state.dosen_wali_id,
     }
     if (Auth.hasRole('mahasiswa')) params.mahasiswa_id = Auth.getEntityId() || ''
     const res = await API.get('/krs', params)
@@ -44,6 +47,29 @@ const KRSModule = (() => {
     state.meta = res.meta
     renderTable()
     renderPagination()
+    renderDosenBanner()
+  }
+
+  const fetchRoleContext = async () => {
+    const role = Auth.getUser()?.role
+    if (role === 'mahasiswa' && !state.myProfile) {
+      try {
+        const res = await API.get('/mahasiswa', { per_page: 1 })
+        state.myProfile = (res.data || [])[0] || null
+      } catch (_) {}
+    }
+    if (role === 'dosen' && !state.myDosen) {
+      try {
+        const res = await API.get('/dosen', { per_page: 1 })
+        state.myDosen = (res.data || [])[0] || null
+      } catch (_) {}
+    }
+    if (['super_admin', 'admin_akademik', 'kaprodi', 'staf'].includes(role) && !state.dosenWaliList.length) {
+      try {
+        const res = await API.get('/dosen', { per_page: 200, status: 'aktif' })
+        state.dosenWaliList = res.data || []
+      } catch (_) {}
+    }
   }
 
   const loadFormRefs = async () => {
@@ -59,9 +85,23 @@ const KRSModule = (() => {
   // ── Main render ──────────────────────────────────────────
   const render = async () => {
     Router.setPageMeta('KRS', 'Kartu Rencana Studi')
-    await fetchSemesters()
+    await Promise.all([fetchSemesters(), fetchRoleContext()])
+
+    const role  = Auth.getUser()?.role
+    const isAdmin = ['super_admin', 'admin_akademik', 'kaprodi', 'staf'].includes(role)
+    const isDosen = role === 'dosen'
+
+    const dosenWaliFilter = isAdmin && state.dosenWaliList.length ? `
+      <select onchange="KRSModule.onFilter('dosen_wali_id', this.value)"
+        class="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white">
+        <option value="">Semua Dosen Wali</option>
+        ${state.dosenWaliList.map(d => `<option value="${d.id}" ${state.dosen_wali_id===d.id?'selected':''}>${d.nama_lengkap}</option>`).join('')}
+      </select>` : ''
 
     document.getElementById('page-content').innerHTML = `
+      <!-- Role-contextual banner -->
+      <div id="krs-role-banner"></div>
+
       <!-- Stats row -->
       <div id="krs-stats" class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5"></div>
 
@@ -91,6 +131,7 @@ const KRSModule = (() => {
           <option value="ditolak"    ${state.status==='ditolak'   ?'selected':''}>Ditolak</option>
           <option value="dibatalkan" ${state.status==='dibatalkan'?'selected':''}>Dibatalkan</option>
         </select>
+        ${dosenWaliFilter}
         <button onclick="KRSModule.openAjukan()"
           class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center gap-2">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
@@ -103,7 +144,80 @@ const KRSModule = (() => {
         <div id="krs-pagination"></div>
       `)}
     `
+
+    renderRoleBanner()
     await Promise.all([fetchStats(), fetchList()])
+  }
+
+  // ── Role-contextual banners ───────────────────────────────
+  const renderRoleBanner = () => {
+    const el = document.getElementById('krs-role-banner')
+    if (!el) return
+    const role = Auth.getUser()?.role
+
+    if (role === 'mahasiswa') {
+      const m = state.myProfile
+      if (!m) { el.innerHTML = ''; return }
+      const hasWali = m.dosen_wali_nama
+      el.innerHTML = `
+        <div class="mb-5 p-4 rounded-xl border ${hasWali ? 'bg-indigo-50 border-indigo-200' : 'bg-amber-50 border-amber-200'} flex items-start gap-3">
+          <div class="w-9 h-9 rounded-full ${hasWali ? 'bg-indigo-500' : 'bg-amber-400'} flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm font-semibold ${hasWali ? 'text-indigo-800' : 'text-amber-800'}">Dosen Wali Anda</p>
+            ${hasWali
+              ? `<p class="text-sm ${hasWali ? 'text-indigo-700' : ''} mt-0.5">${m.dosen_wali_nama}</p>
+                 <p class="text-xs text-indigo-500 mt-0.5">Dosen wali menyetujui atau menolak pengajuan KRS Anda.</p>`
+              : `<p class="text-sm text-amber-700 mt-0.5">Belum ada dosen wali yang ditetapkan untuk Anda.</p>
+                 <p class="text-xs text-amber-600 mt-0.5">Hubungi bagian akademik untuk penetapan dosen wali.</p>`}
+          </div>
+        </div>`
+      return
+    }
+
+    if (role === 'dosen') {
+      const d = state.myDosen
+      if (!d) { el.innerHTML = ''; return }
+      // Count will be rendered after list loads in renderDosenBanner()
+      el.innerHTML = `<div id="krs-dosen-wali-banner" class="mb-5"></div>`
+      return
+    }
+
+    el.innerHTML = ''
+  }
+
+  const renderDosenBanner = () => {
+    const el = document.getElementById('krs-dosen-wali-banner')
+    if (!el) return
+    const d = state.myDosen
+    if (!d) return
+    const waliKRS = state.list.filter(k => k.dosen_wali_id === d.id)
+    const uniqueMhs = new Set(waliKRS.map(k => k.mahasiswa_id)).size
+    const pending   = waliKRS.filter(k => k.status === 'pending').length
+
+    el.innerHTML = `
+      <div class="p-4 rounded-xl border bg-indigo-50 border-indigo-200 flex items-start gap-3">
+        <div class="w-9 h-9 rounded-full bg-indigo-500 flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <p class="text-sm font-semibold text-indigo-800">Mahasiswa Wali Bimbingan Anda</p>
+          <div class="flex flex-wrap gap-4 mt-1.5">
+            <span class="text-sm text-indigo-700"><strong class="text-indigo-900">${uniqueMhs}</strong> mahasiswa bimbingan${state.semester_akademik ? ' semester ini' : ''}</span>
+            ${pending > 0 ? `<span class="text-sm text-amber-700 font-medium"><strong>${pending}</strong> KRS menunggu persetujuan Anda</span>` : '<span class="text-sm text-green-700">Tidak ada KRS yang menunggu persetujuan</span>'}
+          </div>
+        </div>
+        ${pending > 0 ? `
+        <button onclick="KRSModule.onFilter('status','pending')"
+          class="flex-shrink-0 px-3 py-1.5 bg-amber-500 hover:bg-amber-600 text-white text-xs font-medium rounded-lg transition-colors">
+          Lihat Pending
+        </button>` : ''}
+      </div>`
   }
 
   // ── Stats cards ──────────────────────────────────────────
@@ -138,6 +252,8 @@ const KRSModule = (() => {
 
   // ── Table ─────────────────────────────────────────────────
   const renderTable = () => {
+    const role = Auth.getUser()?.role
+    const isAdmin = ['super_admin', 'admin_akademik', 'kaprodi', 'staf'].includes(role)
     document.getElementById('krs-table-wrap').innerHTML = UI.renderTable({
       headers: ['Mahasiswa', 'Mata Kuliah', 'SKS', 'Semester', 'Dosen Wali', 'Status', 'Aksi'],
       emptyText: 'Tidak ada data KRS',
@@ -152,7 +268,14 @@ const KRSModule = (() => {
         </td>
         <td class="px-4 py-3 text-center text-sm font-medium text-slate-700">${k.sks}</td>
         <td class="px-4 py-3 text-sm text-slate-600">${k.semester_akademik}</td>
-        <td class="px-4 py-3 text-sm text-slate-600">${k.dosen_wali_nama || '—'}</td>
+        <td class="px-4 py-3 text-sm">
+          ${k.dosen_wali_id
+            ? (isAdmin
+                ? `<button onclick="KRSModule.onFilter('dosen_wali_id','${k.dosen_wali_id}')"
+                     class="text-indigo-600 hover:underline text-left" title="Filter KRS dosen wali ini">${k.dosen_wali_nama}</button>`
+                : `<span class="text-slate-700">${k.dosen_wali_nama}</span>`)
+            : '<span class="text-slate-400">—</span>'}
+        </td>
         <td class="px-4 py-3">${statusBadge(k.status)}</td>
         <td class="px-4 py-3">
           <div class="flex items-center gap-1">
@@ -342,9 +465,14 @@ const KRSModule = (() => {
       state.kelasList = []  // reset so form reloads for new semester
       fetchStats()
     }
+    // Sync dosen wali dropdown if it exists on page
+    if (key === 'dosen_wali_id') {
+      const sel = document.querySelector('select[onchange*="dosen_wali_id"]')
+      if (sel) sel.value = val
+    }
     fetchList()
   }
   const goPage = (p) => { state.page = p; fetchList() }
 
-  return { render, onSearch, onFilter, goPage, openAjukan, setujui, openTolak, batalkan, showAlasan, _onMhsChange }
+  return { render, onSearch, onFilter, goPage, openAjukan, setujui, openTolak, batalkan, showAlasan, _onMhsChange, renderDosenBanner }
 })()

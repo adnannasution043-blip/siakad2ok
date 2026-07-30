@@ -174,6 +174,47 @@ def update_mahasiswa(mahasiswa_id: str, body: MahasiswaUpdate, authorization: st
     updated = update("mahasiswa", mahasiswa_id, updates)
     return ok({"id": updated["id"], "nama_lengkap": updated["nama_lengkap"]}, "Data diperbarui")
 
+# ── PUT assign dosen wali ──────────────────────────────────
+class DosenWaliUpdate(BaseModel):
+    dosen_id: Optional[str] = None  # None / "" = cabut assignment
+
+@router.put("/{mahasiswa_id}/dosen-wali")
+def set_dosen_wali(mahasiswa_id: str, body: DosenWaliUpdate, authorization: str = Header(default="dev")):
+    from fastapi import HTTPException
+    user = get_user_from_request(authorization)
+    check_role(user, ADMIN_ROLES)
+    m = find_by_id("mahasiswa", mahasiswa_id)
+    if not m:
+        raise HTTPException(404, "Mahasiswa tidak ditemukan")
+
+    dosen_wali_id   = ""
+    dosen_wali_nama = ""
+    if body.dosen_id:
+        d = find_by_id("dosen", body.dosen_id)
+        if not d or d.get("deleted_at"):
+            raise HTTPException(404, "Dosen tidak ditemukan")
+        dosen_wali_id   = d["id"]
+        dosen_wali_nama = d.get("nama_lengkap", "")
+
+    updated = update("mahasiswa", mahasiswa_id, {
+        "dosen_wali_id":   dosen_wali_id,
+        "dosen_wali_nama": dosen_wali_nama,
+    })
+
+    # Cascade ke KRS pending/disetujui yang belum terhapus
+    for k in read_all("krs"):
+        if (k.get("mahasiswa_id") == mahasiswa_id
+                and k.get("status") in ("pending", "disetujui")
+                and not k.get("deleted_at")):
+            update("krs", k["id"], {
+                "dosen_wali_id":   dosen_wali_id,
+                "dosen_wali_nama": dosen_wali_nama,
+            })
+
+    msg = (f"Dosen wali berhasil ditetapkan: {dosen_wali_nama}"
+           if dosen_wali_id else "Penetapan dosen wali berhasil dicabut")
+    return ok(enrich(updated), msg)
+
 # ── DELETE ─────────────────────────────────────────────────
 @router.delete("/{mahasiswa_id}")
 def delete_mahasiswa(mahasiswa_id: str, authorization: str = Header(default="dev")):

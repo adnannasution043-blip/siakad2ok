@@ -22,18 +22,19 @@ const ROUTE_ROLES = {
   penelitian:          ['super_admin', 'kaprodi', 'dosen', 'lppm'],
   pkm:                 ['super_admin', 'kaprodi', 'dosen', 'lppm'],
   surat:               ['super_admin', 'admin_akademik', 'kaprodi', 'dosen', 'mahasiswa', 'staf'],
-  pmb:                 ['super_admin', 'admin_akademik', 'staf'],
+  pmb:                 ['super_admin', 'admin_pmb', 'staf'],
   'semester-pendek':   ['super_admin', 'admin_akademik', 'kaprodi', 'dosen', 'mahasiswa'],
-  kepegawaian:         ['super_admin', 'staf'],
-  aset:                ['super_admin', 'staf'],
+  kepegawaian:         ['super_admin', 'admin_sdm'],
+  aset:                ['super_admin', 'admin_aset', 'staf'],
   akreditasi:          ['super_admin', 'admin_akademik', 'kaprodi', 'dosen'],
   alumni:              ['super_admin', 'admin_akademik', 'kaprodi'],
   laporan:             ['super_admin', 'admin_akademik', 'admin_keuangan', 'kaprodi', 'dosen', 'lppm'],
   notifikasi:          null,
   klinik:              ['super_admin', 'mahasiswa', 'staf'],
-  perpustakaan:        ['super_admin', 'admin_akademik', 'dosen', 'mahasiswa', 'staf'],
+  perpustakaan:        ['super_admin', 'admin_perpustakaan', 'dosen', 'mahasiswa', 'staf'],
   obe:                 ['super_admin', 'admin_akademik', 'kaprodi', 'dosen'],
   master:              ['super_admin', 'admin_akademik', 'kaprodi'],
+  kalender:            ['super_admin', 'admin_akademik', 'kaprodi'],
   pengaturan:          null,
 }
 
@@ -174,6 +175,7 @@ const App = (() => {
     registerRoute('klinik',           () => KlinikModule.render())
     registerRoute('perpustakaan',     () => PerpustakaanModule.render())
     registerRoute('obe',              () => OBEModule.render())
+    registerRoute('kalender',         () => KalenderModule.render())
 
     // Sidebar overlay click (mobile)
     document.getElementById('sidebar-overlay')?.addEventListener('click', () => {

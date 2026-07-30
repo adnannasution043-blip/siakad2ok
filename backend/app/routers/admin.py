@@ -25,6 +25,7 @@ ALL_TABLES = [
     "peserta_sp", "pkm", "presensi", "program_sp", "program_studi",
     "rps", "ruang", "sesi_kuliah", "sidang_ta", "tagihan",
     "template_surat", "tugas_akhir", "ukm", "users", "yudisium",
+    "kalender_akademik", "registrasi_semester",
 ]
 
 TRANSACTIONAL_TABLES = [t for t in ALL_TABLES if t not in MASTER_TABLES]

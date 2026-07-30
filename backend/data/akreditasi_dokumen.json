@@ -1,8 +1,1 @@
-[
-  {"id":"dok-akr-001","prodi_id":"akr-001","prodi_nama":"Teknik Informatika","jenis":"led","judul":"LED Teknik Informatika 2023","tahun":2023,"keterangan":"Laporan Evaluasi Diri untuk re-akreditasi","url":null,"created_at":"2024-01-01T08:00:00","updated_at":"2024-01-01T08:00:00","deleted_at":null},
-  {"id":"dok-akr-002","prodi_id":"akr-001","prodi_nama":"Teknik Informatika","jenis":"lkps","judul":"LKPS Teknik Informatika 2023","tahun":2023,"keterangan":"Laporan Kinerja Program Studi","url":null,"created_at":"2024-01-01T08:00:00","updated_at":"2024-01-01T08:00:00","deleted_at":null},
-  {"id":"dok-akr-003","prodi_id":"akr-002","prodi_nama":"Sistem Informasi","jenis":"led","judul":"LED Sistem Informasi 2022","tahun":2022,"keterangan":"Laporan Evaluasi Diri re-akreditasi 2022","url":null,"created_at":"2024-01-01T08:00:00","updated_at":"2024-01-01T08:00:00","deleted_at":null},
-  {"id":"dok-akr-004","prodi_id":"akr-003","prodi_nama":"Manajemen","jenis":"led","judul":"LED Manajemen 2023 — Akreditasi Unggul","tahun":2023,"keterangan":"LED untuk pengajuan akreditasi Unggul","url":null,"created_at":"2024-01-01T08:00:00","updated_at":"2024-01-01T08:00:00","deleted_at":null},
-  {"id":"dok-akr-005","prodi_id":"akr-005","prodi_nama":"Teknik Elektro","jenis":"renstra","judul":"Renstra Teknik Elektro 2021-2025","tahun":2021,"keterangan":"Rencana Strategis 5 tahunan","url":null,"created_at":"2024-01-01T08:00:00","updated_at":"2024-01-01T08:00:00","deleted_at":null},
-  {"id":"dok-akr-006","prodi_id":"akr-012","prodi_nama":"Teknik Sipil","jenis":"led","judul":"LED Teknik Sipil — Persiapan Re-akreditasi 2025","tahun":2025,"keterangan":"Masa berlaku berakhir Juli 2025, perlu re-akreditasi segera","url":null,"created_at":"2025-01-01T08:00:00","updated_at":"2025-01-01T08:00:00","deleted_at":null}
-]
+[]
