@@ -15,6 +15,10 @@ from contextlib import contextmanager
 
 DATABASE_URL = os.getenv("DATABASE_URL", "")
 
+# Increment this to trigger a full data wipe + re-seed on next startup.
+# Current value causes one-time cleanup of all old dummy data.
+RESET_VERSION = "3"
+
 # ── Postgres helpers ───────────────────────────────────────────────────────────
 
 _pool = None
@@ -59,6 +63,38 @@ def init_db():
                 CREATE INDEX IF NOT EXISTS idx_store_table
                 ON store(table_name)
             """)
+
+
+def check_and_reset():
+    """Wipe all data and re-seed if RESET_VERSION has changed.
+
+    Stores the current version in a _meta sentinel row. On mismatch, every row
+    in store (except the sentinel itself) is deleted so seed_from_json() can
+    start fresh. Increment RESET_VERSION in code to trigger another reset.
+    """
+    with _conn() as conn:
+        with conn.cursor() as cur:
+            cur.execute(
+                "SELECT data->>'version' FROM store "
+                "WHERE table_name = '_meta' AND record_id = 'reset_version'"
+            )
+            row = cur.fetchone()
+            stored_version = row[0] if row else None
+
+            if stored_version == RESET_VERSION:
+                return
+
+            cur.execute("DELETE FROM store WHERE table_name != '_meta'")
+
+            cur.execute(
+                """
+                INSERT INTO store (table_name, record_id, data)
+                VALUES ('_meta', 'reset_version', %s)
+                ON CONFLICT (table_name, record_id)
+                DO UPDATE SET data = EXCLUDED.data
+                """,
+                (json.dumps({"version": RESET_VERSION}),),
+            )
 
 
 def seed_from_json():
